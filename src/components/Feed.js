@@ -7,6 +7,8 @@ function Feed() {
   return (
     <div className="FeedContent">
       <Post/>
+      <Post/>
+      <Post/>
     </div>
   );
 }
