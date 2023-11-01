@@ -1,10 +1,12 @@
 import './App.css';
-import Post from './components/Post';
+
+// Components
+import DiscoverFeed from './pages/DiscoverFeed';
 
 function App() {
   return (
     <div className="App">
-      <Post/>
+      <DiscoverFeed/>
     </div>
   );
 }
