@@ -1,0 +1,25 @@
+.iconAndText {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.iconAndText:hover {
+  color: hsl(152, 93%, 65%);
+}
+
+.iconAndText:hover .iconLink {
+  color: hsl(152, 93%, 65%);
+}
+
+.iconAndText:hover .iconText {
+  color: hsl(152, 93%, 65%);
+}
+
+.iconLink {
+    color: #fafafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }

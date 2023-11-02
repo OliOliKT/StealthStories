@@ -1,0 +1,51 @@
+.feedNav{
+    width: 640px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  #discoverFeedNav{
+    width: 320px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-bottom: 2px solid #50F9AB;
+  }
+  
+  #tendingFeedNav{
+    width: 320px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-bottom: 2px solid #AAA6E5;
+  }
+  
+  .navTextDiscover{
+    color:#50F9AB;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding-left: 8px;
+    font-weight: bold;
+  }
+  
+  .navTextTrending{
+    color:#AAA6E5;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding-left: 8px;
+    font-weight: bold;
+  }
+  
+  .iconLinkTrendingNav{
+    color:#AAA6E5
+  }
+  
+  .iconLinkDiscoverNav{
+    color: #50F9AB;
+  }
+  
+  p{
+    padding: 0;
+  }

@@ -1,8 +1,14 @@
-import "./App.css";
-import React from "react";
+import './App.css';
+
+// Components
+import DiscoverFeed from './pages/DiscoverFeed';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <DiscoverFeed/>
+    </div>
+  );
 }
 
 export default App;

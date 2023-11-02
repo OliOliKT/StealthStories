@@ -50,14 +50,16 @@ input[type="search"]:focus {
     padding-right: 20px;
 }
 
-nav ul {
+ul {
     display: flex;
     padding-right: 20px;
+    list-style: none;
 }
 
 nav li {
-    margin-left: 30px;
+    margin-left: 25px;
     font-size: 17px;
+    list-style: none;
 }
 
 li:hover i {
