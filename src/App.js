@@ -1,12 +1,11 @@
 import './App.css';
 
-// Components
-import DiscoverFeed from './pages/DiscoverFeed';
+import TrendingFeed from './pages/TrendingFeed';
 
 function App() {
   return (
     <div className="App">
-      <DiscoverFeed/>
+      <TrendingFeed/>
     </div>
   );
 }

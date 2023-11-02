@@ -1,0 +1,33 @@
+.trendingBlock {
+  width: 250px;
+  height: 380px;
+  background-color: #393751;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #68669d;
+  margin-right: 30px;
+}
+
+h2 {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fafafc;
+  font-size: 20px;
+}
+
+.trendingText {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fafafc;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.postAmountTrending {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fafafc;
+  font-size: 10px;
+  margin-bottom: 20px;
+}

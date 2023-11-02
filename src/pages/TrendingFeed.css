@@ -1,9 +1,8 @@
 .main-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50px 50px 1fr 50px;
-  grid-gap: 20px; /* Gap between grid items */
-  place-items: center;
+  grid-gap: 20px; 
 }
 
 .FeedContent {
@@ -16,6 +15,14 @@
   grid-column: 2;
   text-align: center;
   align-self: center;
+  justify-self: center;
+}
+
+.trendingBlock {
+  grid-row: 3;
+  grid-column: 1;
+  align-items: flex-start;
+  justify-self: end;
 }
 
 .header {

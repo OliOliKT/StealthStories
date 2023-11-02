@@ -39,11 +39,15 @@
   }
   
   .iconLinkTrendingNav{
-    color:#AAA6E5
+    color:#AAA6E5;
+    align-self: center;
+    justify-self: center;
   }
   
   .iconLinkDiscoverNav{
     color: #50F9AB;
+    align-self: center;
+    justify-self: center;
   }
   
   p{
