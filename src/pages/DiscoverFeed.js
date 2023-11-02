@@ -5,6 +5,7 @@ import "./DiscoverFeed.css"; // The corresponding CSS file
 import FeedNavigation from '../components/FeedNavigation';
 import Feed from '../components/Feed';
 import TopBar from '../components/topBarComponent';
+import Footer from '../components/footer';
 
 function DiscoverFeed() {
   return (
@@ -12,6 +13,7 @@ function DiscoverFeed() {
       <TopBar/>
       <FeedNavigation />
       <Feed/>
+      <Footer/>
     </div>
   );
 }
