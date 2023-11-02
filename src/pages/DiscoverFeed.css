@@ -14,3 +14,8 @@
   grid-row: 2;
   grid-column: 2;
 }
+
+.header{
+  grid-row: 1;
+  grid-column: 1 / span 3;
+}

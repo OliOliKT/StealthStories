@@ -1,5 +1,7 @@
 .FeedContent{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    height: 100vh; /* Set the height of the container to the full viewport height */
+    justify-content: space-around; /* Align items in the center and distribute space around them */
+    align-items: center; /* Center items horizontally */
 }
