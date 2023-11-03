@@ -1,11 +1,16 @@
-import './App.css';
+import "./App.css";
+import Footer from "./components/footer";
+import CommentComponent from "./components/CommentComponent";
+import TopBar from "./components/topBarComponent";
 
-import TrendingFeed from './pages/TrendingFeed';
+import TrendingFeed from "./pages/TrendingFeed";
 
 function App() {
   return (
     <div className="App">
-      <TrendingFeed/>
+      <TopBar />
+      <CommentComponent />
+      <Footer />
     </div>
   );
 }
