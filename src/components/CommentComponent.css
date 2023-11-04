@@ -1,5 +1,5 @@
 .writeComment {
-    width: 600px;
+    width: 640px;
     gap: 10px;
     margin-top: 30px;
     border-radius: 10px;
@@ -10,10 +10,10 @@
 }
 
 
-#comments {
+#comment {
     box-sizing: border-box;
     width: 100%;
-    height: 240px;
+    height: 150px;
     background-color: #393851;
     border: none;
     border-radius: 10px;
@@ -27,34 +27,23 @@
 
 .commentBorder {
     display: flex;
-    flex-direction: row;
-    width: 97,1%;
-    padding-bottom: 6px;
-    padding-top: 6px;
-    padding-left: 15px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 6px 15px;
     background-color: hsl(245, 21%, 22%);
     border-radius: 0 0 10px 10px;
-    border-top: none;
 }
-
 
 .commentIcons {
     display: flex;
-    font-size: 110%;
     gap: 26px;
-    color: white;
-    align-items: center;
 }
 
-.commentIcons i:hover {
+.commentIcons i:hover, .postComment i:hover {
     color: hsl(152, 93%, 65%);
 }
 
 .postComment {
-    padding-left: 490px;
     color: white;
-}
-
-.postComment:hover {
-    color: hsl(152, 93%, 65%);
 }

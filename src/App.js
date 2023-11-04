@@ -3,14 +3,12 @@ import Footer from "./components/footer";
 import CommentComponent from "./components/CommentComponent";
 import TopBar from "./components/topBarComponent";
 
-import TrendingFeed from "./pages/TrendingFeed";
+import IndvidualPost from "./pages/IndividualPost";
 
 function App() {
   return (
     <div className="App">
-      <TopBar />
-      <CommentComponent />
-      <Footer />
+      <IndvidualPost />
     </div>
   );
 }

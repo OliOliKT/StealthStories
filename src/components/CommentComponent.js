@@ -13,7 +13,7 @@ const CommentBox = () => {
   return (
     <div>
       <textarea
-        id="comments"
+        id="comment"
         placeholder="Write your comment here..."
         rows="5"
       ></textarea>
