@@ -1,37 +1,47 @@
+/* css file */
 .sidebar-nav {
     position: absolute;
-    margin-top: 90px;
-    height: 82%;
-    padding: 50px;
-    padding-left: 180px; 
-    width: 170px;
-    border-right: solid 1px #68669D;
+    top: 20px; /* Move it higher up by reducing the top value */
+    left: 0;
+    height: calc(100vh - 20px); /* Subtract the top value to maintain full height */
+    padding: 10px 20px 10px 20px; /* Adjust padding as needed */
+    width: 180px; /* Reduce the width to move the line to the left */
+    border-right: solid 2px #68669D; /* Vertical line */
     background-color: #212034;
-    text-decoration: none; 
     color: #FAFAFC;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Align content to the top */
 }
 
-#userSetting, #appSetting{
-    padding-bottom: 40px;
-}
-
+/* Ensure list items are not centered if using a flex container */
 .sidebar-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    display: block;
+    text-align: left;
+    padding-left: 0; /* Make sure there is no padding on the left */
 }
 
-.sidebar-nav li {
-    margin: 0; 
-}
-
+/* Ensure the individual links are also aligned properly */
 .sidebar-nav a {
-    color: #FAFAFC;
-    display: block; 
-    padding: 7px 0; 
-    font-weight: lighter;}
+    text-align: left;
+    display: block;
+    padding: 10px 0; /* Add padding to each link for better spacing */
+    color: #FAFAFC; /* Color of the links */
+    text-decoration: none; /* No underline */
+}
 
 .sidebar-nav a:hover {
-    color: #aaa6e5; 
-    text-decoration: none;
+    color: #aaa6e5; /* Hover color */
+    text-decoration: none; /* Still no underline */
 }
+
+.sidebar-nav h3 {
+    padding: 0;
+    margin: 0 0 10px 0; /* Adjust the margin as needed */
+    color: #ffffff; /* Color of the headers */
+    font-size: 1.2rem; /* Size of the headers */
+}
+#userSetting li:last-child {
+    margin-bottom: 30px; 
+}
+
