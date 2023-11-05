@@ -1,11 +1,11 @@
 /* css file */
 .sidebar-nav {
     position: absolute;
-    top: 20px; /* Move it higher up by reducing the top value */
+    top: 60px; /* Move it higher up by reducing the top value */
     left: 0;
     height: calc(100vh - 20px); /* Subtract the top value to maintain full height */
     padding: 10px 20px 10px 20px; /* Adjust padding as needed */
-    width: 180px; /* Reduce the width to move the line to the left */
+    width: 320px; /* Reduce the width to move the line to the left */
     border-right: solid 2px #68669D; /* Vertical line */
     background-color: #212034;
     color: #FAFAFC;
