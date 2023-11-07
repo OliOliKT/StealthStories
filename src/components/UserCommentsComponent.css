@@ -1,7 +1,6 @@
 #comments {
     width: 640px;
-    height: 100px;
-    gap: 10px;
+    height: auto;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -9,9 +8,10 @@
     background-color: #393851;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-
 
 #userIcon{
     font-size: 25px;
@@ -20,7 +20,8 @@
 }
 
 .userComment {
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #commentBy {
@@ -32,10 +33,14 @@
 .userInfo {
     display: flex;
     align-items: center;
-    padding: 15px 15px 5px 15px;
+    padding: 15px 15px 0px 15px;
 }
 
 .userComment {
     font-size: 14px;
     padding: 0px 0px 0px 15px;
+}
+
+.commentBorder {
+    bottom: 0;
 }
