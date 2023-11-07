@@ -1,0 +1,43 @@
+.account-information {
+    margin-top: 10px;
+    border-radius: 10px;
+    border: solid 1px #68669D;
+    background-color: #393851;
+    color: #FAFAFC;
+    display: flex;            
+    flex-direction: column;  
+    position: relative;
+    padding: 20px;
+    padding-left: 40px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px; 
+    margin-left: 750px;
+  }
+  
+.account-information h2, 
+.two-factor-authentication h2, .delete-account h2 {
+    margin-top: 0;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.edit{
+    background-color: #212034;
+    color: #FAFAFC;
+    border: solid 1px #68669D; 
+    height: 30px;
+    border-radius: 10%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 20px; 
+    position: absolute;
+    right: 20px;
+    font-size:medium
+}
+.show {
+    color: #aaa6e5; 
+    margin-left: 10px;
+}
+.edit:hover {
+    color: #aaa6e5; /* or any other style changes you prefer */
+}
