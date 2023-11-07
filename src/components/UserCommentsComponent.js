@@ -1,11 +1,12 @@
 import React from "react";
 import "./UserCommentsComponent.css";
+import LikeButtonAndText from "./LikeButtonAndText";
 
 const comments = [
   {
     CommentBy: "FastSnail",
     CommentText:
-      "Wow, I'm sorry to hear! Hope your luck will turn soon and you will be financially stable again!",
+      "Wow, I'm sorry to hear what you been through! Hope your luck will turn soon and you will be financially stable again!",
     TimePosted: "24 minutes ago",
   },
   {
@@ -46,6 +47,9 @@ const CommentByUser = ({ commentBy, commentText, timePosted }) => {
     <div id="comments">
       <CommentInfo commentBy={commentBy} timePosted={timePosted} />
       <CommentText commentText={commentText} />
+      <div>
+        <CommentBorder />
+      </div>
     </div>
   );
 };
@@ -67,6 +71,14 @@ const CommentText = ({ commentText }) => {
   return (
     <div className="userComment">
       <p>{commentText}</p>
+    </div>
+  );
+};
+
+const CommentBorder = () => {
+  return (
+    <div className="commentBorder">
+      <LikeButtonAndText />
     </div>
   );
 };
