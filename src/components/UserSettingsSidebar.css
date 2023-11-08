@@ -1,11 +1,9 @@
 .sidebar-nav {
     position: absolute;
-    top: 60px; 
-    left: 325px;
-    height: calc(100vh - 20px); 
-    padding: 10px 20px 10px 0px; 
-    width: 300px; 
-    border-right: solid 2px #68669D; 
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 220px; 
+    border-right: solid 1px #68669D; 
     background-color: #212034;
     color: #FAFAFC;
     display: flex;
@@ -16,31 +14,29 @@
 .sidebar-nav ul {
     display: block;
     text-align: left;
-    padding-left: 10px; /* Make sure there is no padding on the left */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Ensure the individual links are also aligned properly */
+.sidebar-nav li {
+    margin: 0; 
+    font-weight: 100;
+}
+
 .sidebar-nav a {
     text-align: left;
     display: block;
-    padding: 10px; /* Add padding to each link for better spacing */
-    color: #FAFAFC; /* Color of the links */
-    text-decoration: none; /* No underline */
+    padding-top: 10px;
+    color: #FAFAFC;
+    text-decoration: none;
 }
 
 .sidebar-nav a:hover {
-    color: #aaa6e5; /* Hover color */
-    text-decoration: none; /* Still no underline */
+    color: #aaa6e5;
+    text-decoration: none; 
 }
 
 .sidebar-nav h3 {
-    padding: 0;
-    margin: 0 0 10px 0; /* Adjust the margin as needed */
-    color: #ffffff; /* Color of the headers */
-    font-size: 1.2rem; /* Size of the headers */
-    
+    margin-bottom: 12px;
 }
-#userSetting li:last-child {
-    margin-bottom: 30px; 
-}
-

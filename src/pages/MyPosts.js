@@ -13,11 +13,9 @@ function MyPosts() {
         <>
             <TopBarComponent/>
             <UserSettingsSidebar/>
-            <div id="middle-content">
-                <PostStats/>
-                <PostFilter/>
-                <Feed/>
-            </div>
+            <PostStats/>
+            <PostFilter/>
+            <Feed/>
             <Footer/>
         </>
     );

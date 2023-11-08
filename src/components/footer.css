@@ -8,7 +8,5 @@
     align-items: center;
     background-color: hsl(243, 37%, 11%);
     position: absolute;
-    bottom: 0;
-    position: fixed;
     margin-top: 50px;
 }

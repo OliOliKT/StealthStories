@@ -19,6 +19,7 @@ const UserSettingsSidebar = () => {
                     </ul>
                 </div>
             </li>
+            <br></br><br></br><br></br>
             <li>
                 <div id="appSetting">
                     <h3>APP SETTINGS</h3>
