@@ -8,7 +8,7 @@ import "./IndividualPost.css";
 
 function IndividualPost() {
   return (
-    <div className="main-content">
+    <div>
       <TopBar />
       <Post />
       <CommentComponent />

@@ -17,6 +17,10 @@ p {
   color: hsl(240, 25%, 98%);
 }
 
+textarea::placeholder {
+  font-size: 14px;
+}
+
 /* -------------------- ALL -------------------- */
 
 :root {
@@ -38,4 +42,5 @@ p {
 body {
   font-family: Helvetica, Arial, sans-serif;
   height:100%;
+  background-color: #212034;
 }

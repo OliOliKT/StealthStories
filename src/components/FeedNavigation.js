@@ -12,7 +12,7 @@ function FeedNavigation() {
           <p className="navTextDiscover">Discover</p>
         </div>
       </div>
-      <div id="tendingFeedNav">
+      <div id="trendingFeedNav">
         <div className="iconAndText">
           <a href="#" className="iconLinkTrendingNav">
             <i className="fa-solid fa-fire-flame-curved"></i>

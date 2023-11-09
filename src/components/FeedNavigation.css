@@ -1,12 +1,11 @@
-.feedNav{
-    width: 640px;
+.feedNav {
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center; 
   }
   
-  #discoverFeedNav{
+  #discoverFeedNav {
     width: 320px;
     display: flex;
     justify-content: center; 
@@ -14,7 +13,7 @@
     border-bottom: 2px solid #50F9AB;
   }
   
-  #tendingFeedNav{
+  #trendingFeedNav {
     width: 320px;
     display: flex;
     justify-content: center; 
@@ -22,34 +21,28 @@
     border-bottom: 2px solid #AAA6E5;
   }
   
-  .navTextDiscover{
+  .navTextDiscover {
     color:#50F9AB;
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     padding-left: 8px;
     font-weight: bold;
   }
   
-  .navTextTrending{
+  .navTextTrending {
     color:#AAA6E5;
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     padding-left: 8px;
     font-weight: bold;
   }
   
-  .iconLinkTrendingNav{
+  .iconLinkTrendingNav {
     color:#AAA6E5;
     align-self: center;
     justify-self: center;
   }
   
-  .iconLinkDiscoverNav{
+  .iconLinkDiscoverNav {
     color: #50F9AB;
     align-self: center;
     justify-self: center;
-  }
-  
-  p{
-    padding: 0;
   }
