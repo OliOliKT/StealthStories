@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import DiscoverFeed from "./pages/DiscoverFeed";
+import TrendingFeed from "./pages/TrendingFeed";
+import MyPosts from "./pages/MyPosts";
+import IndividualPost from "./pages/IndividualPost";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <IndividualPost />
   </React.StrictMode>
 );
 
