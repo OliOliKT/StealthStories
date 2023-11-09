@@ -1,7 +1,6 @@
 import React from 'react';
-import "./DiscoverFeed.css"; // The corresponding CSS file
+import "./DiscoverFeed.css";
 
-//Components
 import FeedNavigation from '../components/FeedNavigation';
 import Feed from '../components/Feed';
 import TopBar from '../components/topBarComponent';

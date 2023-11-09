@@ -4,7 +4,7 @@ import "./TrendingBlock.css"; // The corresponding CSS file
 function TrendingBlock() {
   return (
     <div class="trendingBlock">
-        <h2>Trending in Denmark</h2>
+        <h1>Trending in Denmark</h1>
         <p class="trendingText">1 #Woopsie</p>
         <p class="postAmountTrending">2.984 posts</p>
         <p class="trendingText">2 #NotReallySorry</p>

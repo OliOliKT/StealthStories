@@ -1,27 +1,22 @@
 .writeComment {
     width: 640px;
     gap: 10px;
-    margin-top: 30px;
     border-radius: 10px;
-    border: solid 1px #68669D;
-    background-color: #393851;
+    border: solid 1px hsl(242, 22%, 51%);
+    background-color: hsl(242, 18%, 27%);
     margin-left: auto;
     margin-right: auto;
 }
-
 
 #comment {
     box-sizing: border-box;
     width: 100%;
     height: 150px;
-    background-color: #393851;
-    border: none;
+    background-color: hsl(242, 18%, 27%);
     border-radius: 10px;
-    padding: 30px;
-    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
     z-index: 3;
-    font-size: 14px;
-    font-family: Helvetica, Arial, sans-serif;
     resize: none;
 }
 
@@ -42,8 +37,4 @@
 
 .commentIcons i:hover, .postComment i:hover {
     color: hsl(152, 93%, 65%);
-}
-
-.postComment {
-    color: white;
 }

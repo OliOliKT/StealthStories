@@ -1,33 +1,20 @@
 .trendingBlock {
   width: 270px;
-  height: 410px;
-  background-color: #393751;
-  padding: 20px;
+  background-color: hsl(245, 19%, 27%);
+  padding-top: 20px;
+  padding-left: 20px;
   border-radius: 10px;
-  border: 1px solid #68669d;
+  border: 1px solid hsl(242, 22%, 51%);
   margin-right: 30px;
 }
 
-h2 {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #fafafc;
-  font-size: 20px;
-}
-
 .trendingText {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #fafafc;
   margin-top: 10px;
   margin-bottom: 3px;
-  font-size: 14px;
   font-weight: bold;
 }
 
 .postAmountTrending {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  color: #fafafc;
   font-size: 10px;
   margin-bottom: 20px;
 }
