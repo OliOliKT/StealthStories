@@ -1,0 +1,30 @@
+#logInBox {
+    padding-bottom: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+#SignInImage {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+#logInOuterBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 10px;
+    background-color: #2E2C43;
+    width: 310px;
+    height: 340px;
+    border-color: hsl(242, 22%, 51%);
+    box-shadow: 0 0 5px hsl(0, 0%, 100%);
+}
