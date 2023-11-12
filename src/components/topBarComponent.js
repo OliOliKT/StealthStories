@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./topBarComponent.css";
 
 const TopBar = () => {
@@ -26,30 +27,53 @@ const SearchBar = () => {
 const Logo = () => {
   return (
     <div className="logo">
-      <img src="images/logo.png" id="logoimg" />
+      <Link to="/">
+        <img src="images/logo.png" id="logoimg" alt="Logo" />
+      </Link>
     </div>
   );
 };
 
 const TopBarIcons = () => {
+  // State to manage the visibility of the dropdown menu
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // Function to toggle the dropdown menu visibility
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className="navigation">
       <nav>
         <ul>
           <li>
-            <a href="#">
+          <Link to="/MyPosts">
               <i className="fa-solid fa-box-archive"></i>
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#">
               <i className="fa-solid fa-bell"></i>
             </a>
           </li>
-          <li>
+          <li className="user-icon" onClick={toggleDropdown}>
             <a href="#">
               <i className="fas fa-user"></i>
             </a>
+            {isDropdownOpen && (
+              <div className="dropdown-menu">
+                <ul>
+                  <li><a href="/UserSettings">User Settings</a></li>
+                </ul>
+                <ul>
+                  <li><a href="/MyPosts">My Posts</a></li>
+                </ul>
+                <ul>
+                  <li><a href="/Login">Log out</a></li>
+                </ul>
+              </div>
+            )}
           </li>
         </ul>
       </nav>

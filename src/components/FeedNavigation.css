@@ -1,48 +1,52 @@
 .feedNav {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-  }
-  
-  #discoverFeedNav {
-    width: 320px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    border-bottom: 2px solid #50F9AB;
-  }
-  
-  #trendingFeedNav {
-    width: 320px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    border-bottom: 2px solid #AAA6E5;
-  }
-  
-  .navTextDiscover {
-    color:#50F9AB;
-    font-size: 16px;
-    padding-left: 8px;
-    font-weight: bold;
-  }
-  
-  .navTextTrending {
-    color:#AAA6E5;
-    font-size: 16px;
-    padding-left: 8px;
-    font-weight: bold;
-  }
-  
-  .iconLinkTrendingNav {
-    color:#AAA6E5;
-    align-self: center;
-    justify-self: center;
-  }
-  
-  .iconLinkDiscoverNav {
-    color: #50F9AB;
-    align-self: center;
-    justify-self: center;
-  }
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#discoverFeedNav {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #50f9ab;
+}
+
+#trendingFeedNav {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #aaa6e5;
+}
+
+.navTextDiscover {
+  font-size: 16px;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.navTextTrending {
+  font-size: 16px;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.fa-regular,
+.fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Updated styles for active and normal links */
+.activeLink #discoverFeedNav,
+.activeLink .navTextDiscover {
+  color: #50f9ab;
+}
+
+.navLink #trendingFeedNav,
+.navLink .navTextTrending {
+  color: #aaa6e5;
+}
