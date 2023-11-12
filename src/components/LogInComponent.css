@@ -1,0 +1,25 @@
+.login-component {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.logo-container {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: #2E2C43;
+    width: 310px;
+    height: 340px;
+    border-color: hsl(242, 22%, 51%);
+    box-shadow: 0 0 5px hsl(0, 0%, 100%);
+}
