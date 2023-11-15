@@ -3,7 +3,6 @@
     padding: 16px 0px;
     width: 600px;
     font-size: 12px;
-    margin-left: 400px; /* Bør nok fjernes og erstattes med align: center, men det virker ikke */
 }
 
 #filter label {

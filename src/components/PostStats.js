@@ -4,7 +4,6 @@ import './PostStats.css';
 function PostStats() {
     return (
         <>
-            <Title/>
             <div id="stats">
                 <div id="stat-1" className="stat-box">
                     <p>Total posts</p>
@@ -25,10 +24,6 @@ function PostStats() {
             </div>
         </>
     );
-}
-
-function Title() {
-    return <h1 id="your-post-title">My posts</h1>;
 }
 
 export default PostStats;
