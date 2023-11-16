@@ -19,7 +19,7 @@ function TrendingBlock() {
         <p class="postAmountTrending">765 posts</p>
         <p class="trendingText">7 #Sleepy</p>
         <p class="postAmountTrending">673 posts</p>
-      </div>
+    </div>
   );
 }
 

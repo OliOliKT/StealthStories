@@ -70,7 +70,7 @@ const TopBarIcons = () => {
                   <li><a href="/MyPosts">My Posts</a></li>
                 </ul>
                 <ul>
-                  <li><a href="/Login">Log out</a></li>
+                  <li><a href="/">Log out</a></li>
                 </ul>
               </div>
             )}

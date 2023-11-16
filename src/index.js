@@ -8,12 +8,14 @@ import TrendingFeed from "./pages/TrendingFeed";
 import MyPosts from "./pages/MyPosts";
 import IndividualPost from "./pages/IndividualPost";
 import UserSettings from "./pages/UserSettings";
+import LogInPage from "./pages/LogInPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
+        <Route path="/Login" element={<LogInPage/>} /> 
         <Route path="/" element={<DiscoverFeed/>} />
         <Route path="/UserSettings" element={<UserSettings/>} />
         <Route path="/TrendingFeed" element={<TrendingFeed/>} />
