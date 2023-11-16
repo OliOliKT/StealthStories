@@ -2,19 +2,6 @@ import React from "react";
 import "./LogInComponent.css";
 import LogInButtonAndText from "./LogInButtonAndText";
 
-// function LogInComponent() {
-//   return (
-//     <div id="logInBox">
-//       <div id="SignInImage">
-//         <img src="images/logo.png" alt="logo" />
-//       </div>
-//       <div id="logInOuterBox">
-//         <LogInButtonAndText />
-//       </div>
-//     </div>
-//   );
-// }
-
 function LogInComponent() {
   return (
     <div className="login-component">

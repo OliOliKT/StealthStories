@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./topBarComponent.css";
 
 const TopBar = () => {
@@ -27,7 +27,7 @@ const SearchBar = () => {
 const Logo = () => {
   return (
     <div className="logo">
-      <Link to="/">
+      <Link to="/DiscoverFeed">
         <img src="images/logo.png" id="logoimg" alt="Logo" />
       </Link>
     </div>
@@ -48,7 +48,7 @@ const TopBarIcons = () => {
       <nav>
         <ul>
           <li>
-          <Link to="/MyPosts">
+            <Link to="/MyPosts">
               <i className="fa-solid fa-box-archive"></i>
             </Link>
           </li>
@@ -64,13 +64,19 @@ const TopBarIcons = () => {
             {isDropdownOpen && (
               <div className="dropdown-menu">
                 <ul>
-                  <li><a href="/UserSettings">User Settings</a></li>
+                  <li>
+                    <a href="/UserSettings">User Settings</a>
+                  </li>
                 </ul>
                 <ul>
-                  <li><a href="/MyPosts">My Posts</a></li>
+                  <li>
+                    <a href="/MyPosts">My Posts</a>
+                  </li>
                 </ul>
                 <ul>
-                  <li><a href="/Login">Log out</a></li>
+                  <li>
+                    <a href="/">Log out</a>
+                  </li>
                 </ul>
               </div>
             )}
