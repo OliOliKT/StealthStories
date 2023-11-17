@@ -1,14 +1,14 @@
 .main-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-  grid-template-rows: 50px 50px 1fr 50px;
+  grid-template-rows: auto auto auto auto;
   grid-gap: 20px; /* Gap between grid items */
   place-items: center;
 }
 
 .FeedContent {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 4;
 }
 
 .feedNav {
@@ -18,12 +18,12 @@
   align-self: center;
 }
 
-.header {
-  grid-row: 1;
-  grid-column: 1 / span 3;
+.writePost {
+  grid-column: 2;
+  grid-row: 3;
 }
 
-.footer {
-  grid-row: 4;
+.header {
+  grid-row: 1;
   grid-column: 1 / span 3;
 }
