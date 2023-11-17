@@ -1,13 +1,17 @@
 import React from "react";
 import "./ButtonAndText.css";
+import { Link } from "react-router-dom";
+
 
 function CommentButtonAndText() {
   return (
     <div className="iconAndText">
-      <a href="#" className="iconLink">
+
+      <Link to="/IndividualPost" className="iconLink">
         <i className="fa-solid fa-comment"></i>
-      </a>
+      </Link>
       <p className="iconText">153</p>
+      
     </div>
   );
 }
