@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./topBarComponent.css";
+import Parse from "parse";
 
 const TopBar = () => {
   return (
@@ -35,12 +36,21 @@ const Logo = () => {
 };
 
 const TopBarIcons = () => {
-  // State to manage the visibility of the dropdown menu
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
-  // Function to toggle the dropdown menu visibility
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleLogout = async () => {
+    try {
+      await Parse.User.logOut();
+      navigate("/");
+    } catch (error) {
+      console.error("Error logging out", error);
+      alert("Failed to log out, please try again.");
+    }
   };
 
   return (
@@ -65,17 +75,19 @@ const TopBarIcons = () => {
               <div className="dropdown-menu">
                 <ul>
                   <li>
-                    <a href="/UserSettings">User Settings</a>
+                    <Link to="/UserSettings">User Settings</Link>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <a href="/MyPosts">My Posts</a>
+                    <Link to="/MyPosts">My Posts</Link>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <a href="/">Log out</a>
+                    <button className="log-out-btn" onClick={handleLogout}>
+                      Log out
+                    </button>
                   </li>
                 </ul>
               </div>

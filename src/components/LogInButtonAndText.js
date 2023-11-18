@@ -3,6 +3,7 @@ import "./LogInButtonAndText.css";
 import { useState } from "react";
 import Parse from "parse";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function LogInButtonAndText() {
   const [email, setEmail] = useState("");
@@ -49,9 +50,9 @@ function LogInButtonAndText() {
       <div className="noAccount">
         <p>No account? No worries!</p>
         <p>
-          <a className="createAccount" href="#">
-            Create one here
-          </a>
+          <Link to="/CreateUser">
+            <a className="createAccount">Create one here</a>
+          </Link>
         </p>
       </div>
     </div>
