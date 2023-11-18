@@ -1,11 +1,14 @@
-.mail p, .password p {
-    margin-bottom: 5px;
-    margin-top: 5px;
+.mail p, .password p, .verifyPassword p, .username p{
+    margin-bottom: 8px;
+    margin-top: 8px;
     text-align: center;
 }
 
+.mail {
+margin-bottom: 30px;
+}
 
-.inputMailAndPassword {
+.inputMailAndPassword, .inputUsername {
     outline: none;
     width: 180px;
     border-color: hsl(242, 22%, 51%);
@@ -14,26 +17,22 @@
     border: 1px solid hsl(242, 22%, 51%);
     border-radius: 5px;
     font-size: 14px;
+    margin-bottom: 10px;
     color: white;
     background-color: hsl(245, 19%, 27%);
 }
 
-.noAccount {
-    padding-top: 40px;
-    font-size: small;
-}
-
-.logInBtn {
+.create-user {
     display: flex;
     justify-content: center;
-
+    margin-top: 10px;
 }
 
-.signIn {
+.create-user-btn {
     color: white;
     background-color: hsl(245, 19%, 27%);
     border-radius: 5px;
-    width: 70px;
+    width: 100px;
     height: 30px;
     font-size: 13px;
     padding: 5px 10px;
@@ -44,22 +43,6 @@
     transition: background-color 0.3s ease;
 }
 
-.signIn:hover {
+.create-user-btn:hover {
     background-color: hsl(152, 93%, 65%, 0.8);
-}
-
-.noAccount p {
-display: flex;
-justify-content: center;
-}
-
-
-.createAccount {
-    color: white;
-    text-decoration: underline;
-}
-
-
-.createAccount:hover {
-    color: hsla(152, 93%, 65%, 0.8);
 }

@@ -91,7 +91,7 @@ nav a {
   margin: 0;
 }
 
-.dropdown-menu li {
+.dropdown-menu li{
   margin: 5px 5px 10px 5px;
   display: flex;
   justify-content: left;
@@ -104,6 +104,19 @@ nav a {
   color: #fafafc;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover, .log-out-btn:hover {
   color: hsl(152, 93%, 65%);
+}
+
+.log-out-btn {
+  background: none;
+  border: none;
+  color: #fafafc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  padding: 1px;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
 }

@@ -10,6 +10,7 @@ import IndividualPost from "./pages/IndividualPost";
 import UserSettings from "./pages/UserSettings";
 import LogInPage from "./pages/LogInPage";
 import Parse from "parse";
+import CreateUser from "./pages/CreateUser";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<LogInPage />} />
+        <Route path="/CreateUser" element={<CreateUser />} />
         <Route path="/DiscoverFeed" element={<DiscoverFeed />} />
         <Route path="/UserSettings" element={<UserSettings />} />
         <Route path="/TrendingFeed" element={<TrendingFeed />} />
