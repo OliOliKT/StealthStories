@@ -19,9 +19,9 @@
 }
 
 .trendingBlock {
+  display:inline-block;
   grid-row: 4;
   grid-column: 1;
-  align-items: flex-start;
   justify-self: end;
 }
 
