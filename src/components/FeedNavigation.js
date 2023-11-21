@@ -19,19 +19,19 @@ function FeedNavigation() {
   return (
     <div className="feedNav">
       <Link to="/DiscoverFeed" className={activeLink === "/DiscoverFeed" ? "activeLink" : "navLink"}>
-        <div id="discoverFeedNav">
-          <div className="iconAndText">
-            <i className="fa-regular fa-compass"></i>
-            <p className="navTextDiscover">Discover</p>
+        <div id="discoverFeedNav subdiv">
+          <div className="iconAndText subdiv">
+            <i className="fa-regular fa-compass subdiv"></i>
+            <p className="navTextDiscover subdiv">Discover</p>
           </div>
         </div>
       </Link>
 
       <Link to="/TrendingFeed" className={activeLink === "/TrendingFeed" ? "activeLink" : "navLink"}>
-        <div id="trendingFeedNav">
-          <div className="iconAndText">
-            <i className="fa-solid fa-fire-flame-curved"></i>
-            <p className="navTextTrending">Trending</p>
+        <div id="trendingFeedNav subdiv">
+          <div className="iconAndText subdiv">
+            <i className="fa-solid fa-fire-flame-curved subdiv"></i>
+            <p className="navTextTrending subdiv">Trending</p>
           </div>
         </div>
       </Link>

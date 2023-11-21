@@ -42,11 +42,13 @@
 
 /* Updated styles for active and normal links */
 .activeLink #discoverFeedNav,
-.activeLink .navTextDiscover {
+.activeLink .navTextDiscover,
+.activeLink .subdiv{
   color: #50f9ab;
 }
 
 .navLink #trendingFeedNav,
-.navLink .navTextTrending {
+.navLink .navTextTrending,
+.navLink .subdiv {
   color: #aaa6e5;
 }
