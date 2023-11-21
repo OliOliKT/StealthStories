@@ -3,13 +3,20 @@ import Parse from 'parse';
 import "./Feed.css";
 import Post from './Post';
 
-function Feed() {
+function Feed({ filterType, currentUser }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     async function fetchPosts() {
       try {
         const query = new Parse.Query("Post");
+
+        if (filterType === "sipsGreaterThanTen") {
+          query.greaterThanOrEqualTo("sips", 10);
+        } else if (filterType === "currentUserPosts" && currentUser) {
+          query.equalTo("userId", currentUser);
+        }
+
         const results = await query.find();
         setPosts(results);
       } catch (error) {
@@ -18,7 +25,7 @@ function Feed() {
     }
 
     fetchPosts();
-  }, []);
+  }, [filterType, currentUser]);
 
   return (
     <div className="FeedContent">
