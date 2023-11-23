@@ -34,9 +34,22 @@
     font-size:medium
 }
 .show {
-    color: #aaa6e5; 
+    color: white; 
+    background-color: #4a4a8a;
     margin-left: 10px;
+    height: 30px;
+    width: 50px;
+    font-size: small;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #FAFAFC;
 }
+
+.show:hover{
+    background-color: hsl(152, 93%, 65%, 0.8);
+    transition: background-color 0.3s ease;
+}
+
 .edit:hover {
     color: #aaa6e5; /* or any other style changes you prefer */
 }
