@@ -5,12 +5,20 @@ import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
 import WriteComment from './CommentComponent';
+import { useNavigate } from 'react-router-dom'; // Import useHistory
 
 function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, currentUser }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount); // State to store updated sipCount
+  const navigate = useNavigate();
 
 
+
+
+  const handleCommentIconClick = () => {
+    console.log(postId); // test to see if we log the id and not "undefined"
+    navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId } });
+  };
 
   const handleSip = async () => {
     try {
@@ -54,7 +62,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, curren
         <div id="backgroundOnActionBar">
           <div className="actionBarOnPost">
             <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} />
-            {/* <CommentButtonAndText commentCount={commentCount} onComment={handleCommentIconClick} /> */}
+            <CommentButtonAndText onComment={handleCommentIconClick} />
             <BellButtonAndText />
           </div>
         </div>

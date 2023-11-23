@@ -7,11 +7,12 @@ const CreateNewUser = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSignup = async () => {
     if (password !== confirmPassword) {
-      alert("Please make sure the passwords match.");
+      setError("The passwords doesn't match, try again! :)");
       return;
     }
 
@@ -58,6 +59,7 @@ const CreateNewUser = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
+        <span className="errorMessage">{error}</span>
       </div>
       <div className="create-user">
         <button className="create-user-btn" onClick={handleSignup}>
