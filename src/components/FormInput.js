@@ -1,22 +1,25 @@
 import React from "react";
-import "./LogInButtonAndText.css";
+import "./FormInput.css";
 import { useState } from "react";
 import Parse from "parse";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function LogInButtonAndText() {
+function LogInButtonAndFormInput() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    setError("");
     try {
       const user = await Parse.User.logIn(email, password);
       console.log("Success! User ID:", user.id);
       navigate("/DiscoverFeed");
     } catch (error) {
       console.error("Error while logging in user", error);
+      setError("You typed in the wrong password!");
     }
   };
 
@@ -41,6 +44,7 @@ function LogInButtonAndText() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+        <span className="errorMessage">{error}</span>
       </div>
       <div className="logInBtn">
         <button className="signIn" onClick={handleLogin}>
@@ -59,4 +63,4 @@ function LogInButtonAndText() {
   );
 }
 
-export default LogInButtonAndText;
+export default LogInButtonAndFormInput;
