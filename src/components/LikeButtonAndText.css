@@ -1,18 +1,23 @@
+/* ButtonAndText.css */
+
 .iconAndText {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 
-.iconAndText:hover {
+/* Style for the icon when hovered */
+.iconAndText:hover .fa-mug-hot {
   color: hsl(152, 93%, 65%);
 }
 
-.iconAndText:hover .iconLink {
-  color: hsl(152, 93%, 65%);
-}
-
+/* Style for the text when hovered */
 .iconAndText:hover .iconText {
+  color: hsl(152, 93%, 65%);
+}
+
+/* Specific style for when the icon is liked */
+.iconAndText .fa-mug-hot.liked {
   color: hsl(152, 93%, 65%);
 }
 
@@ -23,3 +28,4 @@
     align-items: center;
     text-decoration: none;
   }
+ 
