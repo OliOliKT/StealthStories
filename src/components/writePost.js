@@ -66,7 +66,7 @@ const WritePost = () => {
 
 const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(); 
       handleSendPost();
     }
