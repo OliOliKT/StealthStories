@@ -1,13 +1,15 @@
-import React from "react";
-import './ButtonAndText.css';
+// LikeButtonAndText.js
+import React from 'react';
+import './ButtonAndText.css'; // Make sure this is the correct path
 
-function LikeButtonAndText() {
+function LikeButtonAndText({ likeCount, onLike, isLiked }) {
+  // tenary operator to determine if isLiked is true or false
+  const iconClass = isLiked ? "fa-solid fa-mug-hot liked" : "fa-solid fa-mug-hot";
+
   return (
-    <div className="iconAndText">
-      <a href="#" className="iconLink">
-        <i className="fa-solid fa-mug-hot"></i>
-      </a>
-      <p className="iconText">45</p>
+    <div className="iconAndText" onClick={onLike}>
+      <i className={iconClass}></i>
+      <p className="iconText">{likeCount}</p>
     </div>
   );
 }
