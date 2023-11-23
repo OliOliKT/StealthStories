@@ -17,3 +17,8 @@
   font-size: 10px;
   margin-bottom: 20px;
 }
+
+#title{
+  display: inline;
+  margin-right: 0;
+}

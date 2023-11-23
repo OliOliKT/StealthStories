@@ -20,9 +20,9 @@
 
 .trendingBlock {
   display:inline-block;
-  grid-row: 4;
+  grid-row: 3 / span 4;
   grid-column: 1;
-  justify-self: end;
+  align-self: start;
 }
 
 .writePost {
