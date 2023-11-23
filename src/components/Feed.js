@@ -3,13 +3,20 @@ import Parse from 'parse';
 import "./Feed.css";
 import Post from './Post';
 
-function Feed() {
+function Feed({ filterType, currentUser }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     async function fetchPosts() {
       try {
         const query = new Parse.Query("Post");
+
+        if (filterType === "sipsGreaterThanTen") {
+          query.greaterThanOrEqualTo("sips", 10);
+        } else if (filterType === "currentUserPosts" && currentUser) {
+          query.equalTo("userId", currentUser);
+        }
+
         const results = await query.find();
         setPosts(results);
       } catch (error) {
@@ -18,21 +25,25 @@ function Feed() {
     }
 
     fetchPosts();
-  }, []);
+  }, [filterType, currentUser]);
 
   return (
     <div className="FeedContent">
-      {posts.map((post, index) => (
+      {posts.map((post) => (
         <Post
-          key={index}
+          key={post.id}
           postTitle={post.get("postTitle")}
           mood={post.get("mood")} 
           postedBy={post.get("userId")}
           postContent={post.get("postContent")} 
+          sipCount={post.get("sips")}
+          postId={post.id}
+          currentUser={currentUser} // Pass current user to check ownership for isSipped
         />
       ))}
     </div>
   );
+
 }
 
 export default Feed;
