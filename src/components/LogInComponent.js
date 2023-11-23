@@ -1,6 +1,6 @@
 import React from "react";
 import "./LogInComponent.css";
-import LogInButtonAndText from "./LogInButtonAndText";
+import FormInput from "./FormInput";
 
 function LogInComponent() {
   return (
@@ -9,7 +9,7 @@ function LogInComponent() {
         <img src="images/logo.png" alt="logo" className="logo" />
       </div>
       <div className="login-box">
-        <LogInButtonAndText />
+        <FormInput />
       </div>
     </div>
   );
