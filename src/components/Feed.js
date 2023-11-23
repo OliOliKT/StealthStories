@@ -16,6 +16,7 @@ function Feed({ filterType, currentUser }) {
         } else if (filterType === "currentUserPosts" && currentUser) {
           query.equalTo("userId", currentUser);
         }
+        query.descending("updatedAt");
 
         const results = await query.find();
         setPosts(results);

@@ -1,4 +1,4 @@
-// Only one import statement is necessary for React and useState
+import Parse from 'parse';
 import React, { useState } from "react";
 import LikeButtonAndText from './LikeButtonAndText';
 import CommentButtonAndText from './CommentButtonAndText';
@@ -7,11 +7,9 @@ import './Post.css';
 import WriteComment from './CommentComponent';
 import { useNavigate } from 'react-router-dom'; // Import useHistory
 
-function Post({ postTitle, mood, postedBy, postContent, postId}) {
-  const [likeCount, setLikeCount] = useState(0); // this needs to be fetched from database!!
-  const [commentCount, setCommentCount] = useState(0); // this needs to be fetched from database!!
-  const [isLiked, setIsLiked] = useState(false);
-  const [isCommentModalOpen, setIsCommentModalOpen] = useState(false);
+function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, currentUser }) {
+  const [isSipped, setIsSipped] = useState(false);
+  const [updatedSipCount, setUpdatedSipCount] = useState(sipCount); // State to store updated sipCount
   const navigate = useNavigate();
 
 
@@ -21,16 +19,26 @@ function Post({ postTitle, mood, postedBy, postContent, postId}) {
     console.log(postId); // test to see if we log the id and not "undefined"
     navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId } });
   };
-  
-  // increment like or comment counter (subject to change). Needs to be set up with database!
-  const handleLike = async () => {
-    const newLikeStatus = !isLiked; 
-    setIsLiked(newLikeStatus);
-    setLikeCount(likeCount + (newLikeStatus ? 1 : -1)); // Increment or decrement the like count
-   
-  };
-  const handleComment = async () => {
-    setCommentCount(commentCount + 1); // same for comments
+
+  const handleSip = async () => {
+    try {
+      const Post = Parse.Object.extend("Post");
+      const query = new Parse.Query(Post);
+      const post = await query.get(postId);
+      if (isSipped) {
+        post.decrement("sips");
+        setUpdatedSipCount(updatedSipCount - 1);
+        setIsSipped(false);
+      } else {
+        post.increment("sips");
+        setUpdatedSipCount(updatedSipCount + 1);
+        setIsSipped(true);
+      }
+      await post.save();
+
+    } catch (error) {
+      console.error("Error incrementing sips:", error);
+    }
   };
 
   return (
@@ -53,21 +61,12 @@ function Post({ postTitle, mood, postedBy, postContent, postId}) {
       <div className="bottomPartOfPost">
         <div id="backgroundOnActionBar">
           <div className="actionBarOnPost">
-            <LikeButtonAndText likeCount={likeCount} onLike={handleLike} isLiked={isLiked} />
-            <CommentButtonAndText commentCount={commentCount} onComment={handleCommentIconClick} />
+            <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} />
+            <CommentButtonAndText onComment={handleCommentIconClick} />
             <BellButtonAndText />
           </div>
         </div>
       </div>
-
-      {/* Comment modal */}
-      {isCommentModalOpen && (
-        <WriteComment
-          postId={postId}
-          closeCommentModal={() => setIsCommentModalOpen(false)}
-          onCommentPosted={handleComment}
-        />
-      )}
     </div>
   );
 }
