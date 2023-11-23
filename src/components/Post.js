@@ -18,8 +18,10 @@ function Post({ postTitle, mood, postedBy, postContent, postId}) {
 
 
   const handleCommentIconClick = () => {
+    console.log(postId); // test to see if we log the id and not "undefined"
     navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId } });
   };
+  
   // increment like or comment counter (subject to change). Needs to be set up with database!
   const handleLike = async () => {
     const newLikeStatus = !isLiked; 
