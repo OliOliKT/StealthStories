@@ -31,6 +31,12 @@ const WritePost = () => {
 };
 
 const PostBox = ({ setTitle, setPost, handleSendPost }) => {
+  const handleKeyDown = (e) => {            // added eventhandler so that users may create posts by pressing 'Enter'.
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendPost();
+    }
+  };
   return (
     <div>
       <textarea
@@ -38,12 +44,14 @@ const PostBox = ({ setTitle, setPost, handleSendPost }) => {
         placeholder="Your title..."
         rows="5"
         onChange={(e) => setTitle(e.target.value)}
+        onKeyDown={handleKeyDown}
       ></textarea>
       <textarea
         id="post"
         placeholder="Your post..."
         rows="5"
         onChange={(e) => setPost(e.target.value)}
+        onKeyDown={handleKeyDown}
       ></textarea>
       <PostBorder handleSendPost={handleSendPost} />
     </div>
