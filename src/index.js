@@ -24,6 +24,7 @@ root.render(
         <Route path="/TrendingFeed" element={<TrendingFeed />} />
         <Route path="/MyPosts" element={<MyPosts />} />
         <Route path="/IndividualPost" element={<IndividualPost />} />
+        <Route path="/posts/:postId" element={<IndividualPost />} /> 
       </Routes>
     </Router>
   </React.StrictMode>
