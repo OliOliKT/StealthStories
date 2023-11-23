@@ -19,10 +19,10 @@
 }
 
 .trendingBlock {
-  grid-row: 4;
+  display:inline-block;
+  grid-row: 3 / span 4;
   grid-column: 1;
-  align-items: flex-start;
-  justify-self: end;
+  align-self: start;
 }
 
 .writePost {

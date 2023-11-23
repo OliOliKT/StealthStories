@@ -7,37 +7,32 @@ function FeedNavigation() {
 
   const location = useLocation();
 
-  // Determine the active link based on the current location
   React.useEffect(() => {
-    if (location.pathname === "/trending") {
+    if (location.pathname === "/DiscoverFeed") {
+      setActiveLink("discover");
+    } else if (location.pathname === "/TrendingFeed") {
       setActiveLink("trending");
     } else {
-      setActiveLink("discover");
+      setActiveLink(""); // Default or fallback state
     }
   }, [location.pathname]);
 
   return (
     <div className="feedNav">
-      <Link
-        to="/DiscoverFeed"
-        className={activeLink === "discover" ? "activeLink" : "navLink"}
-      >
-        <div id="discoverFeedNav">
+      <Link to="/DiscoverFeed" className="navLink">
+        <div id="discoverFeedNav" className={activeLink === "discover" ? "activeLink" : "inactiveLink"}>
           <div className="iconAndText">
             <i className="fa-regular fa-compass"></i>
-            <p className="navTextDiscover">Discover</p>
+            <p class="navTextDiscover">Discover</p>
           </div>
         </div>
       </Link>
 
-      <Link
-        to="/TrendingFeed"
-        className={activeLink === "trending" ? "activeLink" : "navLink"}
-      >
-        <div id="trendingFeedNav">
+      <Link to="/TrendingFeed" className="navLink">
+        <div id="trendingFeedNav" className={activeLink === "trending" ? "activeLink" : "inactiveLink"}>
           <div className="iconAndText">
             <i className="fa-solid fa-fire-flame-curved"></i>
-            <p className="navTextTrending">Trending</p>
+            <p class="navTextTrending">Trending</p>
           </div>
         </div>
       </Link>

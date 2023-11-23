@@ -17,7 +17,7 @@ function TrendingFeed() {
       <TrendingBlock />
       <FeedNavigation />
       <WritePost/>
-      <Feed />
+      <Feed filterType="sipsGreaterThanTen" />
     </div>
     <Footer />
     </>

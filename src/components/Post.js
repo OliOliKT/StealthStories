@@ -41,7 +41,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId}) {
             <i className="fas fa-user-circle"></i>
             <div className="post-meta-data">
               <h2>
-                {postTitle} <em className="mood">{mood}</em>
+                {postTitle} - <em className="mood">feeling {mood}</em>
               </h2>
               <p className="posted-by">Posted by {postedBy}</p>
             </div>

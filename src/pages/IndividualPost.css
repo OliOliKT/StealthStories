@@ -1,5 +1,17 @@
-.IndividualPost {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+.individualPostMainContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 20px; /* Gap between grid items */
+  place-items: center;
+}
+
+.header {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+}
+
+.FooterIndividualPost{
+    grid-row: 3;
+    grid-column: 1 / span 3;
 }
