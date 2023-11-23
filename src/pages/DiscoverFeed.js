@@ -14,7 +14,7 @@ function DiscoverFeed() {
       <TopBar/>
       <FeedNavigation />
       <WritePost/>
-      <Feed/>
+      <Feed filterType="all"/>
     </div>
     <Footer/>
     </>
