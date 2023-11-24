@@ -7,7 +7,8 @@ import UserComment from "../components/UserCommentsComponent";
 import "./IndividualPost.css";
 import { useParams } from 'react-router-dom'; 
 import { useLocation } from 'react-router-dom';
-
+import CommentSection from "../components/CommentSection";
+import AddCommentButton from "../components/AddCommentButton";
 
 
 function IndividualPost() {
@@ -15,10 +16,10 @@ function IndividualPost() {
   const location = useLocation();
   const { postTitle, mood, postedBy, postContent } = location.state || {};
   return (
-    <div>
+    <div className ="individual-post-page-content">
       <TopBar />
       {location.state ? (
-        <Post
+        <Post id="individual-post-view"
           postTitle={postTitle}
           mood={mood}
           postedBy={postedBy}
@@ -29,8 +30,9 @@ function IndividualPost() {
         <p>Post not found</p> // or some non-awful error handling :)
       )}
       <CommentComponent postId={postId} />
-      <UserComment postId={postId} />
-      <Footer />
+      <AddCommentButton />
+      <CommentSection />
+      <Footer/>
     </div>
   );
 }
