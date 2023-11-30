@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.iconAndText:hover{
+  color: hsl(152, 93%, 65%);
+}
+
 .iconAndText:hover .fa-mug-hot,
 .iconAndText .fa-mug-hot.liked  {
   color: hsl(152, 93%, 65%);
@@ -19,4 +23,8 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+.iconLink:hover, .iconText:hover{
+  color: hsl(152, 93%, 65%);
 }
