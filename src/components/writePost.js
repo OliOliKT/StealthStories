@@ -54,24 +54,34 @@ const WritePost = () => {
 
   return (
     <section className="writePost">
-      <PostBox setTitle={setTitle} setPost={setPost} handleSendPost={handleSendPost} setMood={setMood} />
+      <PostBox 
+        setTitle={setTitle} 
+        setPost={setPost} 
+        handleSendPost={handleSendPost} 
+        setMood={setMood} // Pass setMood function
+      />
     </section>
   );
 };
 
-
 const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
-  return (
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); 
+      handleSendPost();
+    }
+  };  return (
     <div>
       <textarea
         id="title"
         placeholder="Your title..."
         rows="5"
         onChange={(e) => setTitle(e.target.value)}
+        onKeyDown={handleKeyDown}
       ></textarea>
       <div id="moods">
-        <label for="mood-filter">Mood: </label>
-          <select id="mood-filter" name="mood-filter-list" form="mood-filter-form" onChange={(e) => setMood(e.target.value)}>
+        <label htmlFor="mood-filter">Mood: </label>
+        <select id="mood-filter" name="mood-filter-list" onChange={(e) => setMood(e.target.value)}>
             <option value="happy">Happy</option>
             <option value="cheeky">Cheeky</option>
             <option value="sad">Sad</option>
@@ -89,6 +99,7 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
         placeholder="Your post..."
         rows="5"
         onChange={(e) => setPost(e.target.value)}
+        onKeyDown={handleKeyDown}
       ></textarea>
       <PostBorder handleSendPost={handleSendPost} />
     </div>

@@ -37,7 +37,7 @@
 
 .see-backup-codes:hover,
 .remove-2fa:hover {
-    background-color: #68669D; 
+    background-color: hsl(152, 93%, 65%, 0.8);
 }
 
 .see-backup-codes:focus,

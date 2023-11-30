@@ -16,6 +16,7 @@ function Feed({ filterType, currentUser }) {
         } else if (filterType === "currentUserPosts" && currentUser) {
           query.equalTo("userId", currentUser);
         }
+        query.descending("updatedAt");
 
         const results = await query.find();
         setPosts(results);
@@ -29,17 +30,21 @@ function Feed({ filterType, currentUser }) {
 
   return (
     <div className="FeedContent">
-      {posts.map((post, index) => (
+      {posts.map((post) => (
         <Post
-          key={index}
+          key={post.id}
           postTitle={post.get("postTitle")}
           mood={post.get("mood")} 
           postedBy={post.get("userId")}
           postContent={post.get("postContent")} 
+          sipCount={post.get("sips")}
+          postId={post.id}
+          currentUser={currentUser} // Pass current user to check ownership for isSipped
         />
       ))}
     </div>
   );
+
 }
 
 export default Feed;
