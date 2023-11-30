@@ -1,5 +1,5 @@
 import React from "react";
-import './PostFilter.css';
+import './MyPostsFilter.css';
 
 function PostFilter() {
     return (

@@ -2,14 +2,14 @@
 import React from 'react';
 import './ButtonAndText.css'; // Make sure this is the correct path
 
-function LikeButtonAndText({ likeCount, onLike, isLiked }) {
-  // tenary operator to determine if isLiked is true or false
-  const iconClass = isLiked ? "fa-solid fa-mug-hot liked" : "fa-solid fa-mug-hot";
+function LikeButtonAndText({ sipCount, onSip, isSipped }) {
+  // tenary operator to determine if isSipped is true or false
+  const iconClass = isSipped ? "fa-solid fa-mug-hot liked" : "fa-solid fa-mug-hot";
 
   return (
-    <div className="iconAndText" onClick={onLike}>
+    <div className="iconAndText" onClick={onSip}>
       <i className={iconClass}></i>
-      <p className="iconText">{likeCount}</p>
+      <p className="iconText">{sipCount}</p>
     </div>
   );
 }

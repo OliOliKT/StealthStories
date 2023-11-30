@@ -29,7 +29,7 @@ const Logo = () => {
   return (
     <div className="logo">
       <Link to="/DiscoverFeed">
-        <img src="images/logo.png" id="logoimg" alt="Logo" />
+      <img src={`${process.env.PUBLIC_URL}/images/logo.png`} id="logoimg" alt="Logo" /> {/* made to absolute path */}
       </Link>
     </div>
   );

@@ -8,7 +8,7 @@ function CreatingUser() {
   return (
     <div className="creating-user-grid-container">
       <CreateUserComponent />
-      <Footer />
+      <Footer className="create-user-footer" />
     </div>
   );
 }
