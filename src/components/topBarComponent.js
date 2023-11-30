@@ -63,9 +63,9 @@ const TopBarIcons = () => {
             </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/IndividualPost">
               <i className="fa-solid fa-bell"></i>
-            </a>
+            </Link>
           </li>
           <li className="user-icon" onClick={toggleDropdown}>
             <a href="#">
