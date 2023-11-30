@@ -16,7 +16,6 @@
   color: hsl(152, 93%, 65%);
 }
 
-/* Specific style for when the icon is liked */
 .iconAndText .fa-mug-hot.liked {
   color: hsl(152, 93%, 65%);
 }
