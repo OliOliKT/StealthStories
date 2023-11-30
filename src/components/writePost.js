@@ -23,7 +23,7 @@ const WritePost = () => {
             const user = await userQuery.first();
             if (user) {
               const username = user.get("username");
-              setUserId(username);
+              setUserId(username);  
             }
           }
         }

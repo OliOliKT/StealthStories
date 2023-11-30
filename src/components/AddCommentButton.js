@@ -1,12 +1,14 @@
 import React from 'react';
-import "./AddCommentButton.css"; // The corresponding CSS file
+import "./AddCommentButton.css"; 
 
-function AddCommentButton() {
+// AddCommentButton.js
+function AddCommentButton({ onAddCommentClick }) {
   return (
-    <div className="add-comment-button">
-        <p className="add-comment-text"> + Add comment </p>
-    </div>
+    <button className="add-comment-button" onClick={onAddCommentClick}>
+        <p className="add-comment-text">+ Add Comment</p>
+    </button>
   );
 }
+
 
 export default AddCommentButton;
