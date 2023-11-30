@@ -17,6 +17,11 @@
   position: relative;
 }
 
+.iconAndText:hover .navTextTrending,
+.iconAndText:hover .navTextDiscover {
+  color: #50f9ab;
+}
+
 .navTextDiscover,
 .navTextTrending {
   font-size: 16px;
@@ -34,16 +39,16 @@
 .activeLink,
 .activeLink .navTextDiscover,
 .activeLink .navTextTrending {
-  color: #50f9ab; /* Change text color for active links */
+  color: #50f9ab;
 }
 
-/* This will target the inactive link's text */
 .inactiveLink,
 .inactiveLink .navTextDiscover,
 .inactiveLink .navTextTrending {
-  color: #aaa6e5; /* Change text color for inactive links */
+  color: #aaa6e5; 
 }
 
+/* This is what gives the navigation a bottom line */
 .inactiveLink::after {
   content: "";
   position: absolute;
@@ -57,6 +62,7 @@
   color: #50f9ab;
 }
 
+/* This is what gives the navigation a bottom line */
 .activeLink::after {
   content: "";
   position: absolute;
