@@ -1,12 +1,12 @@
 import React from "react";
 import "./ButtonAndText.css";
 
-function BellButtonAndText() {
+function BellButtonAndText({ onFollow, isFollowed }) {
+  const iconClass = isFollowed ? "fa-solid fa-bell sipped" : "fa-solid fa-bell";
+
   return (
-    <div className="iconAndText">
-      <a href="#" className="iconLink">
-        <i className="fa-solid fa-bell"></i>
-      </a>
+    <div className="iconAndText" onClick={onFollow}>
+      <i className={iconClass}></i>
       <p className="iconText">Follow</p>
     </div>
   );

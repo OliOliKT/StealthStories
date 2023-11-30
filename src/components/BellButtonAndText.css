@@ -1,0 +1,22 @@
+.iconAndText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconAndText:hover .fa-mug-hot,
+.iconAndText .fa-mug-hot.liked {
+    color: hsl(152, 93%, 65%);
+}
+
+.iconAndText:hover .iconText {
+    color: hsl(152, 93%, 65%);
+}
+
+.iconLink {
+    color: #fafafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
