@@ -10,11 +10,12 @@ function Feed({ filterType, currentUser }) {
     async function fetchPosts() {
       try {
         const query = new Parse.Query("Post");
+        const currentUser = Parse.User.current();
 
         if (filterType === "sipsGreaterThanTen") {
           query.greaterThanOrEqualTo("sips", 10);
         } else if (filterType === "currentUserPosts" && currentUser) {
-          query.equalTo("userId", currentUser);
+          query.equalTo("userObjectId", currentUser.id);
         }
         query.descending("updatedAt");
 
@@ -39,7 +40,7 @@ function Feed({ filterType, currentUser }) {
           postContent={post.get("postContent")} 
           sipCount={post.get("sips")}
           postId={post.id}
-          currentUser={currentUser} // Pass current user to check ownership for isSipped
+          currentUser={currentUser}
         />
       ))}
     </div>
