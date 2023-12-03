@@ -10,11 +10,29 @@ function PostFilter() {
                 <option value="newest-to-oldest">Newest to oldest</option>
             </select>
 
-            <label for="alias-filter">Alias:</label>
-            <select id="alias-filter" name="alias-list" form="alias-form">
-                <option value="all">All aliases</option>
-                <option value="oli_oli_kt">oli_oli_kt</option>
-                <option value="oli_ball">oli_ball</option>
+            <label htmlFor="mood-filter">Mood: </label>
+            <select id="mood-filter" name="mood-filter-list">
+                <option value="all" selected>All</option>
+                <option value="happy">Happy</option>
+                <option value="cheeky">Cheeky</option>
+                <option value="sad">Sad</option>
+                <option value="cheerful">Cheerful</option>
+                <option value="excited">Excited</option>
+                <option value="envious">Envious</option>
+                <option value="angry">Angry</option>
+                <option value="outraged">Outraged</option>
+                <option value="disappointed">Disappointed</option>
+                <option value="surprised">Surprised</option>
+                <option value="annoyed">Annoyed</option>
+                <option value="fulfilled">Fulfilled</option>
+                <option value="trusting">Trusting</option>
+                <option value="inspired">Inspired</option>
+                <option value="brave">Brave</option>
+                <option value="proud">Proud</option>
+                <option value="depressed">Depressed</option>
+                <option value="embarrassed">Embarrassed</option>
+                <option value="guilty">Guilty</option>
+                <option value="scared">Scared</option>
             </select>
         </div>
     );

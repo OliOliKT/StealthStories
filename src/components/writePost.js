@@ -42,6 +42,7 @@ const WritePost = () => {
     newPost.set("postContent", post);
     newPost.set("postTitle", title);
     newPost.set("userId", userId);
+    newPost.set("userObjectId", Parse.User.current())
     newPost.set("mood", mood);
 
     try {
@@ -58,7 +59,7 @@ const WritePost = () => {
         setTitle={setTitle} 
         setPost={setPost} 
         handleSendPost={handleSendPost} 
-        setMood={setMood} // Pass setMood function
+        setMood={setMood}
       />
     </section>
   );
@@ -92,6 +93,16 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
             <option value="outraged">Outraged</option>
             <option value="disappointed">Disappointed</option>
             <option value="surprised">Surprised</option>
+            <option value="annoyed">Annoyed</option>
+            <option value="fulfilled">Fulfilled</option>
+            <option value="trusting">Trusting</option>
+            <option value="inspired">Inspired</option>
+            <option value="brave">Brave</option>
+            <option value="proud">Proud</option>
+            <option value="depressed">Depressed</option>
+            <option value="embarrassed">Embarrassed</option>
+            <option value="guilty">Guilty</option>
+            <option value="scared">Scared</option>
         </select>
       </div>
       <textarea
