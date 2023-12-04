@@ -7,7 +7,7 @@ const UserInfo = () => {
     <div className="user-info">
       <i className="fas fa-user-circle"></i>
       <div>
-        <p className="label">Current Alias</p>
+        <p className="label">Your username</p>
         <p className="alias">DangerousHibiscus</p>
       </div>
     </div>

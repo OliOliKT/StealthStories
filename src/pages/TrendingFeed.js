@@ -1,7 +1,6 @@
 import React from "react";
-import "./TrendingFeed.css"; // The corresponding CSS file
+import "./TrendingFeed.css";
 
-//Components
 import FeedNavigation from "../components/FeedNavigation";
 import TrendingBlock from "../components/TrendingBlock";
 import Feed from "../components/Feed";

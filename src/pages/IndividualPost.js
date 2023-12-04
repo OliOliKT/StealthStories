@@ -12,8 +12,9 @@ import { useEffect } from "react";
 function IndividualPost() {
   const { postId } = useParams();
   const location = useLocation();
-  const { postTitle, mood, postedBy, postContent } = location.state || {};
+  const { postTitle, mood, postedBy, postContent, numberOfComments, sipCount } = location.state || {};
   const [isCommenting, setIsCommenting] = useState(false);
+
 
   const handleAddCommentClick = () => {
     console.log('Add comment clicked'); 
@@ -21,8 +22,6 @@ function IndividualPost() {
   };
   const handleCommentPosted = () => {
     setIsCommenting(false);
-    // Here, you would likely want to refresh the comments section
-    // or append the new comment to the current list of comments.
   };
 
   const handleCommentModalClose = () => {
@@ -44,6 +43,8 @@ function IndividualPost() {
           postedBy={postedBy}
           postContent={postContent}
           postId={postId}
+          numberOfComments={numberOfComments}
+          sipCount={sipCount}
         />
       ) : (
         <p>Post not found</p>
