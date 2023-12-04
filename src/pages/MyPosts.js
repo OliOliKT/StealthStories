@@ -4,7 +4,6 @@ import Parse from 'parse';
 
 import PostStats from "../components/PostStats";
 import Title from "../components/MyPostsTitle";
-import PostFilter from "../components/MyPostsFilter";
 import Feed from "../components/Feed";
 import TopBarComponent from "../components/topBarComponent";
 import Footer from "../components/footer";
@@ -30,7 +29,6 @@ function MyPosts() {
             <div className="MyPosts">
             <Title/>
                 <PostStats/>
-                <PostFilter/>
                 <Feed filterType="currentUserPosts" currentUser={loggedInUserId}/>
                 <Footer/>
             </div>

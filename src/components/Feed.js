@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Parse from 'parse';
 import "./Feed.css";
 import Post from './Post';
+import PostFilter from './MyPostsFilter';
 
 function Feed({ filterType, currentUser }) {
   const [posts, setPosts] = useState([]);
@@ -17,10 +18,12 @@ function Feed({ filterType, currentUser }) {
         } else if (filterType === "currentUserPosts" && currentUser) {
           query.equalTo("userObjectId", currentUser.id);
         }
-        query.descending("updatedAt");
+        query.descending("createdAt");
 
         const results = await query.find();
         setPosts(results);
+
+        updatePostsWithCommentCount(results);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -29,23 +32,43 @@ function Feed({ filterType, currentUser }) {
     fetchPosts();
   }, [filterType, currentUser]);
 
+  async function updatePostsWithCommentCount(posts) {
+    const updatedPosts = [];
+
+    for (const post of posts) {
+      const commentQuery = new Parse.Query(Parse.Object.extend("Comment"));
+      commentQuery.equalTo("postIdString", post.id);
+      const count = await commentQuery.count();
+      
+      const updatedPost = {
+        ...post.toJSON(), 
+        numberOfComments: count,
+      };
+      
+      updatedPosts.push(updatedPost);
+    }
+
+    setPosts(updatedPosts);
+  }
+
   return (
     <div className="FeedContent">
+      <PostFilter/>
       {posts.map((post) => (
         <Post
           key={post.id}
-          postTitle={post.get("postTitle")}
-          mood={post.get("mood")} 
-          postedBy={post.get("userId")}
-          postContent={post.get("postContent")} 
-          sipCount={post.get("sips")}
-          postId={post.id}
+          postTitle={post.postTitle}
+          mood={post.mood}
+          postedBy={post.userId}
+          postContent={post.postContent}
+          sipCount={post.sips}
+          postId={post.objectId}
           currentUser={currentUser}
+          numberOfComments={post.numberOfComments}
         />
       ))}
     </div>
   );
-
 }
 
 export default Feed;
