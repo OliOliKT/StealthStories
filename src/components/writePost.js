@@ -42,6 +42,7 @@ const WritePost = () => {
     newPost.set("postContent", post);
     newPost.set("postTitle", title);
     newPost.set("userId", userId);
+    newPost.set("userObjectId", Parse.User.current())
     newPost.set("mood", mood);
 
     try {
@@ -58,7 +59,7 @@ const WritePost = () => {
         setTitle={setTitle} 
         setPost={setPost} 
         handleSendPost={handleSendPost} 
-        setMood={setMood} // Pass setMood function
+        setMood={setMood}
       />
     </section>
   );

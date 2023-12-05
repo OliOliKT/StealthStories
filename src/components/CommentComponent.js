@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CommentComponent.css";
+import Parse from "parse";
 
 const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
   const [comment, setComment] = useState('');
@@ -9,10 +10,24 @@ const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
   };
 
   const handleCommentSubmit = async () => {
-    // replace this logic with database callbacks.
-    console.log("Comment submitted:", comment, "for postId:", postId);
     onCommentPosted();
     closeCommentModal();
+
+    const Comment = Parse.Object.extend("Comment");
+    const newComment = new Comment();
+
+    newComment.set("content", comment);
+    newComment.set("userId", Parse.User.current());
+    newComment.set("postIdString", postId);
+    newComment.set("userIdString", Parse.User.current().get("username"));
+
+    try {
+      await newComment.save();
+      console.log("Post saved successfully!");
+    } catch (error) {
+      console.error("Error saving comment:", error);
+    }
+    
   };
 
   return (

@@ -4,20 +4,36 @@ import LikeButtonAndText from './LikeButtonAndText';
 import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
-import WriteComment from './CommentComponent';
-import { useNavigate } from 'react-router-dom'; // Import useHistory
+import { useNavigate } from 'react-router-dom';
 
-function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, currentUser }) {
+function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments }) {
   const [isSipped, setIsSipped] = useState(false);
-  const [updatedSipCount, setUpdatedSipCount] = useState(sipCount); // State to store updated sipCount
+  const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
+
+  const [commentCount, setCommentCount] = useState(numberOfComments);
+
   const navigate = useNavigate();
 
 
-
-
   const handleCommentIconClick = () => {
-    console.log(postId); // test to see if we log the id and not "undefined"
-    navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId } });
+    navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId, numberOfComments, sipCount } });
+  };
+
+  const handleComment = async () => {
+    try {
+      const Comment = Parse.Object.extend("Comment");
+      const query = new Parse.Query(Comment);
+      query.equalTo("postIdString", postId);
+      query.count()
+        .then((count) => {
+          setCommentCount(count)
+        })
+        .catch((error) => {
+          console.error("Error fetching comment count:", error);
+        });
+    } catch (error) {
+      console.error("Error incrementing comment count:", error);
+    }
   };
 
   const handleSip = async () => {
@@ -62,7 +78,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, curren
         <div id="backgroundOnActionBar">
           <div className="actionBarOnPost">
             <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} />
-            <CommentButtonAndText onComment={handleCommentIconClick} />
+            <CommentButtonAndText onComment={handleCommentIconClick} commentCount={commentCount} />
             <BellButtonAndText />
           </div>
         </div>
