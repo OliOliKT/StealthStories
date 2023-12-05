@@ -1,6 +1,7 @@
 import React from "react";
 import "./CreateUserComponent.css";
 import CreateUserButtonAndText from "./CreateUserButtonAndText";
+import BackToLoginButton from "./BackToLogin";
 
 function CreateUser() {
   return (
@@ -10,6 +11,7 @@ function CreateUser() {
       </div>
       <div className="create-user-box">
         <CreateUserButtonAndText />
+        <BackToLoginButton />
       </div>
     </div>
   );
