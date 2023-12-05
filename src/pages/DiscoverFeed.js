@@ -7,8 +7,6 @@ import TopBar from '../components/topBarComponent';
 import Footer from '../components/footer';
 import WritePost from '../components/writePost';
 
-//const WritePost = ({onPostPosted}) => {
-
 
 const DiscoverFeed = ({}) => {
 

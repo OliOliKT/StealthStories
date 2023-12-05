@@ -24,7 +24,9 @@
 
 
 .background-comment{
-    height: 85px;
+    height: auto; 
+    min-height: 85px;
+    resize: vertical;
     width: 600px;
     background-color: #2A2941;
     border-radius: 10px;

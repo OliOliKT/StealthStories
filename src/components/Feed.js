@@ -10,7 +10,6 @@ function Feed({ filterType, currentUser, numberOfPostsPosted}) {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        console.log('Starting');
         const query = new Parse.Query("Post");
         const currentUser = Parse.User.current();
 
@@ -20,15 +19,12 @@ function Feed({ filterType, currentUser, numberOfPostsPosted}) {
           query.equalTo("userObjectId", currentUser.id);
         }
         query.descending("createdAt");
-        console.log('Starting more');
-
+      
         const results = await query.find();
-        console.log('Starting more2');
+        
         setPosts(results);
-        console.log('Starting more3');
-
         updatePostsWithCommentCount(results);
-        console.log('Starting more4');
+        
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
