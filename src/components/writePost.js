@@ -92,6 +92,7 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
             <option value="outraged">Outraged</option>
             <option value="disappointed">Disappointed</option>
             <option value="surprised">Surprised</option>
+            <option value="nervous">Nervous</option>
         </select>
       </div>
       <textarea
