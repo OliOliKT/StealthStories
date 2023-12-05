@@ -6,10 +6,13 @@ import Footer from "../components/footer";
 
 function CreatingUser() {
   return (
+    <>
     <div className="creating-user-grid-container">
       <CreateUserComponent />
-      <Footer className="create-user-footer" />
+      
     </div>
+    <Footer />
+    </>
   );
 }
 
