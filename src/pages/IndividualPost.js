@@ -36,6 +36,7 @@ function IndividualPost() {
   }, [isCommenting]);
   
   return (
+    <>
     <div className="individual-post-page-content">
       <TopBar />
       {location.state ? (
@@ -60,8 +61,10 @@ function IndividualPost() {
           onCommentPosted={handleCommentPosted}
         />
       )}
-      <Footer />
+      
     </div>
+    <Footer />
+    </>
   );
 }
 
