@@ -1,8 +1,8 @@
 .main-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: auto auto auto auto;
-  grid-gap: 20px; /* Gap between grid items */
+  grid-gap: 20px; 
   place-items: center;
 }
 

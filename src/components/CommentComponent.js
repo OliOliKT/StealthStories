@@ -10,7 +10,6 @@ const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
   };
 
   const handleCommentSubmit = async () => {
-    onCommentPosted();
     closeCommentModal();
 
     const Comment = Parse.Object.extend("Comment");
@@ -27,9 +26,10 @@ const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
     } catch (error) {
       console.error("Error saving comment:", error);
     }
-    
+    onCommentPosted();
+   
   };
-
+  
   return (
     <section className="writeComment">
       <CommentBox 

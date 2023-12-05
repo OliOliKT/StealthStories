@@ -3,10 +3,12 @@ import Parse from 'parse';
 import "./CommentSection.css";
 import Comment from "./Comment";
 
-function CommentSection( { postId } ) {
+function CommentSection( { postId, numberOfComments } ) {
   const [comments, setComments] = useState([]);
 
+
   useEffect(() => {
+    console.log("rendering")
     async function fetchComments() {
       try {
         const query = new Parse.Query("Comment");
@@ -23,13 +25,14 @@ function CommentSection( { postId } ) {
     }
 
     fetchComments();
-  }, [postId]);
+  }, [postId, numberOfComments]);
 
 
   return (
     <div className ="comment-section-content">
-
+      
       {comments.map((comment) => (
+        
         <Comment
           key={comment.id}
           postedBy={comment.get("userIdString")}
