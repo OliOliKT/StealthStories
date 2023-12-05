@@ -2,6 +2,7 @@ import React from "react";
 import "./Comment.css";
 
 function Comment({ postedBy, commentContent, sipCount, daysAgo }) {
+ 
   return (
     <div class="comment-container">
       <div class="user-icon-comment">

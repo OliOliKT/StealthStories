@@ -93,16 +93,7 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
             <option value="outraged">Outraged</option>
             <option value="disappointed">Disappointed</option>
             <option value="surprised">Surprised</option>
-            <option value="annoyed">Annoyed</option>
-            <option value="fulfilled">Fulfilled</option>
-            <option value="trusting">Trusting</option>
-            <option value="inspired">Inspired</option>
-            <option value="brave">Brave</option>
-            <option value="proud">Proud</option>
-            <option value="depressed">Depressed</option>
-            <option value="embarrassed">Embarrassed</option>
-            <option value="guilty">Guilty</option>
-            <option value="scared">Scared</option>
+            <option value="nervous">Nervous</option>
         </select>
       </div>
       <textarea

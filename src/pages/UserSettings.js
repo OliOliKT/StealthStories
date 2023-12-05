@@ -5,10 +5,11 @@ import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import AccountInformation from "../components/AccountInformation";
 import TwoFactorAuthentication from "../components/TwoFactorAuthentication";
 import DeleteAccount from "../components/DeleteAccount";
+import "./UserSettings.css";
 
 function UserSettings() {
   return (
-    <div className="App">
+    <div className="user-settings-main-content">
       <TopBar />
       <UserInfo />
       <UserSettingsSidebar />

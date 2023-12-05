@@ -14,7 +14,7 @@ function IndividualPost() {
   const location = useLocation();
   const { postTitle, mood, postedBy, postContent, numberOfComments, sipCount } = location.state || {};
   const [isCommenting, setIsCommenting] = useState(false);
-
+  const [numberOfCommentsAdded, setNumberOfCommentsAdded] = useState(0);
 
   const handleAddCommentClick = () => {
     console.log('Add comment clicked'); 
@@ -22,6 +22,7 @@ function IndividualPost() {
   };
   const handleCommentPosted = () => {
     setIsCommenting(false);
+    setNumberOfCommentsAdded(numberOfCommentsAdded+1)
   };
 
   const handleCommentModalClose = () => {
@@ -33,6 +34,7 @@ function IndividualPost() {
       document.getElementById('comment').scrollIntoView({ behavior: 'smooth' });
     }
   }, [isCommenting]);
+  
   return (
     <div className="individual-post-page-content">
       <TopBar />
@@ -49,7 +51,7 @@ function IndividualPost() {
       ) : (
         <p>Post not found</p>
       )}
-      <CommentSection postId={postId} />
+      <CommentSection postId={postId} numberOfComments={numberOfCommentsAdded} />
       <AddCommentButton onAddCommentClick={handleAddCommentClick} />
       {isCommenting && (
         <WriteComment
