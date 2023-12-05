@@ -15,7 +15,7 @@ function CommentSection( { postId, numberOfComments } ) {
 
         query.equalTo("postIdString", postId);
         
-        query.descending("createdAt");
+        query.ascending("createdAt");
 
         const results = await query.find();
         setComments(results);

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./writePost.css";
 import Parse from "parse";
 
-const WritePost = () => {
+const WritePost = ({onPostPosted}) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [userId, setUserId] = useState("unknown user");
@@ -36,7 +36,7 @@ const WritePost = () => {
   }, []);
 
   const handleSendPost = async () => {
-    const Post = Parse.Object.extend("Post");
+    const Post = Parse.Object.extend("Post"); 
     const newPost = new Post();
 
     newPost.set("postContent", post);
@@ -51,6 +51,7 @@ const WritePost = () => {
     } catch (error) {
       console.error("Error saving post:", error);
     }
+    onPostPosted();
   };
 
   return (

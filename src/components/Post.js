@@ -5,7 +5,7 @@ import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
 import { useNavigate } from 'react-router-dom';
-
+ 
 function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);

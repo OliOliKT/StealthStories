@@ -4,7 +4,7 @@ import "./Feed.css";
 import Post from './Post';
 import PostFilter from './MyPostsFilter';
 
-function Feed({ filterType, currentUser }) {
+function Feed({ filterType, currentUser, numberOfPostsPosted}) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -33,9 +33,9 @@ function Feed({ filterType, currentUser }) {
         console.error("Error fetching posts:", error);
       }
     }
-
+    console.log("fetchig posts");
     fetchPosts();
-  }, [filterType, currentUser]);
+  }, [filterType, currentUser, numberOfPostsPosted]);
 
   async function updatePostsWithCommentCount(posts) {
     const updatedPosts = [];
