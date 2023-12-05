@@ -18,7 +18,8 @@
   margin-bottom: 20px;
 }
 
-#title{
+#trending-title{
   display: inline;
   margin-right: 0;
+  padding: 0;
 }

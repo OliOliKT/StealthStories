@@ -25,13 +25,13 @@ function MyPosts() {
     return (
         <>
             <TopBarComponent/>
-            <UserSettingsSidebar/>
-            <div className="MyPosts">
+            <div className="my-posts-main-content">
+            <UserSettingsSidebar className ="sidebar-my-posts"/>
             <Title/>
                 <PostStats/>
                 <Feed filterType="currentUserPosts" currentUser={loggedInUserId}/>
-                <Footer/>
             </div>
+            <Footer/>
         </>
     );
 }

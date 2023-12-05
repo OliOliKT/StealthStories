@@ -1,5 +1,4 @@
 .sidebar-nav {
-    position: absolute;
     width: 220px; 
     border-right: solid 1px #68669D; 
     background-color: #212034;
@@ -7,6 +6,10 @@
     display: flex;
     flex-direction: column;
     justify-content: start; 
+    grid-row: 3 / span 4;
+    grid-column: 1;
+    align-self: start;
+    justify-self: end;
 }
 
 .sidebar-nav ul {

@@ -3,6 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 20px; 
+    place-items: center;
 }
 
 .header {
@@ -28,9 +29,4 @@
 .delete-account{
     grid-row: 5;
     grid-column: 2;
-}
-
-.sidebar-nav{
-    grid-row: 3;
-    grid-column: 1;
 }

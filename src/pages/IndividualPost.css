@@ -4,6 +4,7 @@
   grid-template-rows: auto auto auto auto auto auto;
   grid-gap: 20px; /* Gap between grid items */
   place-items: center;
+  
 }
 
 .IndividualPost{
@@ -16,12 +17,6 @@
   grid-column: 2;
   align-self: left;
   justify-self: left;
-}
-
-.footer{
-  grid-row: 6;
-  grid-column: 1 / span 3;
-  width: 100%;
 }
 
 .comment-section-content{
