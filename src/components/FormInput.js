@@ -19,7 +19,7 @@ function LogInButtonAndFormInput() {
       navigate("/DiscoverFeed");
     } catch (error) {
       console.error("Error while logging in user", error);
-      setError("You typed in the wrong password!");
+      setError("Wrong username or password!");
     }
   };
 

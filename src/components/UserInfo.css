@@ -10,18 +10,10 @@
   margin-right: 15px;
 }
 
-.label, 
 .alias {
   margin: 0;
+  margin-top: 8px;
   display: block; 
-}
-
-.label {
-  color: white;
-  margin-bottom: 5px; 
-}
-
-.alias {
   font-weight: bold;
   font-size: xx-large;
 }

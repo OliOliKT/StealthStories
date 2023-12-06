@@ -2,10 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .iconAndText:hover{
   color: hsl(152, 93%, 65%);
+  
 }
 
 .iconAndText:hover .fa-mug-hot,
