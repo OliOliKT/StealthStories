@@ -44,6 +44,7 @@
 .postIcons {
     display: flex;
     gap: 26px;
+    cursor: pointer;
 }
 
 .postIcons i:hover, .postPost i:hover {
@@ -89,4 +90,8 @@ textarea {
 #moods select:hover {
     background-color: #50F9AB;
     color: #393851;
+}
+
+.postPost {
+    cursor: pointer;
 }
