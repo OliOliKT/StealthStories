@@ -84,17 +84,27 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
       <div id="moods">
         <label htmlFor="mood-filter">Mood: </label>
         <select id="mood-filter" name="mood-filter-list" onChange={(e) => setMood(e.target.value)}>
-            <option value="happy">Happy</option>
-            <option value="cheeky">Cheeky</option>
-            <option value="sad">Sad</option>
-            <option value="cheerful">Cheerful</option>
-            <option value="excited">Excited</option>
-            <option value="envious">Envious</option>
-            <option value="angry">Angry</option>
-            <option value="outraged">Outraged</option>
-            <option value="disappointed">Disappointed</option>
-            <option value="surprised">Surprised</option>
-            <option value="nervous">Nervous</option>
+        <option value="all" selected>All</option>
+                <option value="happy">Happy</option>
+                <option value="cheeky">Cheeky</option>
+                <option value="sad">Sad</option>
+                <option value="cheerful">Cheerful</option>
+                <option value="excited">Excited</option>
+                <option value="envious">Envious</option>
+                <option value="angry">Angry</option>
+                <option value="outraged">Outraged</option>
+                <option value="disappointed">Disappointed</option>
+                <option value="surprised">Surprised</option>
+                <option value="annoyed">Annoyed</option>
+                <option value="fulfilled">Fulfilled</option>
+                <option value="trusting">Trusting</option>
+                <option value="inspired">Inspired</option>
+                <option value="brave">Brave</option>
+                <option value="proud">Proud</option>
+                <option value="depressed">Depressed</option>
+                <option value="embarrassed">Embarrassed</option>
+                <option value="guilty">Guilty</option>
+                <option value="scared">Scared</option>
         </select>
       </div>
       <textarea

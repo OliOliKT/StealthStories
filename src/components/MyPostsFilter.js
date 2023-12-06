@@ -1,7 +1,11 @@
 import React from "react";
 import './MyPostsFilter.css';
 
-function PostFilter() {
+function PostFilter({ setSelectedMood }) {
+    const handleMoodChange = (event) => {
+        setSelectedMood(event.target.value);
+      };
+
     return (
         <div id="filter">
             <label for="post-filter">Filter by:</label>
@@ -11,7 +15,7 @@ function PostFilter() {
             </select>
 
             <label htmlFor="mood-filter">Mood: </label>
-            <select id="mood-filter" name="mood-filter-list">
+            <select id="mood-filter" name="mood-filter-list" onChange={handleMoodChange}>
                 <option value="all" selected>All</option>
                 <option value="happy">Happy</option>
                 <option value="cheeky">Cheeky</option>

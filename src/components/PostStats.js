@@ -7,19 +7,19 @@ function PostStats() {
             <div id="stats">
                 <div id="stat-1" className="stat-box">
                     <p>Total posts</p>
-                    <p>24</p>
+                    <p>4</p>
                 </div>
                 <div id="stat-2" className="stat-box">
                     <p>Total comments</p>
-                    <p>187</p>
+                    <p>11</p>
                 </div>
                 <div id="stat-3" className="stat-box">
                     <p>Total sips given</p>
-                    <p>544</p>
+                    <p>17</p>
                 </div>
                 <div id="stat-4" className="stat-box">
                     <p>Total sips recieved</p>
-                    <p>1034</p>
+                    <p>56</p>
                 </div>
             </div>
         </>

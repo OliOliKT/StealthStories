@@ -4,8 +4,9 @@ import "./Feed.css";
 import Post from './Post';
 import PostFilter from './MyPostsFilter';
 
-function Feed({ filterType, currentUser, numberOfPostsPosted}) {
+function Feed({ filterType, currentUser, numberOfPostsPosted }) {
   const [posts, setPosts] = useState([]);
+  const [selectedMood, setSelectedMood] = useState('all');
 
   useEffect(() => {
     async function fetchPosts() {
@@ -22,16 +23,24 @@ function Feed({ filterType, currentUser, numberOfPostsPosted}) {
       
         const results = await query.find();
         
-        setPosts(results);
-        updatePostsWithCommentCount(results);
+        if (selectedMood !== 'all') {
+          const filteredPosts = results.filter(post => post.get('mood') === selectedMood);
+          setPosts(filteredPosts);
+          updatePostsWithCommentCount(filteredPosts);
+        } else {
+          setPosts(results);
+          updatePostsWithCommentCount(results);
+        }
+
+        
         
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
     }
-    console.log("fetchig posts");
+    console.log("fetching posts");
     fetchPosts();
-  }, [filterType, currentUser, numberOfPostsPosted]);
+  }, [filterType, currentUser, numberOfPostsPosted, selectedMood]);
 
   async function updatePostsWithCommentCount(posts) {
     const updatedPosts = [];
@@ -54,7 +63,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted}) {
 
   return (
     <div className="FeedContent">
-      <PostFilter/>
+      <PostFilter setSelectedMood={setSelectedMood} />
       {posts.map((post) => (
         <Post
           key={post.id}
