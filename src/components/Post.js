@@ -11,7 +11,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
   
   const [commentCount, setCommentCount] = useState(numberOfComments);
-    
+  
   const navigate = useNavigate();
 
 
@@ -19,6 +19,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
     navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId, numberOfComments, sipCount } });
   };
 
+  // Not used yet
   const handleComment = async () => {
     try {
       const Comment = Parse.Object.extend("Comment");
