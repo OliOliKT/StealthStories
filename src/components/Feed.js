@@ -24,7 +24,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted}) {
         
         setPosts(results);
         updatePostsWithCommentCount(results);
-        
+        console.log("posts loaded")
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -40,7 +40,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted}) {
       const commentQuery = new Parse.Query(Parse.Object.extend("Comment"));
       commentQuery.equalTo("postIdString", post.id);
       const count = await commentQuery.count();
-      
+      console.log(post.id);
       const updatedPost = {
         ...post.toJSON(), 
         numberOfComments: count,
@@ -57,7 +57,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted}) {
       <PostFilter/>
       {posts.map((post) => (
         <Post
-          key={post.id}
+          key={post.objectId}
           postTitle={post.postTitle}
           mood={post.mood}
           postedBy={post.userId}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Parse from 'parse';
 import TopBar from "../components/topBarComponent";
 import Footer from "../components/footer";
 import Post from "../components/Post";
@@ -13,16 +14,37 @@ function IndividualPost() {
   const { postId } = useParams();
   const location = useLocation();
   const { postTitle, mood, postedBy, postContent, numberOfComments, sipCount } = location.state || {};
+  const [commentCount, setCommentCount] =useState(numberOfComments);
   const [isCommenting, setIsCommenting] = useState(false);
   const [numberOfCommentsAdded, setNumberOfCommentsAdded] = useState(0);
+
 
   const handleAddCommentClick = () => {
     console.log('Add comment clicked'); 
     setIsCommenting(true);
   };
+
+  // const handleComment = async () => {
+  //   try {
+  //     const Comment = Parse.Object.extend("Comment");
+  //     const query = new Parse.Query(Comment);
+  //     query.equalTo("postIdString", postId);
+  //     query.count()
+  //       .then((count) => {
+  //         setCommentCount(count)
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error fetching comment count:", error);
+  //       });
+  //   } catch (error) {
+  //     console.error("Error incrementing comment count:", error);
+  //   }
+  // };
+
   const handleCommentPosted = () => {
     setIsCommenting(false);
     setNumberOfCommentsAdded(numberOfCommentsAdded+1)
+    //handleComment();
   };
 
   const handleCommentModalClose = () => {

@@ -19,22 +19,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
     navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId, numberOfComments, sipCount } });
   };
 
-  const handleComment = async () => {
-    try {
-      const Comment = Parse.Object.extend("Comment");
-      const query = new Parse.Query(Comment);
-      query.equalTo("postIdString", postId);
-      query.count()
-        .then((count) => {
-          setCommentCount(count)
-        })
-        .catch((error) => {
-          console.error("Error fetching comment count:", error);
-        });
-    } catch (error) {
-      console.error("Error incrementing comment count:", error);
-    }
-  };
+  
 
   const handleSip = async () => {
     try {
