@@ -12,6 +12,7 @@ import LogInPage from "./pages/LogInPage";
 import Parse from "parse";
 import CreateUser from "./pages/CreateUser";
 import AboutUs from "./pages/AboutUs";
+import PrivacyAndSafety from "./pages/PrivacyAndSafety";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
         <Route path="/TrendingFeed" element={<TrendingFeed />} />
         <Route path="/MyPosts" element={<MyPosts />} />
         <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/PrivacyAndSafety" element={<PrivacyAndSafety />} />
         <Route path="/posts/:postId" element={<IndividualPost />} />
       </Routes>
     </Router>

@@ -1,0 +1,29 @@
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-gap: 20px;
+    place-items: center;
+}
+
+.pri-and-saf-title {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: center;
+    align-self: center;
+    font-size: xx-large;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.information-outerbox {
+    grid-row: 3;
+    grid-column: 2;
+    align-self: start;
+    justify-self: center;
+}
+
+.pri-and-saf-text {
+    padding: 0 30px 20px 30px;
+    font-size: medium;
+}
