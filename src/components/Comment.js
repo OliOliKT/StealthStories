@@ -6,9 +6,8 @@ function Comment({ postedBy, commentContent, sipCount, daysAgo }) {
  
   return (
     <div className="comment-container">
-      <div classNameName="user-icon-comment">
-        {" "}
-        <i className="fas fa-circle-user"></i>
+      <div className="user-icon-comment">
+        <i className="fas fa-circle-user comment"></i>
       </div>
       <div className="content-part-of-comment">
         <div className="background-comment">
