@@ -1,9 +1,9 @@
 // LikeButtonAndText.js
 import React from 'react';
-import './ButtonAndText.css'; // Make sure this is the correct path
+import './ButtonAndText.css';
 
 function LikeButtonAndText({ sipCount, onSip, isSipped }) {
-  // tenary operator to determine if isSipped is true or false
+  
   const iconClass = isSipped ? "fa-solid fa-mug-hot liked" : "fa-solid fa-mug-hot";
 
   return (

@@ -13,7 +13,7 @@ function FeedNavigation() {
     } else if (location.pathname === "/TrendingFeed") {
       setActiveLink("trending");
     } else {
-      setActiveLink(""); // Default or fallback state
+      setActiveLink("");
     }
   }, [location.pathname]);
 

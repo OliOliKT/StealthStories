@@ -1,7 +1,6 @@
 import React from 'react';
 import "./AddCommentButton.css"; 
 
-// AddCommentButton.js
 function AddCommentButton({ onAddCommentClick }) {
   return (
     <button className="add-comment-button" onClick={onAddCommentClick}>

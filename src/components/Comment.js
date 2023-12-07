@@ -4,26 +4,26 @@ import "./Comment.css";
 function Comment({ postedBy, commentContent, sipCount, daysAgo }) {
  
   return (
-    <div class="comment-container">
-      <div class="user-icon-comment">
+    <div className="comment-container">
+      <div classNameName="user-icon-comment">
         {" "}
-        <i class="fas fa-circle-user"></i>
+        <i className="fas fa-circle-user"></i>
       </div>
-      <div class="content-part-of-comment">
-        <div class="background-comment">
-          <div class="comment-user-info">
-            <p class="comment-user-text"> { postedBy } </p>
-            <p class="comment-user-text"> • </p>
-            <p class="comment-user-text"> { daysAgo } days ago </p>
+      <div className="content-part-of-comment">
+        <div className="background-comment">
+          <div className="comment-user-info">
+            <p className="comment-user-text"> { postedBy } </p>
+            <p className="comment-user-text"> • </p>
+            <p className="comment-user-text"> { daysAgo } days ago </p>
           </div>
-          <div class="comment-content">
+          <div className="comment-content">
             { commentContent }
           </div>
         </div>
-        <div class="actions-on-comment">
-          <i class="comment-icon fa-solid fa-mug-hot"></i>
-          <p class="sip-count-comment"> { sipCount } </p>
-          <i class="comment-icon fa-solid fa-ellipsis"></i>
+        <div className="actions-on-comment">
+          <i className="comment-icon fa-solid fa-mug-hot"></i>
+          <p className="sip-count-comment"> { sipCount } </p>
+          <i className="comment-icon fa-solid fa-ellipsis"></i>
         </div>
       </div>
     </div>
