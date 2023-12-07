@@ -12,7 +12,6 @@ const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
 
   const handleCommentSubmit = async () => {
     closeCommentModal();
-
     const Comment = Parse.Object.extend("Comment");
     const newComment = new Comment();
 
@@ -24,6 +23,16 @@ const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
     try {
       await newComment.save();
       console.log("Post saved successfully!");
+      // Fetch the corresponding post
+      const Post = Parse.Object.extend("Post");
+      const query = new Parse.Query(Post);
+      const post = await query.get(postId);
+
+      // Increment the commentCount for the post
+      post.increment("comments");
+      await post.save();
+      console.log("Post commentCount incremented!");
+
     } catch (error) {
       console.error("Error saving comment:", error);
     }

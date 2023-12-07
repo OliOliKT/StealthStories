@@ -44,18 +44,13 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     fetchPosts();
   }, [filterType, currentUser, numberOfPostsPosted, selectedMood, sortBy]);
 
+
   async function updatePostsWithCommentCount(posts) {
     const updatedPosts = [];
 
     for (const post of posts) {
-      const commentQuery = new Parse.Query(Parse.Object.extend("Comment"));
-      commentQuery.equalTo("postIdString", post.id);
-      const count = await commentQuery.count();
-      
-      const updatedPost = {
-        ...post.toJSON(), 
-        numberOfComments: count,
-      };
+    
+      const updatedPost = post.toJSON()
       
       updatedPosts.push(updatedPost);
     }
@@ -73,6 +68,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     }
   };
 
+
   return (
     <div className="FeedContent">
       <PostFilter setSelectedMood={setSelectedMood} handleSortChange={handleSortChange} />
@@ -86,7 +82,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
           sipCount={post.sips}
           postId={post.objectId}
           currentUser={currentUser}
-          numberOfComments={post.numberOfComments}
+          numberOfComments={post.comments}
         />
       ))}
     </div>
