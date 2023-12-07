@@ -2,7 +2,7 @@ import React from "react";
 
 import './MyPostsFilter.css';
 
-function PostFilter({ setSelectedMood }) {
+function PostFilter({ setSelectedMood, handleSortChange }) {
     const handleMoodChange = (event) => {
         setSelectedMood(event.target.value);
       };
@@ -10,9 +10,9 @@ function PostFilter({ setSelectedMood }) {
     return (
         <div id="filter">
             <label for="post-filter">Filter by:</label>
-            <select id="post-filter" name="post-filter-list" form="post-filter-form">
-                <option value="oldest-to-newest">Date</option>
-                <option value="newest-to-oldest">Popularity</option>
+            <select id="post-filter" name="post-filter-list" form="post-filter-form" onChange={handleSortChange}>
+                <option value="date">Date</option>
+                <option value="popularity">Popularity</option>
             </select>
 
             <label htmlFor="mood-filter">Mood: </label>

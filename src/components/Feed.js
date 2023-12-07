@@ -8,6 +8,7 @@ import "./Feed.css";
 function Feed({ filterType, currentUser, numberOfPostsPosted }) {
   const [posts, setPosts] = useState([]);
   const [selectedMood, setSelectedMood] = useState('all');
+  const [sortBy, setSortBy] = useState('createdAt');
 
   useEffect(() => {
     async function fetchPosts() {
@@ -20,7 +21,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
         } else if (filterType === "currentUserPosts" && currentUser) {
           query.equalTo("userObjectId", currentUser.id);
         }
-        query.descending("createdAt");
+        query.descending(sortBy); 
       
         const results = await query.find();
         
@@ -41,7 +42,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     }
     console.log("fetching posts");
     fetchPosts();
-  }, [filterType, currentUser, numberOfPostsPosted, selectedMood]);
+  }, [filterType, currentUser, numberOfPostsPosted, selectedMood, sortBy]);
 
   async function updatePostsWithCommentCount(posts) {
     const updatedPosts = [];
@@ -62,9 +63,19 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     setPosts(updatedPosts);
   }
 
+  const handleSortChange = (event) => {
+    const selectedSort = event.target.value;
+
+    if (selectedSort === 'date') {
+      setSortBy('createdAt');
+    } else if (selectedSort === 'popularity') {
+      setSortBy('sips');
+    }
+  };
+
   return (
     <div className="FeedContent">
-      <PostFilter setSelectedMood={setSelectedMood} />
+      <PostFilter setSelectedMood={setSelectedMood} handleSortChange={handleSortChange} />
       {posts.map((post) => (
         <Post
           key={post.id}

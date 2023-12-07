@@ -11,7 +11,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
   const [commentCount, setCommentCount] = useState(numberOfComments);
-    
+  
   const navigate = useNavigate();
 
 
@@ -19,7 +19,6 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
   const handleCommentIconClick = () => {
     navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId, numberOfComments, sipCount } });
   };
-
 
   const handleComment = async () => {
     try {
