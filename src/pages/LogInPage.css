@@ -2,7 +2,6 @@
 display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 1fr auto;
-    /* Adjust the row sizes to fit your content */
     grid-gap: 20px;
     min-height: 100vh;
 }

@@ -11,6 +11,7 @@ import UserSettings from "./pages/UserSettings";
 import LogInPage from "./pages/LogInPage";
 import Parse from "parse";
 import CreateUser from "./pages/CreateUser";
+import AboutUs from "./pages/AboutUs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,7 +24,8 @@ root.render(
         <Route path="/UserSettings" element={<UserSettings />} />
         <Route path="/TrendingFeed" element={<TrendingFeed />} />
         <Route path="/MyPosts" element={<MyPosts />} />
-        <Route path="/posts/:postId" element={<IndividualPost />} /> 
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/posts/:postId" element={<IndividualPost />} />
       </Routes>
     </Router>
   </React.StrictMode>

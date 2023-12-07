@@ -1,0 +1,9 @@
+.information-outerbox {
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #2E2C43;
+    width: 500px;
+    height: 310px;
+    border-color: hsl(242, 22%, 51%);
+    box-shadow: 0 0 5px hsl(0, 0%, 100%);
+}
