@@ -4,6 +4,7 @@ import Parse from "parse";
 import { useNavigate } from "react-router-dom";
 
 const CreateNewUser = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -17,7 +18,7 @@ const CreateNewUser = () => {
     }
 
     const user = new Parse.User();
-    user.setUsername(email);
+    user.setUsername(username);
     user.setPassword(password);
     user.setEmail(email);
 
@@ -32,11 +33,20 @@ const CreateNewUser = () => {
   return (
     <div className="creater-user-box">
       <div className="inputContainer">
+        <div className="username">
+          <p>Username</p>
+          <input
+            type="username"
+            className="inputUsernameAndMailAndPassword"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
         <div className="mail">
           <p>E-mail</p>
           <input
             type="email"
-            className="inputMailAndPassword"
+            className="inputUsernameAndMailAndPassword"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -45,7 +55,7 @@ const CreateNewUser = () => {
           <p>Password</p>
           <input
             type="password"
-            className="inputMailAndPassword"
+            className="inputUsernameAndMailAndPassword"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -54,7 +64,7 @@ const CreateNewUser = () => {
           <p>Confirm Password</p>
           <input
             type="password"
-            className="inputMailAndPassword"
+            className="inputUsernameAndMailAndPassword"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
