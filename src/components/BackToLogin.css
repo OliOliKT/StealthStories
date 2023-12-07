@@ -4,8 +4,8 @@
     color: white;
     background-color: hsl(245, 19%, 27%);
     border-color: hsl(242, 22%, 51%);
-    box-shadow: 0 0 5px hsl(0, 0%, 100%);
     padding: 5px;
+    margin-top: 10px;
     border: 1px solid hsl(242, 22%, 51%);
     border-radius: 5px;
     font-size: 14px;

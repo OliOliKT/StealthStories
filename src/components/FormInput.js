@@ -30,7 +30,7 @@ function LogInButtonAndFormInput() {
           <p>E-mail</p>
           <input
             type="email"
-            className="inputMailAndPassword"
+            className="login-mail-and-password"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -39,7 +39,7 @@ function LogInButtonAndFormInput() {
           <p>Password</p>
           <input
             type="password"
-            className="inputMailAndPassword"
+            className="login-mail-and-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
