@@ -1,26 +1,41 @@
 import Parse from 'parse';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LikeButtonAndText from './LikeButtonAndText';
 import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
  
 function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
-
-  const [commentCount, setCommentCount] = useState(numberOfComments);
-
+  const location = useLocation();
+  // const [commentCount, setCommentCount] = useState(numberOfComments);
+  
   const navigate = useNavigate();
 
 
+  /* Navigates to the page 'IndividualPost' with the associated post data, using the postId for the URL */
   const handleCommentIconClick = () => {
+    console.log(location)
+    if (location.pathname == "/DiscoverFeed"){
     navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId, numberOfComments, sipCount } });
+    }
+    else{
+      
+    }
   };
 
+ 
+    useEffect(() => {
+      console.log(numberOfComments);
+    }, [numberOfComments]);
   
-
+  /* 
+  When a user clicks the 'sip' (coffee) button, the total sips for a post will be incremented by 1.
+  If the user clicks it once more, the total sips will be decremented instead.
+  Styling the in 'LikeButtonAndText' determined the color based on the sipped state.
+  */
   const handleSip = async () => {
     try {
       const Post = Parse.Object.extend("Post");
@@ -63,7 +78,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
         <div id="backgroundOnActionBar">
           <div className="actionBarOnPost">
             <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} />
-            <CommentButtonAndText onComment={handleCommentIconClick} commentCount={commentCount} />
+            <CommentButtonAndText commentCount={numberOfComments} onComment={handleCommentIconClick} />
             <BellButtonAndText />
           </div>
         </div>
