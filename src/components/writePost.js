@@ -45,6 +45,10 @@ const WritePost = ({onPostPosted}) => {
     newPost.set("userObjectId", Parse.User.current())
     newPost.set("mood", mood);
 
+    document.getElementById("title").value = "";
+    document.getElementById("post").value = "";
+    document.getElementById("mood-filter").value = "all";
+
     try {
       await newPost.save();
       console.log("Post saved successfully!");
@@ -140,9 +144,6 @@ const PostIcons = () => {
 const SendPostIcon = ({ handleSendPost }) => {
   const handleClick = () => {
     handleSendPost();
-
-    document.getElementById("title").value = "";
-    document.getElementById("post").value = "";
   };
 
   return (

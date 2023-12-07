@@ -10,8 +10,8 @@ function PostFilter({ setSelectedMood }) {
         <div id="filter">
             <label for="post-filter">Filter by:</label>
             <select id="post-filter" name="post-filter-list" form="post-filter-form">
-                <option value="oldest-to-newest">Oldest to newest</option>
-                <option value="newest-to-oldest">Newest to oldest</option>
+                <option value="oldest-to-newest">Date</option>
+                <option value="newest-to-oldest">Popularity</option>
             </select>
 
             <label htmlFor="mood-filter">Mood: </label>
