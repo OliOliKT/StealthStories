@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./writePost.css";
 import Parse from "parse";
+
+import "./writePost.css";
 
 const WritePost = ({onPostPosted}) => {
   const [title, setTitle] = useState("");

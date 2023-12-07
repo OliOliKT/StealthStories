@@ -1,9 +1,9 @@
-import React from "react";
-import "./FormInput.css";
-import { useState } from "react";
-import Parse from "parse";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Parse from "parse";
+
+import "./FormInput.css";
 
 function LogInButtonAndFormInput() {
   const [email, setEmail] = useState("");

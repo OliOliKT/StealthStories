@@ -1,7 +1,8 @@
-import { useState } from "react";
-import "./CreateUserButtonAndText.css";
-import Parse from "parse";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Parse from "parse";
+
+import "./CreateUserButtonAndText.css";
 
 const CreateNewUser = () => {
   const [username, setUsername] = useState("");

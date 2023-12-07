@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./CommentComponent.css";
 import Parse from "parse";
+
+import "./CommentComponent.css";
 
 const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
   const [comment, setComment] = useState('');

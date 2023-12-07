@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./DiscoverFeed.css";
 
 import FeedNavigation from '../components/FeedNavigation';
 import Feed from '../components/Feed';
 import TopBar from '../components/topBarComponent';
 import Footer from '../components/footer';
 import WritePost from '../components/writePost';
+import "./DiscoverFeed.css";
 
 
 const DiscoverFeed = ({}) => {

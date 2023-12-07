@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useLocation } from 'react-router-dom';
+
 import TopBar from "../components/topBarComponent";
 import Footer from "../components/footer";
 import Post from "../components/Post";
-import WriteComment from "../components/CommentComponent"; // Assuming this is your updated Comment component
-import "./IndividualPost.css";
-import { useParams, useLocation } from 'react-router-dom'; 
+import WriteComment from "../components/CommentComponent"; 
 import CommentSection from "../components/CommentSection";
 import AddCommentButton from "../components/AddCommentButton";
-import { useEffect } from "react";
+import "./IndividualPost.css";
 
 function IndividualPost() {
   const { postId } = useParams();

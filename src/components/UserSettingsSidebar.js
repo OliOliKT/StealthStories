@@ -1,6 +1,8 @@
 import React from "react";
-import "./UserSettingsSidebar.css";
 import { Link } from "react-router-dom";
+
+import "./UserSettingsSidebar.css";
+
 
 const UserSettingsSidebar = () => {
   return (

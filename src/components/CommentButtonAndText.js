@@ -1,6 +1,7 @@
 import React from "react";
-import "./ButtonAndText.css";
 import { Link } from "react-router-dom";
+
+import "./ButtonAndText.css";
 
 function CommentButtonAndText({ commentCount, onComment }) {
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
-import "./TrendingBlock.css"; // The corresponding CSS file
+
+import "./TrendingBlock.css";
 
 function TrendingBlock() {
   return (

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './DeleteAccount.css';
 
 const DeleteAccount = () => {

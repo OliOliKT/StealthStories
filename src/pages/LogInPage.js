@@ -1,8 +1,8 @@
 import React from "react";
-import "./LogInPage.css";
 
 import LogInComponent from "../components/LogInComponent";
 import Footer from "../components/footer";
+import "./LogInPage.css";
 
 function LoggingIn() {
   return (

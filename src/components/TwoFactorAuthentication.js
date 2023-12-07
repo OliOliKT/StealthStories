@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './TwoFactorAuthentication.css';
 
 const TwoFactorAuthentication = () => {

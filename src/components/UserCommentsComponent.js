@@ -1,6 +1,7 @@
 import React from "react";
-import "./UserCommentsComponent.css";
+
 import LikeButtonAndText from "./LikeButtonAndText";
+import "./UserCommentsComponent.css";
 
 const comments = [
   {

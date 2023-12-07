@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import "./MyPosts.css";
 import Parse from 'parse';
 
 import PostStats from "../components/PostStats";
@@ -8,6 +7,7 @@ import Feed from "../components/Feed";
 import TopBarComponent from "../components/topBarComponent";
 import Footer from "../components/footer";
 import UserSettingsSidebar from '../components/UserSettingsSidebar';
+import "./MyPosts.css";
 
 function MyPosts() {
     const [loggedInUserId, setLoggedInUserId] = useState(null);

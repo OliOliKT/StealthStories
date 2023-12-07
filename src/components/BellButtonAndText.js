@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./ButtonAndText.css";
 
 function BellButtonAndText({ onFollow, isFollowed }) {

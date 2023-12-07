@@ -1,5 +1,5 @@
-// LikeButtonAndText.js
 import React from 'react';
+
 import './ButtonAndText.css';
 
 function LikeButtonAndText({ sipCount, onSip, isSipped }) {

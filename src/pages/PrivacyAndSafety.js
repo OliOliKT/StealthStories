@@ -1,10 +1,10 @@
 import React from "react";
-import "./PrivacyAndSafety.css";
 
 import TopBarComponent from "../components/topBarComponent";
 import InformationComponent from "../components/Information";
 import Footer from "../components/footer";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
+import "./PrivacyAndSafety.css";
 
 const PrivacyAndSafety = () => {
   return (

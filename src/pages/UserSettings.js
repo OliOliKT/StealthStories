@@ -1,3 +1,5 @@
+import React from "react";
+
 import Footer from "../components/footer";
 import TopBar from "../components/topBarComponent";
 import UserInfo from "../components/UserInfo";

@@ -1,6 +1,7 @@
 import React from "react";
-import "./LogInComponent.css";
+
 import FormInput from "./FormInput";
+import "./LogInComponent.css";
 
 function LogInComponent() {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+
 import './MyPostsTitle.css';
 
 function Title() {

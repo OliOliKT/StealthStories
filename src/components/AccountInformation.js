@@ -1,7 +1,8 @@
-import React from "react";
-import "./AccountInformation.css";
+import React, { useState } from "react";
 import Parse from "parse";
-import { useState } from "react";
+
+import "./AccountInformation.css";
+
 
 const AccountInformation = () => {
   const currentUser = Parse.User.current();

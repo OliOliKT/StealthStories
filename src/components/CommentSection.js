@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Parse from 'parse';
-import "./CommentSection.css";
+
 import Comment from "./Comment";
+import "./CommentSection.css";
+
 
 function CommentSection( { postId, numberOfComments } ) {
   const [comments, setComments] = useState([]);

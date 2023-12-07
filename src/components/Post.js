@@ -1,23 +1,25 @@
-import Parse from 'parse';
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import Parse from 'parse';
+
 import LikeButtonAndText from './LikeButtonAndText';
 import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
-import { useNavigate } from 'react-router-dom';
  
 function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
-  
   const [commentCount, setCommentCount] = useState(numberOfComments);
     
   const navigate = useNavigate();
 
 
+  /* Navigates to the page 'IndividualPost' with the associated post data */
   const handleCommentIconClick = () => {
     navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId, numberOfComments, sipCount } });
   };
+
 
   const handleComment = async () => {
     try {

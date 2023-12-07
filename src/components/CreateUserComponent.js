@@ -1,7 +1,8 @@
 import React from "react";
-import "./CreateUserComponent.css";
+
 import CreateUserButtonAndText from "./CreateUserButtonAndText";
 import BackToLoginButton from "./BackToLogin";
+import "./CreateUserComponent.css";
 
 function CreateUser() {
   return (

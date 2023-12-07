@@ -1,5 +1,4 @@
 import React from "react";
-import "./TrendingFeed.css";
 
 import FeedNavigation from "../components/FeedNavigation";
 import TrendingBlock from "../components/TrendingBlock";
@@ -7,6 +6,7 @@ import Feed from "../components/Feed";
 import TopBar from "../components/topBarComponent";
 import Footer from "../components/footer";
 import WritePost from '../components/writePost';
+import "./TrendingFeed.css";
 
 function TrendingFeed() {
   return (

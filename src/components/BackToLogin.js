@@ -1,6 +1,7 @@
 import React from "react";
-import "./BackToLogin.css";
 import { Link } from "react-router-dom";
+
+import "./BackToLogin.css";
 
 const BackToLoginButton = () => {
   return (

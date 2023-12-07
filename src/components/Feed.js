@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Parse from 'parse';
-import "./Feed.css";
+
 import Post from './Post';
 import PostFilter from './MyPostsFilter';
+import "./Feed.css";
 
 function Feed({ filterType, currentUser, numberOfPostsPosted }) {
   const [posts, setPosts] = useState([]);
