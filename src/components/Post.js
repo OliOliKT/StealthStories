@@ -6,31 +6,10 @@ import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
 import { useNavigate, useLocation } from 'react-router-dom';
  
-function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments }) {
+function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments, commentClickCallback }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
-  const location = useLocation();
-  // const [commentCount, setCommentCount] = useState(numberOfComments);
-  
-  const navigate = useNavigate();
 
-
-  /* Navigates to the page 'IndividualPost' with the associated post data, using the postId for the URL */
-  const handleCommentIconClick = () => {
-    console.log(location)
-    if (location.pathname == "/DiscoverFeed"){
-    navigate(`/posts/${postId}`, { state: { postTitle, mood, postedBy, postContent, postId, numberOfComments, sipCount } });
-    }
-    else{
-      
-    }
-  };
-
- 
-    useEffect(() => {
-      console.log(numberOfComments);
-    }, [numberOfComments]);
-  
   /* 
   When a user clicks the 'sip' (coffee) button, the total sips for a post will be incremented by 1.
   If the user clicks it once more, the total sips will be decremented instead.
@@ -77,8 +56,8 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
       <div className="bottomPartOfPost">
         <div id="backgroundOnActionBar">
           <div className="actionBarOnPost">
-            <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} />
-            <CommentButtonAndText commentCount={numberOfComments} onComment={handleCommentIconClick} />
+            <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} className={"iconAndText"}/>
+            <CommentButtonAndText commentCount={numberOfComments} onComment={commentClickCallback} />
             <BellButtonAndText />
           </div>
         </div>

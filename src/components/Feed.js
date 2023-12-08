@@ -4,11 +4,21 @@ import Parse from 'parse';
 import Post from './Post';
 import PostFilter from './MyPostsFilter';
 import "./Feed.css";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Feed({ filterType, currentUser, numberOfPostsPosted }) {
   const [posts, setPosts] = useState([]);
   const [selectedMood, setSelectedMood] = useState('all');
   const [sortBy, setSortBy] = useState('createdAt');
+  const navigate = useNavigate(); 
+
+  /* Navigates to the individualPost page, brining with the postId of the post being clicked*/
+  const handleCommentIconClick = (postId) => {
+    console.log('clicked');
+    console.log(postId);
+    navigate(`/posts/${postId}`);
+    
+  };
 
   useEffect(() => {
     async function fetchPosts() {
@@ -74,7 +84,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
       <PostFilter setSelectedMood={setSelectedMood} handleSortChange={handleSortChange} />
       {posts.map((post) => (
         <Post
-          key={post.id}
+          key={post.objectId}
           postTitle={post.postTitle}
           mood={post.mood}
           postedBy={post.userId}
@@ -83,6 +93,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
           postId={post.objectId}
           currentUser={currentUser}
           numberOfComments={post.comments}
+          commentClickCallback={() => handleCommentIconClick(post.objectId)}
         />
       ))}
     </div>

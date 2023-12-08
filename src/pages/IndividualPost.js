@@ -9,14 +9,38 @@ import CommentSection from "../components/CommentSection";
 import AddCommentButton from "../components/AddCommentButton";
 import "./IndividualPost.css";
 import Parse from 'parse';
-import PostFilter from '../components/MyPostsFilter';
+import fetchPost from "../repositories/postRepository";
+
 function IndividualPost() {
   const { postId } = useParams();
-  const location = useLocation();
-  const { postTitle, mood, postedBy, postContent, numberOfComments, sipCount } = location.state || {};
+  
+  const [postTitle, setPostTitle] = useState("");
+  const [postedBy, setpostedBy] = useState("");
+  const [mood, setmood] = useState("");
+  const [postContent, setPostContent] = useState("");
+  const [numberOfComments2, setNumberOfComments] = useState(0);
+  const [sipCount, setsipCount] = useState(0);
+
   const [isCommenting, setIsCommenting] = useState(false);
 
-  const [numberOfComments2, setNumberOfComments] = useState(numberOfComments);
+  /* Fetches the post with the given id from the data, on each render */
+  useEffect(() => {
+    const getPostData = async () => {
+      try {
+        const postData = await fetchPost(postId);
+        console.log(postData);
+        setPostTitle(postData.postTitle); 
+        setpostedBy(postData.userId);
+        setmood(postData.mood);
+        setPostContent(postData.postContent);
+        setNumberOfComments(postData.comments);
+        setsipCount(postData.sips);
+      } catch (error) {
+        console.error('Error fetching post:', error);
+      }
+    };
+    getPostData();
+  }, []);
 
   const handleAddCommentClick = () => {
     console.log('Add comment clicked'); 
@@ -28,10 +52,8 @@ function IndividualPost() {
     const Post = Parse.Object.extend("Post");
     const query = new Parse.Query(Post);
     const post = await query.get(postId);
-    console.log(numberOfComments);
-  
-    console.log(postId);
-    setNumberOfComments(post.toJSON().comments)
+    const updatedNumberOfComments = post.get('comments');
+    setNumberOfComments(updatedNumberOfComments);
   }
 
   const handleCommentPosted = () => {
@@ -54,7 +76,7 @@ function IndividualPost() {
     <>
     <div className="individual-post-page-content">
       <TopBar />
-      {location.state ? (
+      {postTitle ? (
         <Post id="individual-post-view"
           postTitle={postTitle}
           mood={mood}
@@ -63,11 +85,12 @@ function IndividualPost() {
           postId={postId}
           numberOfComments={numberOfComments2}
           sipCount={sipCount}
+          commentClickCallback={() => handleAddCommentClick(postId)}
         />
       ) : (
         <p>Post not found</p>
       )}
-      <CommentSection postId={postId} numberOfComments={numberOfComments} />
+      <CommentSection postId={postId} numberOfComments={numberOfComments2} />
       <AddCommentButton onAddCommentClick={handleAddCommentClick} />
       {isCommenting && (
         <WriteComment
