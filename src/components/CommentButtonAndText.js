@@ -6,9 +6,7 @@ import "./ButtonAndText.css";
 function CommentButtonAndText({ commentCount, onComment }) {
   return (
     <div className="iconAndText" onClick={onComment}>
-      <Link to="#" className="iconLink" onClick={(e) => e.preventDefault()}>
-        <i className="fa-solid fa-comment"></i>
-      </Link>
+      <i className="fa-solid fa-comment"></i>
       <p className="iconText">{commentCount}</p>
     </div>
   );
