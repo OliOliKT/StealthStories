@@ -17,7 +17,6 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     console.log('clicked');
     console.log(postId);
     navigate(`/posts/${postId}`);
-    
   };
 
   useEffect(() => {
@@ -94,6 +93,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
           currentUser={currentUser}
           numberOfComments={post.comments}
           commentClickCallback={() => handleCommentIconClick(post.objectId)}
+          ClickCallback={() => handleCommentIconClick(post.objectId)}
         />
       ))}
     </div>

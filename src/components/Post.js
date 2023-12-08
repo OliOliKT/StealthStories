@@ -6,7 +6,7 @@ import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
 import { useNavigate, useLocation } from 'react-router-dom';
  
-function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments, commentClickCallback }) {
+function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments, commentClickCallback, ClickCallback }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
 
@@ -37,7 +37,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
   };
 
   return (
-    <div className="IndividualPost">
+    <div className="IndividualPost" onClick={ClickCallback}>
       <div className="BlockPostContent">
         <div className="textPartOfPost">
           <div className="avatar-area">
