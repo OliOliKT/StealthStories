@@ -10,7 +10,7 @@ const UserSettingsSidebar = () => {
       <ul>
         <li>
           <div id="userSetting">
-            <h3>User settings</h3>
+            <h3>Settings</h3>
             <ul>
               <Link to="/UserSettings">
                 <li>

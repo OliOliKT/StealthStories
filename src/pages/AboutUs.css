@@ -1,68 +1,53 @@
 .about-us-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-gap: 20px;
-    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-gap: 20px;
+  place-items: start;
 }
 
 .about-us-title {
-    grid-row: 1;
-    grid-column: 2;
-    text-align: center;
-    align-self: center;
-    font-size: xx-large;
-    margin-bottom: 10px;
-    margin-top: 50px;
+  grid-row: 1;
+  grid-column: 2;
+  font-size: xx-large;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.hi-there {
+  grid-row: 3;
+  grid-column: 2;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .information-outerbox {
-    grid-row: 3;
-    grid-column: 2;
-    align-self: start;
-    justify-self: center;
+  grid-row: 3;
+  grid-column: 2 / span 3;
 }
 
 .about-us-text {
-   padding: 0 30px 20px 30px;
-   font-size: medium;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 14px;
 }
 
-
-.user-settings-main-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-gap: 20px;
-    place-items: center;
+.our-values-header {
+  grid-row: 4;
+  grid-column: 2;
+  font-size: 20px;
+  font-weight: 600;
+  
 }
 
-.header {
-    grid-row: 1;
-    grid-column: 1 / span 3;
+.our-values-content {
+  grid-row: 5;
+  grid-column: 2 / span 3;
 }
 
-.user-info {
-    grid-row: 2;
-    grid-column: 2;
-}
-
-.account-information {
+.about-us-image{
     grid-row: 3;
-    grid-column: 2;
+    grid-column: 3;
+    width: 500px;
+    height: 500px;
 }
-
-.two-factor-authentication {
-    grid-row: 4;
-    grid-column: 2;
-}
-
-.delete-account {
-    grid-row: 5;
-    grid-column: 2;
-}
-
-
-
-
-
