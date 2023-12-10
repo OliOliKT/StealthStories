@@ -9,3 +9,9 @@
   background-color: hsl(243, 37%, 11%);
   margin-top: 20px;
 }
+
+.footer--pin {
+  position: relative;
+  left: 0;
+  bottom: 0;
+}

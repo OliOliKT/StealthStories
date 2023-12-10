@@ -3,12 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 20px; 
-    place-items: center;
-}
-
-.header {
-    grid-row: 1;
-    grid-column: 1 / span 3;
+    place-items: start;
 }
 
 .user-info{

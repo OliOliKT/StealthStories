@@ -37,7 +37,7 @@ const UserSettingsSidebar = () => {
         </li>
         <li>
           <div className="about-us">
-            <h3>Learn more about StealthStories</h3>
+            <h3>Learn more</h3>
             <ul>
               <Link to="/AboutUs">
                 <li>
