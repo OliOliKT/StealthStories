@@ -4,7 +4,6 @@ import LikeButtonAndText from './LikeButtonAndText';
 import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
-import { useNavigate, useLocation } from 'react-router-dom';
  
 function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments, commentClickCallback, ClickCallback }) {
   const [isSipped, setIsSipped] = useState(false);
