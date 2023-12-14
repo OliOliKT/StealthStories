@@ -18,17 +18,17 @@
     background-color: hsl(245, 19%, 27%);
 }
 
-.noAccount {
+.no-account {
     padding-top: 25px;
     font-size: small;
 }
 
-.logInBtn {
+.log-in-btn {
     display: flex;
     justify-content: center;
 }
 
-.signIn {
+.sign-in {
     color: white;
     background-color: hsl(245, 19%, 27%);
     border-radius: 5px;
@@ -43,27 +43,27 @@
     transition: background-color 0.3s ease;
 }
 
-.signIn:hover {
+.sign-in:hover {
     background-color: hsl(152, 93%, 65%, 0.8);
 }
 
-.noAccount p {
+.no-account p {
 display: flex;
 justify-content: center;
 }
 
 
-.createAccount {
+.create-account {
     color: white;
     text-decoration: underline;
 }
 
 
-.createAccount:hover {
+.create-account:hover {
     color: hsla(152, 93%, 65%, 0.8);
 }
 
-.errorMessage {
+.error-message {
     color: hsla(11, 96%, 46%, 0.8);
     font-size: small;
     width: 100%;

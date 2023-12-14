@@ -24,8 +24,8 @@ function LogInButtonAndFormInput() {
   };
 
   return (
-    <div className="logIn">
-      <div className="inputContainer">
+    <div className="log-in">
+      <div className="input-container">
         <div className="mail">
           <p>E-mail</p>
           <input
@@ -44,18 +44,18 @@ function LogInButtonAndFormInput() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <span className="errorMessage">{error}</span>
+        <span className="error-message">{error}</span>
       </div>
-      <div className="logInBtn">
-        <button className="signIn" onClick={handleLogin}>
+      <div className="log-in-btn">
+        <button className="sign-in" onClick={handleLogin}>
           Log in
         </button>
       </div>
-      <div className="noAccount">
+      <div className="no-account">
         <p>No account? No worries!</p>
         <p>
           <Link to="/CreateUser">
-            <a className="createAccount">Create one here</a>
+            <a className="create-account">Create one here</a>
           </Link>
         </p>
       </div>
