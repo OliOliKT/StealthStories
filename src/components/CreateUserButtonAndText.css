@@ -1,4 +1,4 @@
-.mail p, .password p, .verifyPassword p, .username p{
+.mail p, .password p, .verify-password p, .username p{
     margin-bottom: 8px;
     margin-top: 8px;
     text-align: center;
@@ -6,7 +6,7 @@
 
 
 
-.inputUsernameAndMailAndPassword {
+.input-username-and-mail-and-password {
     outline: none;
     width: 180px;
     border-color: hsl(242, 22%, 51%);

@@ -33,12 +33,12 @@ const CreateNewUser = () => {
 
   return (
     <div className="creater-user-box">
-      <div className="inputContainer">
+      <div className="input-container">
         <div className="username">
           <p>Username</p>
           <input
             type="username"
-            className="inputUsernameAndMailAndPassword"
+            className="input-username-and-mail-and-password"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
@@ -47,7 +47,7 @@ const CreateNewUser = () => {
           <p>E-mail</p>
           <input
             type="email"
-            className="inputUsernameAndMailAndPassword"
+            className="input-username-and-mail-and-password"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -56,21 +56,21 @@ const CreateNewUser = () => {
           <p>Password</p>
           <input
             type="password"
-            className="inputUsernameAndMailAndPassword"
+            className="input-username-and-mail-and-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div className="verifyPassword">
+        <div className="verify-password">
           <p>Confirm Password</p>
           <input
             type="password"
-            className="inputUsernameAndMailAndPassword"
+            className="input-username-and-mail-and-password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
-        <span className="errorMessage">{error}</span>
+        <span className="error-message">{error}</span>
       </div>
       <div className="create-user">
         <button className="create-user-btn" onClick={handleSignup}>
