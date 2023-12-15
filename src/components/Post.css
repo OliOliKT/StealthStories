@@ -3,19 +3,19 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
+
 
 .BlockPostContent {
   padding: 20px 20px 10px 20px;
 }
 
 .IndividualPost {
-  background-color: #393751;
+  background-color: hsl(245, 19%, 27%);
   width: 640px;
   border-radius: 10px;
-  border: 1px solid #68669d;
-  margin-bottom: 30px;
+  border: 1px solid hsl(242, 22%, 51%);
 }
 
 .bottomPartOfPost {
@@ -23,7 +23,7 @@
 }
 
 #backgroundOnActionBar {
-  background-color: #2e2c43;
+  background-color: hsl(245, 21%, 22%);
   height: 30px;
   width: 100%;
   z-index: 1;
@@ -55,8 +55,6 @@
   font-size: 12px;
   font-weight: normal;
   color: hsl(244, 55%, 77%);
-  font-family: Helvetica, Arial, sans-serif;
-  margin: 0;
 }
 
 .mood {
@@ -65,19 +63,12 @@
 }
 
 .postTitle {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  font-size: 20px;
   margin-top: 3px;
   margin-bottom: 3px;
   padding-left: 8px;
 }
 
 .post-content {
-  font-family: Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.5;
   padding-bottom: 12px;
 }
 .actionBarOnPost {
@@ -90,17 +81,7 @@
 .iconText {
   padding-left: 8px;
   padding-right: 30px;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
   display: flex;
   align-items: center;
   white-space: nowrap;
 }
-
-h2 {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #fafafc;
-    font-size: 20px;
-  }

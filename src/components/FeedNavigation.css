@@ -1,55 +1,81 @@
-.feedNav{
-    width: 640px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-  }
-  
-  #discoverFeedNav{
-    width: 320px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    border-bottom: 2px solid #50F9AB;
-  }
-  
-  #tendingFeedNav{
-    width: 320px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    border-bottom: 2px solid #AAA6E5;
-  }
-  
-  .navTextDiscover{
-    color:#50F9AB;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    padding-left: 8px;
-    font-weight: bold;
-  }
-  
-  .navTextTrending{
-    color:#AAA6E5;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    padding-left: 8px;
-    font-weight: bold;
-  }
-  
-  .iconLinkTrendingNav{
-    color:#AAA6E5;
-    align-self: center;
-    justify-self: center;
-  }
-  
-  .iconLinkDiscoverNav{
-    color: #50F9AB;
-    align-self: center;
-    justify-self: center;
-  }
-  
-  p{
-    padding: 0;
-  }
+.feedNav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.navLink div {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.iconAndText:hover .navTextTrending,
+.iconAndText:hover .navTextDiscover {
+  color: #50f9ab;
+}
+
+.navTextDiscover,
+.navTextTrending {
+  font-size: 16px;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.fa-regular,
+.fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activeLink,
+.activeLink .navTextDiscover,
+.activeLink .navTextTrending {
+  color: #50f9ab;
+}
+
+.inactiveLink,
+.inactiveLink .navTextDiscover,
+.inactiveLink .navTextTrending {
+  color: #aaa6e5; 
+}
+
+/* This is what gives the navigation a bottom line */
+.inactiveLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #aaa6e5;
+}
+
+.navTextDiscover:hover,.navTextTrending:hover{
+  color: #50f9ab;
+}
+
+/* This is what gives the navigation a bottom line */
+.activeLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+}
+
+#discoverFeedNav.activeLink::after {
+  background-color: #50f9ab;
+}
+
+#trendingFeedNav.activeLink::after {
+  background-color: #50f9ab;
+}
+

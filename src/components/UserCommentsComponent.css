@@ -1,0 +1,46 @@
+#comments {
+    width: 640px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: solid 1px #68669D;
+    background-color: #393851;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#userIcon{
+    font-size: 25px;
+    padding-right: 10px;
+    color: #AAA6E5;
+}
+
+.userComment {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#commentBy {
+    font-size: 12px;
+    font-weight: lighter;
+    color: hsl(244, 55%, 77%);
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 0px 15px;
+}
+
+.userComment {
+    font-size: 14px;
+    padding: 0px 0px 0px 15px;
+}
+
+.commentBorder {
+    bottom: 0;
+}

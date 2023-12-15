@@ -1,0 +1,19 @@
+.back-to-login-page {
+    width: 220px;
+    height: 30px;
+    color: white;
+    background-color: hsl(245, 19%, 27%);
+    border-color: hsl(242, 22%, 51%);
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid hsl(241, 22%, 51%);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+.back-to-login-page:hover {
+     background-color: hsla(152, 93%, 65%, 0.8);
+}

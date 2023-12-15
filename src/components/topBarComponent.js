@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Parse from "parse";
+
 import "./topBarComponent.css";
+
 
 const TopBar = () => {
   return (
@@ -26,30 +30,70 @@ const SearchBar = () => {
 const Logo = () => {
   return (
     <div className="logo">
-      <img src="images/logo.png" id="logoimg" />
+      <Link to="/DiscoverFeed">
+      <img src={`${process.env.PUBLIC_URL}/images/logo.png`} id="logoimg" alt="Logo" /> {/* made to absolute path */}
+      </Link>
     </div>
   );
 };
 
 const TopBarIcons = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleLogout = async () => {
+    try {
+      await Parse.User.logOut();
+      navigate("/");
+    } catch (error) {
+      console.error("Error logging out", error);
+      alert("Failed to log out, please try again.");
+    }
+  };
+
   return (
     <div className="navigation">
       <nav>
         <ul>
           <li>
-            <a href="#">
+            <Link to="/MyPosts">
               <i className="fa-solid fa-box-archive"></i>
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#">
               <i className="fa-solid fa-bell"></i>
             </a>
           </li>
-          <li>
+          <li className="user-icon" onClick={toggleDropdown}>
             <a href="#">
               <i className="fas fa-user"></i>
             </a>
+            {isDropdownOpen && (
+              <div className="dropdown-menu">
+                <ul>
+                  <li>
+                    <Link to="/UserSettings">User Settings</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <Link to="/MyPosts">My Posts</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <button className="log-out-btn" onClick={handleLogout}>
+                      Log out
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            )}
           </li>
         </ul>
       </nav>

@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
 import "./FeedNavigation.css";
 
 function FeedNavigation() {
+  const [activeLink, setActiveLink] = useState("discover");
+
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.pathname === "/DiscoverFeed") {
+      setActiveLink("discover");
+    } else if (location.pathname === "/TrendingFeed") {
+      setActiveLink("trending");
+    } else {
+      setActiveLink("");
+    }
+  }, [location.pathname]);
+
   return (
     <div className="feedNav">
-      <div id="discoverFeedNav">
-        <div className="iconAndText">
-          <a href="#" className="iconLinkDiscoverNav">
+      <Link to="/DiscoverFeed" className="navLink">
+        <div id="discoverFeedNav" className={activeLink === "discover" ? "activeLink" : "inactiveLink"}>
+          <div className="iconAndText">
             <i className="fa-regular fa-compass"></i>
-          </a>
-          <p className="navTextDiscover">Discover</p>
+            <p class="navTextDiscover">Discover</p>
+          </div>
         </div>
-      </div>
-      <div id="tendingFeedNav">
-        <div className="iconAndText">
-          <a href="#" className="iconLinkTrendingNav">
+      </Link>
+
+      <Link to="/TrendingFeed" className="navLink">
+        <div id="trendingFeedNav" className={activeLink === "trending" ? "activeLink" : "inactiveLink"}>
+          <div className="iconAndText">
             <i className="fa-solid fa-fire-flame-curved"></i>
-          </a>
-          <p className="navTextTrending">Trending</p>
+            <p class="navTextTrending">Trending</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

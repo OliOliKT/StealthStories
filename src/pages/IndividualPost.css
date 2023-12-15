@@ -1,0 +1,30 @@
+.individual-post-page-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-gap: 20px; /* Gap between grid items */
+  place-items: center;
+  
+}
+
+.IndividualPost{
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.add-comment-button{
+  grid-row: 3;
+  grid-column: 2;
+  align-self: left;
+  justify-self: left;
+}
+
+.comment-section-content{
+  grid-row: 4;
+  grid-column: 2;
+}
+
+.writeComment{
+  grid-row: 5;
+  grid-column: 2;
+} 

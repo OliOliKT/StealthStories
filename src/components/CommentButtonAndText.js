@@ -1,13 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./ButtonAndText.css";
 
-function CommentButtonAndText() {
+function CommentButtonAndText({ commentCount, onComment }) {
   return (
-    <div className="iconAndText">
-      <a href="#" className="iconLink">
-        <i className="fa-solid fa-comment"></i>
-      </a>
-      <p className="iconText">153</p>
+    <div className="iconAndText" onClick={onComment}>
+      <i className="fa-solid fa-comment"></i>
+      <p className="iconText">{commentCount}</p>
     </div>
   );
 }

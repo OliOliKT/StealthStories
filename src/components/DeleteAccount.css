@@ -1,0 +1,33 @@
+.delete-account-button {
+    background-color: #d9534f; /* Bootstrap's button danger color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-account-button:hover {
+    background-color: #c9302c; /* A darker shade for hover */
+}
+
+/* Optional: Adding an outline on focus for accessibility */
+.delete-account-button:focus {
+    outline: 2px solid #FFF;
+    outline-offset: 2px;
+}
+
+.delete-account {
+    margin-top: 10px;
+    border-radius: 10px;
+    border: solid 1px #68669D;
+    background-color: #393851;
+    color: #FAFAFC;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px;
+}

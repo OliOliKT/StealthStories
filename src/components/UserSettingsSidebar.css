@@ -1,0 +1,47 @@
+.sidebar-nav {
+    width: 220px; 
+    border-right: solid 1px #68669D; 
+    background-color: #212034;
+    color: #FAFAFC;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; 
+    grid-row: 3 / span 4;
+    grid-column: 1;
+    align-self: start;
+    justify-self: end;
+}
+
+.sidebar-nav ul {
+    display: block;
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin: 0; 
+    font-weight: 100;
+}
+
+.sidebar-nav a {
+    text-align: left;
+    display: block;
+    padding-top: 10px;
+    color: #FAFAFC;
+    text-decoration: none;
+}
+
+.sidebar-nav a:hover {
+    color: #aaa6e5;
+    text-decoration: none; 
+}
+
+.sidebar-nav h3 {
+    margin-bottom: 12px;
+}
+
+.about-us {
+    margin-top: 40px;
+}

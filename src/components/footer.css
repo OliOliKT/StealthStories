@@ -1,12 +1,11 @@
 .footer {
-    text-align: center;
-    padding: 10px;
-    height: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(243, 37%, 11%);
-    position: absolute;
-    bottom: 0;
+  text-align: center;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(243, 37%, 11%);
+  margin-top: 20px;
 }

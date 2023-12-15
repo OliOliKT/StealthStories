@@ -1,13 +1,15 @@
-import React from "react";
+import React from 'react';
+
 import './ButtonAndText.css';
 
-function LikeButtonAndText() {
+function LikeButtonAndText({ sipCount, onSip, isSipped, className }) {
+  
+  const iconClass = isSipped ? "fa-solid fa-mug-hot liked" : "fa-solid fa-mug-hot";
+
   return (
-    <div className="iconAndText">
-      <a href="#" className="iconLink">
-        <i className="fa-solid fa-mug-hot"></i>
-      </a>
-      <p className="iconText">45</p>
+    <div className={className} onClick={onSip}>
+      <i className={iconClass}></i>
+      <p className="iconText">{sipCount}</p>
     </div>
   );
 }

@@ -1,0 +1,42 @@
+#your-post-title {
+    margin-top: 30px;
+}
+
+#stats {
+    background-color: #212034;
+    width: 640px;
+    border-bottom: 1px solid #68669D;
+    padding-bottom: 16px;
+
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+
+.stat-box {
+    background-color: #393851;
+    border: 1px solid #565481;
+    color: #FAFAFC;
+    text-align: center;
+    padding: 8px;
+    margin: 0px 12px 0px 12px;
+    border-radius: 5px;
+    min-width: 90px;
+
+    flex-direction: row;
+}
+
+#stats p:first-child {
+    font-size: 12px;
+}
+
+#stats p:nth-child(2) {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+#your-post-title {
+    margin-bottom: 14px;
+}

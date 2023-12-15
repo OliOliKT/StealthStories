@@ -1,46 +1,64 @@
-import React from "react";
+import Parse from 'parse';
+import React, { useState, useEffect } from "react";
 import LikeButtonAndText from './LikeButtonAndText';
 import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
+import { useNavigate, useLocation } from 'react-router-dom';
+ 
+function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments, commentClickCallback, ClickCallback }) {
+  const [isSipped, setIsSipped] = useState(false);
+  const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
 
-function Post() {
+  /* 
+  When a user clicks the 'sip' (coffee) button, the total sips for a post will be incremented by 1.
+  If the user clicks it once more, the total sips will be decremented instead.
+  Styling the in 'LikeButtonAndText' determined the color based on the sipped state.
+  */
+  const handleSip = async () => {
+    try {
+      const Post = Parse.Object.extend("Post");
+      const query = new Parse.Query(Post);
+      const post = await query.get(postId);
+      if (isSipped) {
+        post.decrement("sips");
+        setUpdatedSipCount(updatedSipCount - 1);
+        setIsSipped(false);
+      } else {
+        post.increment("sips");
+        setUpdatedSipCount(updatedSipCount + 1);
+        setIsSipped(true);
+      }
+      await post.save();
+
+    } catch (error) {
+      console.error("Error incrementing sips:", error);
+    }
+  };
+
   return (
-    <div>
-      <div className="IndividualPost">
-        <div className="BlockPostContent">
-          <div className="textPartOfPost">
-            <div className="avatar-area">
-              <i className="fas fa-user-circle"></i>
-              <div className="post-meta-data">
-                <h2>
-                  I stole a clock from a kindergarden
-                  <em className="mood"> Feeling cheeky</em>
-                </h2>
-                <p className="posted-by">Posted by oli_oli_kt 3 months ago</p>
-              </div>
+    <div className="IndividualPost" onClick={ClickCallback}>
+      <div className="BlockPostContent">
+        <div className="textPartOfPost">
+          <div className="avatar-area">
+            <i className="fas fa-user-circle"></i>
+            <div className="post-meta-data">
+              <h2>
+                {postTitle} - <em className="mood">feeling {mood}</em>
+              </h2>
+              <p className="posted-by">Posted by {postedBy}</p>
             </div>
-            <p className="post-content">
-              I was the very last parent to pick up my son from kindergarden
-              that day. We have struggled financially for a few years since the
-              hospital bills for my mom have been pretty rough. I don’t know how
-              a kindergarden got hold of such an expensive piece of decoration,
-              but on the wall in the main dining room hang an Arne Jacobsen
-              clock worth around 200 dollars. To be honest I don’t know why I
-              did it, because a clock will not make a huge difference in our
-              lives, but as we were about to leave, I quickly climbed up on a
-              table of took the clock under my jacket and left.
-            </p>
           </div>
+          <p className="post-content">{postContent}</p>
         </div>
+      </div>
 
-        <div className="bottomPartOfPost">
-          <div id="backgroundOnActionBar">
-            <div className="actionBarOnPost">
-             <LikeButtonAndText/>
-             <CommentButtonAndText/>
-             <BellButtonAndText/>
-            </div>
+      <div className="bottomPartOfPost">
+        <div id="backgroundOnActionBar">
+          <div className="actionBarOnPost">
+            <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} className={"iconAndText"}/>
+            <CommentButtonAndText commentCount={numberOfComments} onComment={commentClickCallback} />
+            <BellButtonAndText />
           </div>
         </div>
       </div>
