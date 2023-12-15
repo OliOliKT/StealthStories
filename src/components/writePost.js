@@ -136,8 +136,8 @@ const PostBorder = ({ handleSendPost }) => {
 const PostIcons = () => {
   return (
     <div className="postIcons">
-      <i className="fa-solid fa-image"></i>
-      <i className="fa-solid fa-rainbow"></i>
+      <i className="fa-solid fa-image NotImplemented"></i>
+      <i className="fa-solid fa-rainbow NotImplemented"></i>
     </div>
   );
 };

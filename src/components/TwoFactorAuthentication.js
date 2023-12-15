@@ -4,7 +4,7 @@ import './TwoFactorAuthentication.css';
 
 const TwoFactorAuthentication = () => {
   return (
-    <div className="two-factor-authentication">
+    <div className="two-factor-authentication NotImplemented">
       <h2>Two-Factor Authentication</h2>
       <div className="sub-category">
         <div className="lock-symbol">

@@ -8,6 +8,7 @@ import AccountInformation from "../components/AccountInformation";
 import TwoFactorAuthentication from "../components/TwoFactorAuthentication";
 import DeleteAccount from "../components/DeleteAccount";
 import "./UserSettings.css";
+import "../components/NotImplemented.css";
  
 function UserSettings() {
   return (
