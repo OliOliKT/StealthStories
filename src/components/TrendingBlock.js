@@ -4,7 +4,7 @@ import "./TrendingBlock.css";
 
 function TrendingBlock() {
   return (
-    <div class="trendingBlock">
+    <div class="trendingBlock NotImplemented">
         <h1 id="trending-title">Trending in Denmark</h1>
         <p class="trendingText">1 #Woopsie</p>
         <p class="postAmountTrending">2.984 posts</p>
