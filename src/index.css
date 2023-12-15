@@ -17,6 +17,7 @@ p {
   color: hsl(240, 25%, 98%);
 }
 
+
 textarea::placeholder {
   font-size: 14px;
 }
