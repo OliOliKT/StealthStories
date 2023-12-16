@@ -14,3 +14,8 @@
 .add-comment-button:hover{
     background-color: #444267;
 }
+
+
+.add-comment-button-container{
+    width:640px;
+}

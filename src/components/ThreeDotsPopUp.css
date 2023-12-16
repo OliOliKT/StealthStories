@@ -2,6 +2,10 @@
   background-color: #393751;
   border-radius: 10px;
   border: 1px solid #68669d;
+  height: 78px;
+  width: 90px;
+  z-index: 9999;
+  position: fixed;
 }
 
 .delete-action{
