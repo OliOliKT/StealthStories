@@ -5,16 +5,20 @@
   cursor: pointer;
 }
 
-.iconAndText:hover{
+.iconAndText:hover {
   color: hsl(152, 93%, 65%);
 }
 
-.iconAndText:hover .fa-mug-hot,
-.iconAndText .fa-mug-hot.liked  {
+.iconAndText .fa-mug-hot.liked,
+.iconAndText:hover .fa-mug-hot {
   color: hsl(152, 93%, 65%);
 }
 
 .iconAndText:hover .iconText {
+  color: hsl(152, 93%, 65%);
+}
+
+.iconAndText .fa-mug-hot.liked + .iconText {
   color: hsl(152, 93%, 65%);
 }
 
@@ -26,6 +30,6 @@
   text-decoration: none;
 }
 
-.iconLink:hover, .iconText:hover{
+.iconLink:hover .iconText {
   color: hsl(152, 93%, 65%);
 }

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Comment.css";
 import LikeButtonAndText from "./LikeButtonAndText";
 
-function Comment({ postedBy, commentContent, daysAgo, ellipsesOnClick, handleSip, sipCount}) {
- 
+function Comment({ postedBy, commentContent, daysAgo, ellipsesOnClick, handleSip, sipCount, isSipped }) {
+  
   return (
     <div className="comment-container">
       <div className="user-icon-comment">
@@ -22,7 +22,7 @@ function Comment({ postedBy, commentContent, daysAgo, ellipsesOnClick, handleSip
           </div>
         </div>
         <div className="actions-on-comment">
-         <LikeButtonAndText className={"iconAndText"} sipCount={sipCount} onSip={handleSip}/>
+         <LikeButtonAndText className={"iconAndText"} isSipped={isSipped} sipCount={sipCount} onSip={handleSip}/>
           <i className="comment-icon fa-solid fa-ellipsis" onClick={ellipsesOnClick}></i>
         </div>
       </div>
