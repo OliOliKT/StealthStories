@@ -33,3 +33,9 @@
 .iconLink:hover .iconText {
   color: hsl(152, 93%, 65%);
 }
+
+.container-tooltip{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}

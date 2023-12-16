@@ -2,6 +2,7 @@
     background-color: #212034;
     width: 600px;
     font-size: 12px;
+    
 }
 
 #filter label {
@@ -19,6 +20,7 @@
     appearance: none; 
     cursor: pointer;
     margin-right: 30px;
+    transition: 0.1s ease-in-out;
 }
 
 #filter select option {
@@ -28,5 +30,5 @@
 
 #filter select:hover {
     background-color: #50F9AB;
-    color: #393851;
+    color: #393851; 
 }

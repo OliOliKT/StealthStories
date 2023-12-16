@@ -35,7 +35,7 @@ input[type="search"] {
   border: 1px solid hsl(242, 22%, 51%);
   border-radius: 5px;
   font-size: 14px;
-  color: hsl(152, 93%, 65%);
+  color: #FAFAFC;
   background-color: hsl(245, 19%, 27%);
 }
 
@@ -125,4 +125,8 @@ nav li {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+#search::placeholder {
+  color: #68669D;
 }
