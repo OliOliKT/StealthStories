@@ -86,7 +86,7 @@ function CommentSection( { postId, numberOfComments } ) {
           postedBy={comment.userIdString}
           commentContent={comment.content} 
           sipCount={comment.sips}
-          // daysAgo = {Math.round((new Date().getTime() - comment.createdAt.getTime()) / (1000 * 3600 * 24))}
+          daysAgo = {Math.round((new Date().getTime() - new Date(comment.createdAt).getTime()) / (1000 * 3600 * 24))}
           ellipsesOnClick = {() => toggleThreeDotsPopUp}
           handleSip = {() => handleSipOnComment(currentUser.id, commentId)}
         />
