@@ -1,0 +1,44 @@
+.background-pop-up {
+  background-color: #393751;
+  border-radius: 10px;
+  border: 1px solid #68669d;
+  height: 78px;
+  width: 90px;
+  z-index: 9999;
+  position: fixed;
+}
+
+.delete-action{
+  display: flex;
+  padding: 10px 10px 0px 10px;
+}
+
+.report-action {
+  display: flex;
+  padding: 10px 10px 10px 10px;
+}
+
+.delete-action:hover,
+.delete-action:hover .pop-up-text,
+.report-action:hover,
+.report-action:hover .pop-up-text {
+  cursor: pointer;
+  color: #50F9AB; /* Change to the color you want */
+}
+
+.fa-flag,
+.fa-trash-can {
+  padding-right: 10px;
+}
+
+.icon-container-pop-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+}
+
+.pop-up-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}

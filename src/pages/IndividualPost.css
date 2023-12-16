@@ -12,11 +12,11 @@
   grid-column: 2;
 }
 
-.add-comment-button{
+.add-comment-button-container{
   grid-row: 3;
   grid-column: 2;
-  align-self: left;
-  justify-self: left;
+  align-self: center;
+  justify-self: center;
 }
 
 .comment-section-content{

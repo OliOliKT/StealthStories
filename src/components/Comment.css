@@ -1,62 +1,72 @@
-.user-icon-comment{
-    color: #A8A4E5;
-    width: 40px;
-    font-size: 30px;
+.user-icon-comment {
+  color: #a8a4e5;
+  width: 40px;
+  font-size: 30px;
 }
 
-.comment-user-info{
-    display: flex;
-    padding: 10px 10px 5px 10px;
+.comment-user-info {
+  display: flex;
+  padding: 10px 10px 5px 10px;
 }
 
-.comment-content{
-    padding: 0px 10px 10px 10px;
-    margin: 0;
-    color: #FFFFFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+.fa-ellipsis {
+  align-self: center;
+  justify-self: center;
 }
 
-.comment-container{
-    display: flex;
-    margin-bottom: 20px;
+.fa-ellipsis:hover {
+  background-color: #393851;
+  border-radius: 3px;
 }
 
-.background-comment{
-    height: auto; 
-    min-height: 60px;
-    resize: vertical;
-    width: 600px;
-    background-color: #2A2941;
-    border-radius: 10px;
+.comment-content {
+  padding: 0px 10px 10px 10px;
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.comment-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.background-comment {
+  height: auto;
+  min-height: 60px;
+  resize: vertical;
+  width: 600px;
+  background-color: #2a2941;
+  border-radius: 10px;
 }
 
 .comment-icon {
-    padding: 0 5px 0 10px;
-    color: #FFFFFF;
+  padding: 0 5px 0 5px;
+  color: #ffffff;
 }
 
-.actions-on-comment{
-    display: flex;
-    padding-top: 10px;
+.actions-on-comment {
+  display: flex;
+  padding-top: 10px;
 }
 
-.sip-count-comment{
-    font-size: 12px;
-    color: #FFFFFF;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 3px 20px 0 0;
+.sip-count-comment {
+  font-size: 12px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 3px 20px 0 0;
 }
 
-.comment-user-text{
-    margin: 0;
-    font-size: 12px;
-    color: #FFFFFF;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-right: 10px;
-    font-weight: 700;
+.comment-user-text {
+  margin: 0;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 10px;
+  font-weight: 700;
 }
 
-body{
-    background-color: #212034;
+body {
+  background-color: #212034;
 }

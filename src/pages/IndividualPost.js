@@ -7,9 +7,9 @@ import Post from "../components/Post";
 import WriteComment from "../components/CommentComponent"; 
 import CommentSection from "../components/CommentSection";
 import AddCommentButton from "../components/AddCommentButton";
-import "./IndividualPost.css";
 import Parse from 'parse';
-import fetchPost from "../repositories/postRepository";
+import {fetchPost} from "../repositories/postRepository";
+import "./IndividualPost.css";
 
 function IndividualPost() {
   const { postId } = useParams();
@@ -20,7 +20,6 @@ function IndividualPost() {
   const [postContent, setPostContent] = useState("");
   const [numberOfComments2, setNumberOfComments] = useState(0);
   const [sipCount, setsipCount] = useState(0);
-
   const [isCommenting, setIsCommenting] = useState(false);
 
   /* Fetches the post with the given id from the data, on each render */
@@ -42,13 +41,14 @@ function IndividualPost() {
     getPostData();
   }, []);
 
+  /* When the 'add  comment' button is clicked, a component will appear at the bottom of the page */
   const handleAddCommentClick = () => {
     console.log('Add comment clicked'); 
     setIsCommenting(true);
   };
 
+  /* Updats the comment count for the post object in the database */
   const fetchCommentCount = async() =>  {
-    
     const Post = Parse.Object.extend("Post");
     const query = new Parse.Query(Post);
     const post = await query.get(postId);
@@ -99,7 +99,6 @@ function IndividualPost() {
           onCommentPosted={handleCommentPosted}
         />
       )}
-      
     </div>
     <Footer />
     </>

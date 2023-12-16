@@ -4,7 +4,6 @@ import LikeButtonAndText from './LikeButtonAndText';
 import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
-import { useNavigate, useLocation } from 'react-router-dom';
  
 function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments, commentClickCallback, ClickCallback }) {
   const [isSipped, setIsSipped] = useState(false);
@@ -37,14 +36,14 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
   };
 
   return (
-    <div className="IndividualPost" onClick={ClickCallback}>
-      <div className="BlockPostContent">
+    <div className="IndividualPost">
+      <div className="BlockPostContent" onClick={ClickCallback}>
         <div className="textPartOfPost">
           <div className="avatar-area">
             <i className="fas fa-user-circle"></i>
             <div className="post-meta-data">
               <h2>
-                {postTitle} - <em className="mood">feeling {mood}</em>
+                {postTitle} <em className="mood"> Feeling {mood}</em>
               </h2>
               <p className="posted-by">Posted by {postedBy}</p>
             </div>

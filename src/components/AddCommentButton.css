@@ -15,6 +15,7 @@
     background-color: #444267;
 }
 
-.show {
-    cursor: pointer;
+
+.add-comment-button-container{
+    width:640px;
 }
