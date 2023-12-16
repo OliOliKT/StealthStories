@@ -4,7 +4,6 @@ import Parse from "parse";
 
 import "./topBarComponent.css";
 
-
 const TopBar = () => {
   return (
     <section className="header">
@@ -31,11 +30,16 @@ const Logo = () => {
   return (
     <div className="logo">
       <Link to="/DiscoverFeed">
-      <img src={`${process.env.PUBLIC_URL}/images/logo.png`} id="logoimg" alt="Logo" /> {/* made to absolute path */}
+        <img
+          src={`${process.env.PUBLIC_URL}/images/logo.png`}
+          id="logoimg"
+          alt="Logo"
+        />{" "}
       </Link>
     </div>
   );
 };
+
 
 const TopBarIcons = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -60,36 +64,35 @@ const TopBarIcons = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/MyPosts">
-              <i className="fa-solid fa-box-archive"></i>
-            </Link>
+              <i className="fa-solid fa-box-archive nav-icon" onClick={() => navigate("/UserSettings")}></i>
           </li>
           <li>
             <a href="#">
-              <i className="fa-solid fa-bell"></i>
+              <i className="fa-solid fa-bell nav-icon"></i>
             </a>
           </li>
-          <li className="user-icon" onClick={toggleDropdown}>
+          <li className="user-icon nav-icon" onClick={toggleDropdown}>
             <a href="#">
-              <i className="fas fa-user"></i>
+              <i className="fas fa-user nav-icon"></i>
             </a>
             {isDropdownOpen && (
               <div className="dropdown-menu">
-                <ul>
+                <ul onClick={() => navigate("/UserSettings")}>
                   <li>
-                    <Link to="/UserSettings">User Settings</Link>
+                    <i class="fa-solid fa-gear dropdown-icon"></i>
+                    <p className="dropdown-text"> User settings</p>
                   </li>
                 </ul>
-                <ul>
+                <ul onClick={() => navigate("/MyPosts")}>
                   <li>
-                    <Link to="/MyPosts">My Posts</Link>
+                    <i class="fa-solid fa-box-archive dropdown-icon"></i>
+                    <p className="dropdown-text"> My posts </p>
                   </li>
                 </ul>
-                <ul>
+                <ul onClick={handleLogout}>
                   <li>
-                    <button className="log-out-btn" onClick={handleLogout}>
-                      Log out
-                    </button>
+                    <i class="fa-solid fa-arrow-right-from-bracket dropdown-icon"></i>
+                    <p className="dropdown-text"> Log out</p>
                   </li>
                 </ul>
               </div>

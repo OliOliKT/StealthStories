@@ -34,6 +34,7 @@
     display: block;
     color: #FAFAFC;
     text-decoration: none;
+    transition: 0.05s ease-in-out;
 }
 
 .sidebar-nav a:hover {
