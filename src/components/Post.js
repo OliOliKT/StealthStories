@@ -5,7 +5,7 @@ import CommentButtonAndText from './CommentButtonAndText';
 import BellButtonAndText from './BellButtonAndText';
 import './Post.css';
  
-function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, numberOfComments, commentClickCallback, ClickCallback }) {
+function Post({ postTitle, mood, postedBy, daysAgo, postContent, postId, sipCount, numberOfComments, commentClickCallback, ClickCallback }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
 
@@ -45,7 +45,7 @@ function Post({ postTitle, mood, postedBy, postContent, postId, sipCount, number
               <h2>
                 {postTitle} <em className="mood"> Feeling {mood}</em>
               </h2>
-              <p className="posted-by">Posted by {postedBy}</p>
+              <p className="posted-by">Posted by {postedBy} • { daysAgo } days ago</p>
             </div>
           </div>
           <p className="post-content">{postContent}</p>

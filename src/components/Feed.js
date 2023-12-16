@@ -94,6 +94,10 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
           numberOfComments={post.comments}
           commentClickCallback={() => handleCommentIconClick(post.objectId)}
           ClickCallback={() => handleCommentIconClick(post.objectId)}
+          daysAgo={Math.round(
+            (new Date().getTime() - new Date(post.createdAt).getTime()) /
+              (1000 * 3600 * 24)
+          )}
         />
       ))}
     </div>
