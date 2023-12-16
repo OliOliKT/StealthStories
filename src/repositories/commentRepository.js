@@ -4,7 +4,7 @@ const fetchComment = async (commentId) => {
   const Comment = Parse.Object.extend("Comment");
   const query = new Parse.Query(Comment);
   const comment = await query.get(commentId);
-  return comment.toJSON();
+  return comment;
 };
 
 // Function for ADDING a row in the CommentLikes class in the database
@@ -59,10 +59,10 @@ const checkIfCommentLiked = async (userId, commentId) => {
     try {
       const result = await query.first();
       if (result) {
-        console.log("TRUE");
+        console.log("User have liked this comment before");
         return true;
       } else {
-        console.log("FALSE");
+        console.log("User have NOT liked this comment before");
         return false;
       }
     } catch (error) {
