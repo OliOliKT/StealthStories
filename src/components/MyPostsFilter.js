@@ -9,7 +9,7 @@ function PostFilter({ setSelectedMood, handleSortChange }) {
 
     return (
         <div id="filter">
-            <label for="post-filter">Filter by:</label>
+            <label for="post-filter">Sort by:</label>
             <select id="post-filter" name="post-filter-list" form="post-filter-form" onChange={handleSortChange}>
                 <option value="date">Date</option>
                 <option value="popularity">Popularity</option>

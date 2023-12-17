@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Parse from "parse";
 
-import "./CommentComponent.css";
+import "./WriteComment.css";
 
 const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
   const [comment, setComment] = useState('');
@@ -77,7 +77,7 @@ const CommentBorder = ({ onCommentSubmit }) => {
 
 const CommentIcons = () => {
   return (
-    <div className="commentIcons">
+    <div className="commentIcons NotImplemented">
       <i className="fa-solid fa-image"></i>
       <i className="fa-solid fa-rainbow"></i>
     </div>

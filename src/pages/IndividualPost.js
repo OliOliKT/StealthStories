@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import TopBar from "../components/topBarComponent";
 import Footer from "../components/footer";
 import Post from "../components/Post";
-import WriteComment from "../components/CommentComponent"; 
+import WriteComment from "../components/WriteComment"; 
 import CommentSection from "../components/CommentSection";
-import AddCommentButton from "../components/AddCommentButton";
 import Parse from 'parse';
 import {fetchPost} from "../repositories/postRepository";
 import "./IndividualPost.css";
@@ -91,7 +90,13 @@ function IndividualPost() {
         <p>Post not found</p>
       )}
       <CommentSection postId={postId} numberOfComments={numberOfComments2} />
-      <AddCommentButton onAddCommentClick={handleAddCommentClick} />
+
+      <div className="add-comment-button-container">
+        <button className="add-comment-button" onClick={handleAddCommentClick}>
+            <p className="add-comment-text">+ Add Comment</p>
+        </button>
+      </div>
+
       {isCommenting && (
         <WriteComment
           postId={postId}
