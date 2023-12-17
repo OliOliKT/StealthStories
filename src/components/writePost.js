@@ -3,7 +3,7 @@ import Parse from "parse";
 
 import "./writePost.css";
 
-const WritePost = ({onPostPosted}) => {
+const WritePost = ({ onPostPosted }) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [userId, setUserId] = useState("unknown user");
@@ -24,7 +24,7 @@ const WritePost = ({onPostPosted}) => {
             const user = await userQuery.first();
             if (user) {
               const username = user.get("username");
-              setUserId(username);  
+              setUserId(username);
             }
           }
         }
@@ -37,13 +37,13 @@ const WritePost = ({onPostPosted}) => {
   }, []);
 
   const handleSendPost = async () => {
-    const Post = Parse.Object.extend("Post"); 
+    const Post = Parse.Object.extend("Post");
     const newPost = new Post();
 
     newPost.set("postContent", post);
     newPost.set("postTitle", title);
     newPost.set("userId", userId);
-    newPost.set("userObjectId", Parse.User.current())
+    newPost.set("userObjectId", Parse.User.current());
     newPost.set("mood", mood);
 
     document.getElementById("title").value = "";
@@ -61,10 +61,10 @@ const WritePost = ({onPostPosted}) => {
 
   return (
     <section className="writePost">
-      <PostBox 
-        setTitle={setTitle} 
-        setPost={setPost} 
-        handleSendPost={handleSendPost} 
+      <PostBox
+        setTitle={setTitle}
+        setPost={setPost}
+        handleSendPost={handleSendPost}
         setMood={setMood}
       />
     </section>
@@ -73,11 +73,12 @@ const WritePost = ({onPostPosted}) => {
 
 const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(); 
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
       handleSendPost();
     }
-  };  return (
+  };
+  return (
     <div>
       <textarea
         id="title"
@@ -88,28 +89,34 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
       ></textarea>
       <div id="moods">
         <label htmlFor="mood-filter">Mood: </label>
-        <select id="mood-filter" name="mood-filter-list" onChange={(e) => setMood(e.target.value)}>
-        <option value="all" selected>All</option>
-                <option value="happy">Happy</option>
-                <option value="cheeky">Cheeky</option>
-                <option value="sad">Sad</option>
-                <option value="cheerful">Cheerful</option>
-                <option value="excited">Excited</option>
-                <option value="envious">Envious</option>
-                <option value="angry">Angry</option>
-                <option value="outraged">Outraged</option>
-                <option value="disappointed">Disappointed</option>
-                <option value="surprised">Surprised</option>
-                <option value="annoyed">Annoyed</option>
-                <option value="fulfilled">Fulfilled</option>
-                <option value="trusting">Trusting</option>
-                <option value="inspired">Inspired</option>
-                <option value="brave">Brave</option>
-                <option value="proud">Proud</option>
-                <option value="depressed">Depressed</option>
-                <option value="embarrassed">Embarrassed</option>
-                <option value="guilty">Guilty</option>
-                <option value="scared">Scared</option>
+        <select
+          id="mood-filter"
+          name="mood-filter-list"
+          onChange={(e) => setMood(e.target.value)}
+        >
+          <option value="all" selected>
+            All
+          </option>
+          <option value="happy">Happy</option>
+          <option value="cheeky">Cheeky</option>
+          <option value="sad">Sad</option>
+          <option value="cheerful">Cheerful</option>
+          <option value="excited">Excited</option>
+          <option value="envious">Envious</option>
+          <option value="angry">Angry</option>
+          <option value="outraged">Outraged</option>
+          <option value="disappointed">Disappointed</option>
+          <option value="surprised">Surprised</option>
+          <option value="annoyed">Annoyed</option>
+          <option value="fulfilled">Fulfilled</option>
+          <option value="trusting">Trusting</option>
+          <option value="inspired">Inspired</option>
+          <option value="brave">Brave</option>
+          <option value="proud">Proud</option>
+          <option value="depressed">Depressed</option>
+          <option value="embarrassed">Embarrassed</option>
+          <option value="guilty">Guilty</option>
+          <option value="scared">Scared</option>
         </select>
       </div>
       <textarea

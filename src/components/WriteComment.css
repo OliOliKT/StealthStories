@@ -38,3 +38,7 @@
 .commentIcons i:hover, .postComment i:hover {
     color: hsl(152, 93%, 65%);
 }
+
+.postComment {
+    cursor: pointer;
+}

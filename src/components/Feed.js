@@ -4,7 +4,7 @@ import Parse from 'parse';
 import Post from './Post';
 import PostFilter from './MyPostsFilter';
 import "./Feed.css";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Feed({ filterType, currentUser, numberOfPostsPosted }) {
   const [posts, setPosts] = useState([]);
@@ -26,7 +26,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
         const currentUser = Parse.User.current();
 
         if (filterType === "sipsGreaterThanTen") {
-          query.greaterThanOrEqualTo("sips", 10);
+          query.greaterThanOrEqualTo("sips", 15);
         } else if (filterType === "currentUserPosts" && currentUser) {
           query.equalTo("userObjectId", currentUser.id);
         }

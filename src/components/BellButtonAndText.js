@@ -10,7 +10,7 @@ function BellButtonAndText({ onFollow, isFollowed }) {
     <ToolTip text="Notification feature has not been implemented yet!" >
     <div className="iconAndText" onClick={onFollow}>
       <i className={iconClass}></i>
-      <p className="iconText">Follow</p>
+      <p className="icon-text">Follow</p>
     </div>
     </ToolTip>
   );
