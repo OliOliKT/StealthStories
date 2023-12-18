@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import "./UserSettingsSidebar.css";
 
-
 const UserSettingsSidebar = () => {
   return (
     <nav className="sidebar-nav">
@@ -20,11 +19,6 @@ const UserSettingsSidebar = () => {
               <Link to="/MyPosts">
                 <li>
                   <a>My Posts</a>
-                </li>
-              </Link>
-              <Link to="/Notifications">
-                <li>
-                  <a>Notifications</a>
                 </li>
               </Link>
               <Link to="/ChangePassword">
