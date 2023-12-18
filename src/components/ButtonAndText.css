@@ -14,7 +14,7 @@
   color: hsl(152, 93%, 65%);
 }
 
-.icon-and-text:hover .iconText {
+.icon-and-text:hover .icon-text {
   color: hsl(152, 93%, 65%);
 }
 
@@ -30,7 +30,7 @@
   text-decoration: none;
 }
 
-.icon-link:hover .iconText {
+.icon-link:hover .icon-text {
   color: hsl(152, 93%, 65%);
 }
 
@@ -38,4 +38,12 @@
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+.icon-text {
+  padding-left: 8px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }

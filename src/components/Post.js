@@ -56,7 +56,7 @@ function Post({ postTitle, mood, postedBy, daysAgo, postContent, postId, sipCoun
         <div id="backgroundOnActionBar">
           <div className="actionBarOnPost">
             <LikeButtonAndText sipCount={updatedSipCount} onSip={handleSip} isSipped={isSipped} className={"icon-and-text"}/>
-            <CommentButtonAndText commentCount={numberOfComments} onComment={commentClickCallback} />
+            <CommentButtonAndText commentCount={numberOfComments} handleComment={commentClickCallback} />
             <BellButtonAndText />
           </div>
         </div>

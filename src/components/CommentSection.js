@@ -6,7 +6,7 @@ import {
   checkIfCommentLiked,
   deleteCommentLike,
   fetchComment,
-} from "../repositories/CommentRepository";
+} from "../repositories/commentRepository";
 import "./CommentSection.css";
 
 function CommentSection({ postId, numberOfComments }) {
@@ -21,13 +21,16 @@ function CommentSection({ postId, numberOfComments }) {
         query.equalTo("postIdString", postId);
         query.ascending("createdAt");
         const results = await query.find();
+        console.log("RESULT " + results.map((x) => x.id));
+        const updatedComments = { ...comments };
 
-        results.map((comment) =>
-          setComments({
-            ...comments,
-            [comment.id]: comment.toJSON(),
-          })
-        );
+        for (const result of results) {
+          updatedComments[result.id] = result.toJSON();
+          console.log("COMMENTS " + result.id);
+        }
+
+        setComments(updatedComments);
+        
       } catch (error) {
         console.error("Error fetching comments:", error);
       }

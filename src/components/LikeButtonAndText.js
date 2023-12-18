@@ -9,7 +9,7 @@ function LikeButtonAndText({ sipCount, onSip, isSipped, className }) {
   return (
     <div className={className} onClick={onSip}>
       <i className={iconClass}></i>
-      <p className="iconText">{sipCount}</p>
+      <p className="icon-text">{sipCount}</p>
     </div>
   );
 }
