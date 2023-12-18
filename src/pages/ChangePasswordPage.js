@@ -10,6 +10,7 @@ function ChangePasswordPage() {
       <>
         <TopBar />
         <div className="change-password-grid">
+        <h1 className="change-password-title"> Change password </h1>
           <UserSettingsSidebar className="sidebar-content" />
           <div className="change-password-main-content">
             <ChangePasswordComponent />

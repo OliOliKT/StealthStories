@@ -27,7 +27,6 @@ function CommentSection({ postId, numberOfComments }) {
       try {
         const query = new Parse.Query("Comment");
         query.equalTo("postIdString", postId);
-
         query.ascending("createdAt");
 
         const results = await query.find();
@@ -35,10 +34,9 @@ function CommentSection({ postId, numberOfComments }) {
         results.map((comment) =>
           setComments({
             ...comments,
-            [comment.id]: comment.toJSON(), // Assigning commentText to the commentId key in the dictionary
+            [comment.id]: comment.toJSON(),
           })
         );
-        console.log(comments);
       } catch (error) {
         console.error("Error fetching comments:", error);
       }
@@ -60,7 +58,6 @@ function CommentSection({ postId, numberOfComments }) {
       [commentId]: commentToUpdate,
     };
     setComments(updatedComments);
-    
   }
 
   // Uses functions from the commentRepository to add or delete a commentLike from the database

@@ -80,7 +80,7 @@ function IndividualPost() {
           postTitle={postTitle}
           mood={mood}
           postedBy={postedBy}
-          postContent={postContent}
+          postContent={postContent} 
           postId={postId}
           numberOfComments={numberOfComments2}
           sipCount={sipCount}
