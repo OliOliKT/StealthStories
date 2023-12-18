@@ -22,7 +22,7 @@ const addCommentLike = async (userId, commentId) => {
     })
     .catch((error) => {
       console.log(
-        "Something went wrong when saving the CommentLIke to the database"
+        "Something went wrong when saving the CommentLike to the database"
       );
     });
 };

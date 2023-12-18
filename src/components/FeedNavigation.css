@@ -17,8 +17,8 @@
   position: relative;
 }
 
-.iconAndText:hover .navTextTrending,
-.iconAndText:hover .navTextDiscover {
+.icon-and-text:hover .navTextTrending,
+.icon-and-text:hover .navTextDiscover {
   color: #50f9ab;
 }
 

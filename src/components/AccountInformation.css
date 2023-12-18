@@ -1,52 +1,37 @@
 .account-information {
-    border-radius: 10px;
-    border: solid 1px #68669D;
-    background-color: #393851;
-    color: #FAFAFC;
-    display: flex;            
-    flex-direction: column;  
-    position: relative;
-    padding: 20px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-.account-information h2, 
-.two-factor-authentication h2, .delete-account h2 {
-    margin-top: 0;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.edit{
-    background-color: #212034;
-    color: #FAFAFC;
-    border: solid 1px #68669D; 
-    height: 30px;
-    border-radius: 10%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 20px; 
-    position: absolute;
-    right: 20px;
-    font-size:medium
-}
-.show {
-    color: white; 
-    background-color: #4a4a8a;
-    margin-left: 10px;
-    height: 30px;
-    width: 50px;
-    font-size: small;
-    margin-top: 10px;
-    border-radius: 5px;
-    color: #FAFAFC;
+  border-radius: 10px;
+  border: solid 1px #68669d;
+  background-color: #393851;
+  color: #fafafc;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
 }
 
-.show:hover{
-    background-color: hsl(152, 93%, 65%, 0.8);
-    transition: background-color 0.3s ease;
+.account-information h2,
+.two-factor-authentication h2,
+.delete-account h2 {
+  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.edit:hover {
-    color: #aaa6e5; /* or any other style changes you prefer */
+.show-information {
+  color: white;
+  background-color: #4a4a8a;
+  margin-left: 10px;
+  height: 30px;
+  width: 50px;
+  font-size: small;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #fafafc;
+}
+
+.show-information:hover {
+  background-color: hsl(152, 93%, 65%, 0.8);
+  transition: background-color 0.3s ease;
 }
