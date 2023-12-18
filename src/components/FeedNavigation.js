@@ -22,7 +22,7 @@ function FeedNavigation() {
     <div className="feedNav">
       <Link to="/DiscoverFeed" className="navLink">
         <div id="discoverFeedNav" className={activeLink === "discover" ? "activeLink" : "inactiveLink"}>
-          <div className="iconAndText">
+          <div className="icon-and-text">
             <i className="fa-regular fa-compass"></i>
             <p class="navTextDiscover">Discover</p>
           </div>
@@ -31,7 +31,7 @@ function FeedNavigation() {
 
       <Link to="/TrendingFeed" className="navLink">
         <div id="trendingFeedNav" className={activeLink === "trending" ? "activeLink" : "inactiveLink"}>
-          <div className="iconAndText">
+          <div className="icon-and-text">
             <i className="fa-solid fa-fire-flame-curved"></i>
             <p class="navTextTrending">Trending</p>
           </div>

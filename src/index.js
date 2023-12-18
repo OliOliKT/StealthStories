@@ -13,7 +13,7 @@ import Parse from "parse";
 import CreateUser from "./pages/CreateUser";
 import AboutUs from "./pages/AboutUs";
 import PrivacyAndSafety from "./pages/PrivacyAndSafety";
-import ChangePasswordPage from "./pages/ChangePasswordPage";
+import ChangePassword from "./pages/ChangePassword";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,7 +29,7 @@ root.render(
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/PrivacyAndSafety" element={<PrivacyAndSafety />} />
         <Route path="/posts/:postId" element={<IndividualPost />} />
-        <Route path="/ChangePassword" element={<ChangePasswordPage />} />
+        <Route path="/ChangePassword" element={<ChangePassword />} />
       </Routes>
     </Router>
   </React.StrictMode>

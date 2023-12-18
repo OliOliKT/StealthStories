@@ -1,28 +1,28 @@
-.iconAndText {
+.icon-and-text {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-.iconAndText:hover {
+.icon-and-text:hover {
   color: hsl(152, 93%, 65%);
 }
 
-.iconAndText .fa-mug-hot.liked,
-.iconAndText:hover .fa-mug-hot {
+.icon-and-text .fa-mug-hot.liked,
+.icon-and-text:hover .fa-mug-hot {
   color: hsl(152, 93%, 65%);
 }
 
-.iconAndText:hover .iconText {
+.icon-and-text:hover .iconText {
   color: hsl(152, 93%, 65%);
 }
 
-.iconAndText .fa-mug-hot.liked + .icon-text {
+.icon-and-text .fa-mug-hot.liked + .icon-text {
   color: hsl(152, 93%, 65%);
 }
 
-.iconLink {
+.icon-link {
   color: #fafafc;
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@
   text-decoration: none;
 }
 
-.iconLink:hover .iconText {
+.icon-link:hover .iconText {
   color: hsl(152, 93%, 65%);
 }
 

@@ -1,10 +1,15 @@
 import React from "react";
-
 import "./Comment.css";
 import LikeButtonAndText from "./LikeButtonAndText";
 
-function Comment({ postedBy, commentContent, daysAgo, ellipsesOnClick, handleSip, sipCount, isSipped }) {
-  
+function Comment({
+  postedBy,
+  commentContent,
+  daysAgo,
+  handleSip,
+  sipCount,
+  isSipped,
+}) {
   return (
     <div className="comment-container">
       <div className="user-icon-comment">
@@ -13,17 +18,20 @@ function Comment({ postedBy, commentContent, daysAgo, ellipsesOnClick, handleSip
       <div className="content-part-of-comment">
         <div className="background-comment">
           <div className="comment-user-info">
-            <p className="comment-user-text"> { postedBy } </p>
+            <p className="comment-user-text"> {postedBy} </p>
             <p className="comment-user-text"> • </p>
-            <p className="comment-user-text"> { daysAgo } days ago </p>
+            <p className="comment-user-text"> {daysAgo} days ago </p>
           </div>
-          <div className="comment-content">
-            { commentContent }
-          </div>
+          <div className="comment-content">{commentContent}</div>
         </div>
         <div className="actions-on-comment">
-         <LikeButtonAndText className={"iconAndText"} isSipped={isSipped} sipCount={sipCount} onSip={handleSip}/>
-          <i className="comment-icon fa-solid fa-ellipsis" onClick={ellipsesOnClick}></i>
+          <LikeButtonAndText
+            className={"icon-and-text"}
+            isSipped={isSipped}
+            sipCount={sipCount}
+            onSip={handleSip}
+          />
+          <i className="comment-icon fa-solid fa-ellipsis"></i>
         </div>
       </div>
     </div>
