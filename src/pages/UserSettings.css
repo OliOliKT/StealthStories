@@ -1,6 +1,6 @@
 .user-settings-main-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto 640px auto;
     grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 20px; 
     place-items: start;
