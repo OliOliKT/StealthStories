@@ -19,7 +19,7 @@ function LogInButtonAndFormInput() {
       navigate("/DiscoverFeed");
     } catch (error) {
       console.error("Error while logging in user", error);
-      setError("Wrong username or password!");
+      setError("Wrong email or password!");
     }
   };
 
@@ -54,8 +54,8 @@ function LogInButtonAndFormInput() {
       <div className="no-account">
         <p>No account? No worries!</p>
         <p>
-          <Link to="/CreateUser">
-            <a className="create-account">Create one here</a>
+          <Link to="/CreateUser" className="create-account">
+            Create one here
           </Link>
         </p>
       </div>
