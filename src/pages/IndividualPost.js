@@ -6,7 +6,7 @@ import Post from "../components/Post";
 import WriteComment from "../components/WriteComment";
 import CommentSection from "../components/CommentSection";
 import Parse from "parse";
-import { fetchPost } from "../repositories/postRepository";
+import { fetchPost } from "../repositories/PostRepository";
 import "./IndividualPost.css";
 
 function IndividualPost() {
