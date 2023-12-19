@@ -1,5 +1,5 @@
 .user-icon-comment {
-  color: #a8a4e5;
+  color: hsl(244, 56%, 77%);
   width: 40px;
   font-size: 30px;
 }
@@ -15,14 +15,14 @@
 }
 
 .fa-ellipsis:hover {
-  background-color: #393851;
+  background-color: hsl(242, 18%, 27%);
   border-radius: 3px;
 }
 
 .comment-content {
   padding: 0px 10px 10px 10px;
   margin: 0;
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -37,13 +37,13 @@
   min-height: 60px;
   resize: vertical;
   width: 600px;
-  background-color: #2a2941;
+  background-color: hsl(243, 23%, 21%);
   border-radius: 10px;
 }
 
 .comment-icon {
   padding: 0 5px 0 5px;
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
 }
 
 .actions-on-comment {
@@ -54,12 +54,12 @@
 .comment-user-text {
   margin: 0;
   font-size: 12px;
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
   font-family: Arial, Helvetica, sans-serif;
   padding-right: 10px;
   font-weight: 700;
 }
 
 body {
-  background-color: #212034;
+  background-color: hsl(243, 24%, 16%);
 }

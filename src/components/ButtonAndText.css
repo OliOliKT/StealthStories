@@ -23,7 +23,7 @@
 }
 
 .icon-link {
-  color: #fafafc;
+  color: hsl(240, 25%, 98%);
   display: flex;
   justify-content: center;
   align-items: center;

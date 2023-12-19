@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Parse from "parse";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
-import TopBar from "../components/topBarComponent";
+import TopBar from "../components/TopBar";
 import "./ChangePassword.css";
-import "../components/FormInput.css";
+import "./LogIn.css";
 
 function ChangePassword() {
   const [oldPassword, setOldPassword] = useState("");

@@ -3,8 +3,8 @@ import React from "react";
 import FeedNavigation from "../components/FeedNavigation";
 import TrendingBlock from "../components/TrendingBlock";
 import Feed from "../components/Feed";
-import TopBar from "../components/topBarComponent";
-import Footer from "../components/footer";
+import TopBar from "../components/TopBar";
+import Footer from "../components/Footer";
 import WritePost from '../components/writePost';
 import "./TrendingFeed.css";
 
@@ -16,7 +16,7 @@ function TrendingFeed() {
       <TrendingBlock />
       <FeedNavigation />
       <WritePost/>
-      <Feed filterType="sipsGreaterThanTen" />
+      <Feed filterType="sipsGreaterThanFifteen" />
     </div>
     <Footer />
     </>

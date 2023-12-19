@@ -1,5 +1,5 @@
 import "./CreateUser.css";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";

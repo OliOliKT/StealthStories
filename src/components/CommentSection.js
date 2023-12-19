@@ -6,7 +6,7 @@ import {
   checkIfCommentLiked,
   deleteCommentLike,
   fetchComment,
-} from "../repositories/commentRepository";
+} from "../repositories/CommentRepository";
 import "./CommentSection.css";
 
 function CommentSection({ postId, numberOfComments }) {
@@ -37,7 +37,7 @@ function CommentSection({ postId, numberOfComments }) {
     }
 
     fetchComments();
-  }, [postId, numberOfComments]);
+  }, [comments, postId, numberOfComments]);
 
   async function changeSipCount(factor, commentId) {
     const commentToUpdate = comments[commentId];

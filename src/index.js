@@ -8,7 +8,7 @@ import TrendingFeed from "./pages/TrendingFeed";
 import MyPosts from "./pages/MyPosts";
 import IndividualPost from "./pages/IndividualPost";
 import UserSettings from "./pages/UserSettings";
-import LogInPage from "./pages/LogInPage";
+import LogIn from "./pages/LogIn";
 import Parse from "parse";
 import CreateUser from "./pages/CreateUser";
 import AboutUs from "./pages/AboutUs";
@@ -20,7 +20,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<LogInPage />} />
+        <Route path="/" element={<LogIn />} />
         <Route path="/CreateUser" element={<CreateUser />} />
         <Route path="/DiscoverFeed" element={<DiscoverFeed />} />
         <Route path="/UserSettings" element={<UserSettings />} />

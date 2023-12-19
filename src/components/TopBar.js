@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Parse from "parse";
 
-import "./topBarComponent.css";
+import "./TopBar.css";
 
 const TopBar = () => {
   return (
@@ -17,9 +17,9 @@ const TopBar = () => {
 const SearchBar = () => {
   return (
     <div className="header">
-      <div id="searchBar">
+      <div id="search-bar">
         <form action="/search" method="get">
-          <input type="search" id="search" name="q" placeholder="Search..." />
+          <input type="search" id="search" placeholder="Search..." />
         </form>
       </div>
     </div>
@@ -32,7 +32,7 @@ const Logo = () => {
       <Link to="/DiscoverFeed">
         <img
           src={`${process.env.PUBLIC_URL}/images/logo.png`}
-          id="logoimg"
+          id="logo-img"
           alt="Logo"
         />{" "}
       </Link>
@@ -40,13 +40,12 @@ const Logo = () => {
   );
 };
 
-
 const TopBarIcons = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setDropdown] = useState(false);
   const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const handleDropdown = () => {
+    setDropdown(!isDropdownOpen);
   };
 
   const handleLogout = async () => {
@@ -64,17 +63,16 @@ const TopBarIcons = () => {
       <nav>
         <ul>
           <li>
-              <i className="fa-solid fa-box-archive nav-icon" onClick={() => navigate("/UserSettings")}></i>
+            <i
+              className="fa-solid fa-box-archive nav-icon"
+              onClick={() => navigate("/MyPosts")}
+            ></i>
           </li>
           <li>
-            <a href="#">
-              <i className="fa-solid fa-bell nav-icon"></i>
-            </a>
+            <i className="fa-solid fa-bell nav-icon"></i>
           </li>
-          <li className="user-icon nav-icon" onClick={toggleDropdown}>
-            <a href="#">
-              <i className="fas fa-user nav-icon"></i>
-            </a>
+          <li className="user-icon nav-icon" onClick={handleDropdown}>
+            <i className="fas fa-user nav-icon"></i>
             {isDropdownOpen && (
               <div className="dropdown-menu">
                 <ul onClick={() => navigate("/UserSettings")}>

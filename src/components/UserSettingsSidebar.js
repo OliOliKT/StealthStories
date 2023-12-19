@@ -13,17 +13,17 @@ const UserSettingsSidebar = () => {
             <ul>
               <Link to="/UserSettings">
                 <li>
-                  <a>User settings</a>
+                  <p>User settings</p>
                 </li>
               </Link>
               <Link to="/MyPosts">
                 <li>
-                  <a>My Posts</a>
+                  <p>My Posts</p>
                 </li>
               </Link>
               <Link to="/ChangePassword">
                 <li>
-                  <a>Change Password</a>
+                  <p>Change Password</p>
                 </li>
               </Link>
             </ul>
@@ -35,12 +35,12 @@ const UserSettingsSidebar = () => {
             <ul>
               <Link to="/AboutUs">
                 <li>
-                  <a>About us</a>
+                  <p>About us</p>
                 </li>
               </Link>
               <Link to="/PrivacyAndSafety">
                 <li>
-                  <a>Privacy & Safety</a>
+                  <p>Privacy & Safety</p>
                 </li>
               </Link>
             </ul>
