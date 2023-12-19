@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import TopBar from "../components/TopBar";
-import Footer from "../components/TempFooter";
+import Footer from "../components/Footer";
 import Post from "../components/Post";
 import WriteComment from "../components/WriteComment";
 import CommentSection from "../components/CommentSection";
