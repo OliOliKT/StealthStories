@@ -7,7 +7,6 @@ const fetchPost = async (postId) => {
   return post.toJSON();
 };
 
-
 const checkIfUserLikedPost = async (postId, userId) => {
   const Likes = Parse.Object.extend("Likes");
   const query = new Parse.Query(Likes);

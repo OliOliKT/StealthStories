@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import FeedNavigation from "../components/FeedNavigation";
 import TrendingBlock from "../components/TrendingBlock";
 import Feed from "../components/Feed";
@@ -9,16 +8,23 @@ import WritePost from "../components/WritePost";
 import "./TrendingFeed.css";
 
 function TrendingFeed() {
+  const [numberOfPostsPosted, setNumberOfPostsPosted] = useState(0);
+
+  const handlePostPosted = () => {
+    setNumberOfPostsPosted(numberOfPostsPosted + 1);
+    console.log(numberOfPostsPosted);
+  };
+
   return (
     <>
-    <div className="main-content">
-      <TopBar />
-      <TrendingBlock />
-      <FeedNavigation />
-      <WritePost/>
-      <Feed filterType="sipsGreaterThanFifteen" />
-    </div>
-    <Footer />
+      <div className="main-content-trending-feed">
+        <TopBar />
+        <TrendingBlock />
+        <FeedNavigation />
+        <WritePost onPostPosted={handlePostPosted} />
+        <Feed filterType="sipsGreaterThanFifteen" />
+      </div>
+      <Footer />
     </>
   );
 }

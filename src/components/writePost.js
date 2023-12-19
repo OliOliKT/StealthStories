@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Parse from "parse";
 import "./WritePost.css";
 
-const WritePost = ({ onPostPosted }) => {
+function WritePost({ onPostPosted }) {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [userId, setUserId] = useState("unknown user");
@@ -68,7 +68,7 @@ const WritePost = ({ onPostPosted }) => {
       />
     </section>
   );
-};
+}
 
 const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
   const handleKeyDown = (e) => {

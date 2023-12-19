@@ -27,7 +27,7 @@
 }
 
 .delete-account-button {
-  background-color: #d9534f;
+  background-color: hsl(2, 64%, 58%);
   color: white;
   border: none;
   border-radius: 5px;
@@ -37,20 +37,20 @@
 }
 
 .delete-account-button:hover {
-  background-color: #c9302c;
+  background-color: hsl(2, 64%, 48%);
 }
 
 .delete-account-button:focus {
-  outline: 2px solid #fff;
+  outline: 2px solid white;
   outline-offset: 2px;
 }
 
 .delete-account {
   margin-top: 10px;
   border-radius: 10px;
-  border: solid 1px #68669d;
-  background-color: #393851;
-  color: #fafafc;
+  border: solid 1px hsl(242, 22%, 51%);
+  background-color: hsl(242, 18%, 27%);
+  color: hsl(240, 25%, 98%);
   display: flex;
   flex-direction: column;
   padding: 20px;

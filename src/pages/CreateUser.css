@@ -1,121 +1,121 @@
 .creating-user-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr auto;
-    grid-gap: 20px;
-    min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 20px;
+  min-height: 100vh;
 }
 
 .create-user-component {
-    grid-row: 2;
-    grid-column: 2;
-    align-self: center;
-    justify-self: center;
+  grid-row: 2;
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
 }
 
 .logo-container {
-    grid-row: 1;
-    grid-column: 1;
-    text-align: center;
-    align-self: center;
-    justify-self: center;
+  grid-row: 1;
+  grid-column: 1;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
 }
-
 
 .create-user-footer {
-    grid-row: 3;
-    grid-column: 1 / span 3;
-    width: 100%;
+  grid-row: 3;
+  grid-column: 1 / span 3;
+  width: 100%;
 }
 
 .create-user-component {
-    display: grid;
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
-
 .logo-container {
-    padding-top: 30px;
-    padding-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 70px;
 }
 
 .create-user-box {
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #2E2C43;
-    width: 310px;
-    height: 500px;
-    border-color: hsl(242, 22%, 51%);
-    box-shadow: 0 0 5px hsl(0, 0%, 100%);
-
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #2e2c43;
+  width: 310px;
+  height: 500px;
+  border-color: hsl(242, 22%, 51%);
+  box-shadow: 0 0 5px hsl(0, 0%, 100%);
 }
 
 .back-to-login-page {
-    width: 220px;
-    height: 30px;
-    color: white;
-    background-color: hsl(245, 19%, 27%);
-    border-color: hsl(242, 22%, 51%);
-    padding: 5px;
-    margin-top: 10px;
-    border: 1px solid hsl(241, 22%, 51%);
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    }
-    
-.back-to-login-page:hover {
-     background-color: hsla(152, 93%, 65%, 0.8);
+  width: 220px;
+  height: 30px;
+  color: white;
+  background-color: hsl(245, 19%, 27%);
+  border-color: hsl(242, 22%, 51%);
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid hsl(241, 22%, 51%);
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.mail p, .password p, .verify-password p, .username p{
-    margin-bottom: 8px;
-    margin-top: 8px;
-    text-align: center;
+.back-to-login-page:hover {
+  background-color: hsla(152, 93%, 65%, 0.8);
+}
+
+.mail p,
+.password p,
+.verify-password p,
+.username p {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  text-align: center;
 }
 
 .input-username-and-mail-and-password {
-    outline: none;
-    width: 180px;
-    border-color: hsl(242, 22%, 51%);
-    box-shadow: 0 0 5px hsl(0, 0%, 100%);
-    padding: 5px;
-    border: 1px solid hsl(242, 22%, 51%);
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: white;
-    background-color: hsl(245, 19%, 27%);
+  outline: none;
+  width: 180px;
+  border-color: hsl(242, 22%, 51%);
+  box-shadow: 0 0 5px hsl(0, 0%, 100%);
+  padding: 5px;
+  border: 1px solid hsl(242, 22%, 51%);
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: hsl(245, 19%, 27%);
 }
 
 .create-user {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .create-user-btn {
-    color: white;
-    background-color: hsl(245, 19%, 27%);
-    border-color: hsl(242, 22%, 51%);
-    border: 1px solid hsl(242, 22%, 51%);
-    border-radius: 5px;
-    font-size: 14px;
-    width: 100px;
-    height: 30px;
-    font-size: 13px;
-    padding: 5px 10px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  color: white;
+  background-color: hsl(245, 19%, 27%);
+  border-color: hsl(242, 22%, 51%);
+  border: 1px solid hsl(242, 22%, 51%);
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100px;
+  height: 30px;
+  font-size: 13px;
+  padding: 5px 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .create-user-btn:hover {
-    background-color: hsl(152, 93%, 65%, 0.8);
+  background-color: hsl(152, 93%, 65%, 0.8);
 }

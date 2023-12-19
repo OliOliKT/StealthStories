@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import FeedNavigation from '../components/FeedNavigation';
 import Feed from '../components/Feed';
 import TopBar from '../components/TopBar';
@@ -8,7 +7,7 @@ import WritePost from '../components/WritePost';
 import "./DiscoverFeed.css";
 
 
-const DiscoverFeed = () => {
+function DiscoverFeed() {
 
   const [numberOfPostsPosted, setNumberOfPostsPosted] = useState(0);
 
@@ -19,7 +18,7 @@ const DiscoverFeed = () => {
 
   return (
     <>
-    <div className="main-content">
+    <div className="main-content-discover-feed">
       <TopBar/>
       <FeedNavigation />
       <WritePost onPostPosted = {handlePostPosted}/>

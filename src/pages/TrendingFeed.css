@@ -1,8 +1,8 @@
-.main-content {
+.main-content-trending-feed {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto auto;
-  grid-gap: 20px; 
+  grid-gap: 20px;
 }
 
 .feed-content {
@@ -19,7 +19,7 @@
 }
 
 .trending-block {
-  display:inline-block;
+  display: inline-block;
   grid-row: 3 / span 4;
   grid-column: 1;
   align-self: start;
