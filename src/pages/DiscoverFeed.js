@@ -4,7 +4,7 @@ import FeedNavigation from '../components/FeedNavigation';
 import Feed from '../components/Feed';
 import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
-import WritePost from '../components/writePost';
+import WritePost from '../components/WritePost';
 import "./DiscoverFeed.css";
 
 

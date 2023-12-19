@@ -3,31 +3,29 @@ import { Link } from "react-router-dom";
 
 import "./UserSettingsSidebar.css";
 
-const UserSettingsSidebar = () => {
+function UserSettingsSidebar() {
   return (
     <nav className="sidebar-nav">
       <ul>
         <li>
-          <div id="userSetting">
-            <h3>Settings</h3>
-            <ul>
-              <Link to="/UserSettings">
-                <li>
-                  <p>User settings</p>
-                </li>
-              </Link>
-              <Link to="/MyPosts">
-                <li>
-                  <p>My Posts</p>
-                </li>
-              </Link>
-              <Link to="/ChangePassword">
-                <li>
-                  <p>Change Password</p>
-                </li>
-              </Link>
-            </ul>
-          </div>
+          <h3>Settings</h3>
+          <ul>
+            <Link to="/UserSettings">
+              <li>
+                <p>User settings</p>
+              </li>
+            </Link>
+            <Link to="/MyPosts">
+              <li>
+                <p>My Posts</p>
+              </li>
+            </Link>
+            <Link to="/ChangePassword">
+              <li>
+                <p>Change Password</p>
+              </li>
+            </Link>
+          </ul>
         </li>
         <li>
           <div className="about-us">
@@ -49,6 +47,6 @@ const UserSettingsSidebar = () => {
       </ul>
     </nav>
   );
-};
+}
 
 export default UserSettingsSidebar;

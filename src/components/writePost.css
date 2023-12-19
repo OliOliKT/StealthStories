@@ -1,4 +1,4 @@
-.writePost {
+.write-post {
   width: 640px;
   gap: 10px;
   border-radius: 10px;
@@ -32,7 +32,7 @@
   resize: none;
 }
 
-.postBorder {
+.post-border {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,14 +42,14 @@
   border-radius: 0 0 10px 10px;
 }
 
-.postIcons {
+.post-icons {
   display: flex;
   gap: 26px;
   cursor: pointer;
 }
 
-.postIcons i:hover,
-.postPost i:hover {
+.post-icons i:hover,
+.post-post i:hover {
   color: hsl(152, 93%, 65%);
 }
 
@@ -73,9 +73,9 @@ textarea {
 }
 
 #mood-selector select {
-  background-color: #393851;
-  color: #fafafc;
-  border: 1px solid #565481;
+  background-color: hsl(242, 18%, 27%);
+  color: hsl(240, 25%, 98%);
+  border: 1px solid hsl(243, 21%, 42%);
   padding: 4px;
   border-radius: 5px;
   width: 200px;
@@ -86,20 +86,20 @@ textarea {
 }
 
 #mood-selector select option {
-  background-color: #393851;
-  color: #fafafc;
+  background-color: hsl(242, 18%, 27%);
+  color: hsl(240, 25%, 98%);
 }
 
 #mood-selector select:hover {
-  background-color: #50f9ab;
-  color: #393851;
+  background-color: hsl(152, 93%, 65%);
+  color: hsl(242, 18%, 27%);
 }
 
-.postPost {
+.post-post {
   cursor: pointer;
 }
 
 #title::placeholder,
 #post::placeholder {
-  color: #68679e;
+  color: hsl(241, 22%, 51%);
 }

@@ -26,7 +26,7 @@
   justify-self: right;
 }
 
-.writePost {
+.write-post {
   grid-column: 2;
   grid-row: 3;
 }

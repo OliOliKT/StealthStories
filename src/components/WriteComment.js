@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import Parse from "parse";
-
 import "./WriteComment.css";
 
-const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
-  const [comment, setComment] = useState('');
+function WriteComment({ postId, clearCommentForm, onCommentPosted }) {
+  const [comment, setComment] = useState("");
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
   };
 
   const handleCommentSubmit = async () => {
-    closeCommentModal();
+    clearCommentForm();
     const Comment = Parse.Object.extend("Comment");
     const newComment = new Comment();
 
@@ -23,33 +22,29 @@ const WriteComment = ({ postId, closeCommentModal, onCommentPosted }) => {
     try {
       await newComment.save();
       console.log("Post saved successfully!");
-      // Fetch the corresponding post
       const Post = Parse.Object.extend("Post");
       const query = new Parse.Query(Post);
       const post = await query.get(postId);
 
-      // Increment the commentCount for the post
       post.increment("comments");
       await post.save();
       console.log("Post commentCount incremented!");
-
     } catch (error) {
       console.error("Error saving comment:", error);
     }
     onCommentPosted();
-   
   };
-  
+
   return (
-    <section className="writeComment">
-      <CommentBox 
+    <section className="write-comment">
+      <CommentBox
         comment={comment}
         onCommentChange={handleCommentChange}
         onCommentSubmit={handleCommentSubmit}
       />
     </section>
   );
-};
+}
 
 const CommentBox = ({ comment, onCommentChange, onCommentSubmit }) => {
   return (
@@ -68,25 +63,19 @@ const CommentBox = ({ comment, onCommentChange, onCommentSubmit }) => {
 
 const CommentBorder = ({ onCommentSubmit }) => {
   return (
-    <div className="commentBorder">
-      <CommentIcons />
+    <div className="comment-border">
+      <div className="comment-icons not-implemented">
+        <i className="fa-solid fa-image"></i>
+        <i className="fa-solid fa-rainbow"></i>
+      </div>
       <SendCommentIcon onCommentSubmit={onCommentSubmit} />
-    </div>
-  );
-};
-
-const CommentIcons = () => {
-  return (
-    <div className="commentIcons NotImplemented">
-      <i className="fa-solid fa-image"></i>
-      <i className="fa-solid fa-rainbow"></i>
     </div>
   );
 };
 
 const SendCommentIcon = ({ onCommentSubmit }) => {
   return (
-    <div className="postComment" onClick={onCommentSubmit}>
+    <div className="post-comment" onClick={onCommentSubmit}>
       <i className="fa-solid fa-paper-plane"></i>
     </div>
   );

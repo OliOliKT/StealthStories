@@ -100,7 +100,7 @@ function IndividualPost() {
       {isCommenting && (
         <WriteComment
           postId={postId}
-          closeCommentModal={handleCommentModalClose}
+          clearCommentForm={handleCommentModalClose}
           onCommentPosted={handleCommentPosted}
         />
       )}
