@@ -1,5 +1,5 @@
 import React from "react";
-import "./TempFooter.css";
+import "./Footer.css";
 
 function Footer() {
   return <p className="footer">&copy; Stealth Stories - All rights reserved</p>;
