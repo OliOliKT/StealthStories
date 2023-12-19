@@ -51,7 +51,7 @@ function LogIn() {
               </div>
               <span className="error-message">{error}</span>
             </div>
-            <button className="sign-in" onClick={handleLogin}>
+            <button className="log-in-btn" onClick={handleLogin}>
               Log in
             </button>
             <div className="no-account">

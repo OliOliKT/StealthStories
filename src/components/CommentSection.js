@@ -37,7 +37,7 @@ function CommentSection({ postId, numberOfComments }) {
     }
 
     fetchComments();
-  }, [comments, postId, numberOfComments]);
+  }, [postId, numberOfComments]);
 
   async function changeSipCount(factor, commentId) {
     const commentToUpdate = comments[commentId];

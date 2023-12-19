@@ -11,17 +11,17 @@ function UserSettingsSidebar() {
           <h3>Settings</h3>
           <ul>
             <Link to="/UserSettings">
-              <li>
+              <li className="sidebar-list-item">
                 <p>User settings</p>
               </li>
             </Link>
             <Link to="/MyPosts">
-              <li>
+              <li className="sidebar-list-item">
                 <p>My Posts</p>
               </li>
             </Link>
             <Link to="/ChangePassword">
-              <li>
+              <li className="sidebar-list-item">
                 <p>Change Password</p>
               </li>
             </Link>
@@ -32,12 +32,12 @@ function UserSettingsSidebar() {
             <h3>Learn more</h3>
             <ul>
               <Link to="/AboutUs">
-                <li>
+                <li className="sidebar-list-item">
                   <p>About us</p>
                 </li>
               </Link>
               <Link to="/PrivacyAndSafety">
-                <li>
+                <li className="sidebar-list-item">
                   <p>Privacy & Safety</p>
                 </li>
               </Link>

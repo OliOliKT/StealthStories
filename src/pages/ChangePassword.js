@@ -85,11 +85,9 @@ function ChangePassword() {
                   />
                 </div>
                 <span className="error-message">{error}</span>
-                <div className="log-in-btn">
-                  <button type="submit" className="sign-in change-password-btn">
-                    Change Password
-                  </button>
-                </div>
+                <button type="submit" className="log-in-btn password-submit">
+                  Change Password
+                </button>
               </form>
             </div>
           </div>
