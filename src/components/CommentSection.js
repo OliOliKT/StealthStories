@@ -14,7 +14,7 @@ function CommentSection({ postId, numberOfComments }) {
   const currentUser = Parse.User.current();
 
   useEffect(() => {
-    console.log("Rendering...");
+    console.log("Rendering comments...");
     async function fetchComments() {
       try {
         const query = new Parse.Query("Comment");
