@@ -29,7 +29,7 @@
     margin-left: 5px;
 }
 
-.sidebar-nav a {
+.sidebar-nav p {
     text-align: left;
     display: block;
     color: #FAFAFC;
@@ -37,7 +37,7 @@
     transition: 0.05s ease-in-out;
 }
 
-.sidebar-nav a:hover {
+.sidebar-nav p:hover {
     background-color: #393851;
     border-radius: 5px;
     text-decoration: none; 

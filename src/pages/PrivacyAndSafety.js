@@ -1,8 +1,8 @@
 import React from "react";
 
-import TopBarComponent from "../components/topBarComponent";
+import TopBarComponent from "../components/TopBar";
 import InformationComponent from "../components/Information";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import "./PrivacyAndSafety.css";
 

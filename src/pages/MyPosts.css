@@ -16,7 +16,11 @@
   grid-column: 2;
 }
 
-.FeedContent {
+.feed-content {
   grid-row: 4;
   grid-column: 2;
+}
+
+#your-post-title{
+  font-size: xx-large;
 }

@@ -1,0 +1,33 @@
+#post-filter {
+  background-color: hsl(243, 24%, 16%);
+  width: 600px;
+  font-size: 12px;
+}
+
+#post-filter label {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+#post-filter select {
+  background-color: hsl(242, 18%, 27%);
+  color: hsl(240, 25%, 98%);
+  border: 1px solid hsl(243, 21%, 42%);
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+  appearance: none;
+  cursor: pointer;
+  margin-right: 30px;
+  transition: 0.1s ease-in-out;
+}
+
+#post-filter select option {
+  background-color: hsl(242, 18%, 27%);
+  color: hsl(240, 25%, 98%);
+}
+
+#post-filter select:hover {
+  background-color: hsl(152, 93%, 65%);
+  color: hsl(242, 18%, 27%);
+}

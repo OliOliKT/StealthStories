@@ -6,12 +6,12 @@
   place-items: center;
 }
 
-.FeedContent {
+.feed-content {
   grid-column: 2;
   grid-row: 4;
 }
 
-.feedNav {
+.feed-nav {
   grid-row: 2;
   grid-column: 2;
   text-align: center;

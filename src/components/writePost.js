@@ -87,11 +87,11 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
         onChange={(e) => setTitle(e.target.value)}
         onKeyDown={handleKeyDown}
       ></textarea>
-      <div id="moods">
-        <label htmlFor="mood-filter">Mood: </label>
+      <div id="mood-selector">
+        <label htmlFor="mood-chooser">Mood: </label>
         <select
-          id="mood-filter"
-          name="mood-filter-list"
+          id="mood-chooser"
+          name="mood-chooser-list"
           onChange={(e) => setMood(e.target.value)}
         >
           <option value="all" selected>

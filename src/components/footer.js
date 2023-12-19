@@ -1,17 +1,8 @@
 import React from "react";
+import "./Footer.css";
 
-import "./footer.css";
-
-const Footer = () => {
-  return (
-    <section className="footer">
-      <FooterText />
-    </section>
-  );
-};
-
-const FooterText = () => {
-  return <p>&copy; Stealth Stories - All rights reserved</p>;
-};
+function Footer() {
+  return <p className="footer">&copy; Stealth Stories - All rights reserved</p>;
+}
 
 export default Footer;

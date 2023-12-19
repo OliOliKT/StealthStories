@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Parse from "parse";
+import Footer from "../components/Footer";
+import "./LogIn.css";
 
-import "./FormInput.css";
-
-function LogInButtonAndFormInput() {
+function LoggingIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -24,7 +23,14 @@ function LogInButtonAndFormInput() {
   };
 
   return (
-    <div className="log-in">
+    <>
+    <div className="login-grid-container">
+    <div className="login-component">
+      <div className="logo-container">
+        <img src="images/logo.png" alt="logo" className="logo" />
+      </div>
+      <div className="login-box">
+      <div className="log-in">
       <div className="input-container">
         <div className="mail">
           <p>E-mail</p>
@@ -60,7 +66,13 @@ function LogInButtonAndFormInput() {
         </p>
       </div>
     </div>
+      </div>
+    </div>
+      
+    </div>
+    <Footer />
+    </>
   );
 }
 
-export default LogInButtonAndFormInput;
+export default LoggingIn;

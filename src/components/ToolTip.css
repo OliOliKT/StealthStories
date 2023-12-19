@@ -6,21 +6,21 @@
 }
 
 .tooltip-container .tooltip-text::after {
-    content: " ";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #131227 transparent transparent transparent;
-  }
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(243, 37%, 11%) transparent transparent transparent;
+}
 
 .tooltip-text {
   visibility: hidden;
   width: 200px;
-  background-color: #131227;
-  color: #fff;
+  background-color: hsl(243, 37%, 11%);
+  color: hsl(0, 0%, 100%);
   text-align: center;
   font-size: 14px;
   border-radius: 6px;
