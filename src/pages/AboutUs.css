@@ -37,7 +37,6 @@
   grid-column: 2;
   font-size: 20px;
   font-weight: 600;
-  
 }
 
 .our-values-content {
@@ -45,9 +44,9 @@
   grid-column: 2 / span 3;
 }
 
-.about-us-image{
-    grid-row: 3;
-    grid-column: 3;
-    width: 500px;
-    height: 500px;
+.about-us-image {
+  grid-row: 6;
+  grid-column: 2;
+  width: 500px;
+  height: 500px;
 }

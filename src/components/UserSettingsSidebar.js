@@ -3,50 +3,42 @@ import { Link } from "react-router-dom";
 
 import "./UserSettingsSidebar.css";
 
-
-const UserSettingsSidebar = () => {
+function UserSettingsSidebar() {
   return (
     <nav className="sidebar-nav">
       <ul>
         <li>
-          <div id="userSetting">
-            <h3>Settings</h3>
-            <ul>
-              <Link to="/UserSettings">
-                <li>
-                  <a>User settings</a>
-                </li>
-              </Link>
-              <Link to="/MyPosts">
-                <li>
-                  <a>My Posts</a>
-                </li>
-              </Link>
-              <Link to="/Notifications">
-                <li>
-                  <a>Notifications</a>
-                </li>
-              </Link>
-              <Link to="/ChangePassword">
-                <li>
-                  <a>Change Password</a>
-                </li>
-              </Link>
-            </ul>
-          </div>
+          <h3>Settings</h3>
+          <ul>
+            <Link to="/UserSettings">
+              <li className="sidebar-list-item">
+                <p>User settings</p>
+              </li>
+            </Link>
+            <Link to="/MyPosts">
+              <li className="sidebar-list-item">
+                <p>My Posts</p>
+              </li>
+            </Link>
+            <Link to="/ChangePassword">
+              <li className="sidebar-list-item">
+                <p>Change Password</p>
+              </li>
+            </Link>
+          </ul>
         </li>
         <li>
           <div className="about-us">
-            <h3>Learn more about StealthStories</h3>
+            <h3>Learn more</h3>
             <ul>
               <Link to="/AboutUs">
-                <li>
-                  <a>About us</a>
+                <li className="sidebar-list-item">
+                  <p>About us</p>
                 </li>
               </Link>
               <Link to="/PrivacyAndSafety">
-                <li>
-                  <a>Privacy & Safety</a>
+                <li className="sidebar-list-item">
+                  <p>Privacy & Safety</p>
                 </li>
               </Link>
             </ul>
@@ -55,6 +47,6 @@ const UserSettingsSidebar = () => {
       </ul>
     </nav>
   );
-};
+}
 
 export default UserSettingsSidebar;

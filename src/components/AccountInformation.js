@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import Parse from "parse";
-
 import "./AccountInformation.css";
 
-
-const AccountInformation = () => {
+function AccountInformation() {
   const currentUser = Parse.User.current();
-  const [showUserId, setShowUserId] = useState(false);
-  const [showEmail, setShowEmail] = useState(false);
+  const [isUserIdVisible, setUserIdVisibility] = useState(false);
+  const [isEmailVisible, setEmailVisibility] = useState(false);
 
-  const toggleUserId = () => {
-    setShowUserId(!showUserId);
+  const handleUserIdVisibility = () => {
+    setUserIdVisibility(!isUserIdVisible);
   };
 
-  const toggleEmail = () => {
-    setShowEmail(!showEmail);
+  const handleEmailVisibility = () => {
+    setEmailVisibility(!isEmailVisible);
   };
 
   return (
@@ -25,13 +23,13 @@ const AccountInformation = () => {
           <strong>User ID</strong>
         </p>
         <p>
-          {showUserId ? (
+          {isUserIdVisible ? (
             <span>{currentUser.id}</span>
           ) : (
             <span>*************</span>
           )}
-          <button className="show" onClick={toggleUserId}>
-            {showUserId ? "Hide" : "Show"}
+          <button className="show-information" onClick={handleUserIdVisibility}>
+            {isUserIdVisible ? "Hide" : "Show"}
           </button>
         </p>
       </div>
@@ -40,18 +38,18 @@ const AccountInformation = () => {
           <strong>E-mail</strong>
         </p>
         <p>
-          {showEmail ? (
+          {isEmailVisible ? (
             <span>{currentUser.getEmail()}</span>
           ) : (
             <span>*************</span>
           )}
-          <button className="show" onClick={toggleEmail}>
-            {showEmail ? "Hide" : "Show"}{" "}
+          <button className="show-information" onClick={handleEmailVisibility}>
+            {isEmailVisible ? "Hide" : "Show"}{" "}
           </button>
         </p>
       </div>
     </div>
   );
-};
+}
 
 export default AccountInformation;

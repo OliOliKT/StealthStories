@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Parse from "parse";
 
-import "./topBarComponent.css";
-
+import "./TopBar.css";
 
 const TopBar = () => {
   return (
@@ -18,9 +17,9 @@ const TopBar = () => {
 const SearchBar = () => {
   return (
     <div className="header">
-      <div id="searchBar">
+      <div id="search-bar">
         <form action="/search" method="get">
-          <input type="search" id="search" name="q" placeholder="Search..." />
+          <input type="search" id="search" placeholder="Search..." />
         </form>
       </div>
     </div>
@@ -31,18 +30,22 @@ const Logo = () => {
   return (
     <div className="logo">
       <Link to="/DiscoverFeed">
-      <img src={`${process.env.PUBLIC_URL}/images/logo.png`} id="logoimg" alt="Logo" /> {/* made to absolute path */}
+        <img
+          src={`${process.env.PUBLIC_URL}/images/logo.png`}
+          id="logo-img"
+          alt="Logo"
+        />{" "}
       </Link>
     </div>
   );
 };
 
 const TopBarIcons = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setDropdown] = useState(false);
   const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const handleDropdown = () => {
+    setDropdown(!isDropdownOpen);
   };
 
   const handleLogout = async () => {
@@ -60,36 +63,34 @@ const TopBarIcons = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/MyPosts">
-              <i className="fa-solid fa-box-archive"></i>
-            </Link>
+            <i
+              className="fa-solid fa-box-archive nav-icon"
+              onClick={() => navigate("/MyPosts")}
+            ></i>
           </li>
           <li>
-            <a href="#">
-              <i className="fa-solid fa-bell"></i>
-            </a>
+            <i className="fa-solid fa-bell nav-icon"></i>
           </li>
-          <li className="user-icon" onClick={toggleDropdown}>
-            <a href="#">
-              <i className="fas fa-user"></i>
-            </a>
+          <li className="user-icon nav-icon" onClick={handleDropdown}>
+            <i className="fas fa-user nav-icon"></i>
             {isDropdownOpen && (
               <div className="dropdown-menu">
-                <ul>
+                <ul onClick={() => navigate("/UserSettings")}>
                   <li>
-                    <Link to="/UserSettings">User Settings</Link>
+                    <i class="fa-solid fa-gear dropdown-icon"></i>
+                    <p className="dropdown-text"> User settings</p>
                   </li>
                 </ul>
-                <ul>
+                <ul onClick={() => navigate("/MyPosts")}>
                   <li>
-                    <Link to="/MyPosts">My Posts</Link>
+                    <i class="fa-solid fa-box-archive dropdown-icon"></i>
+                    <p className="dropdown-text"> My posts </p>
                   </li>
                 </ul>
-                <ul>
+                <ul onClick={handleLogout}>
                   <li>
-                    <button className="log-out-btn" onClick={handleLogout}>
-                      Log out
-                    </button>
+                    <i class="fa-solid fa-arrow-right-from-bracket dropdown-icon"></i>
+                    <p className="dropdown-text"> Log out</p>
                   </li>
                 </ul>
               </div>

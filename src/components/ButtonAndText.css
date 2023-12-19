@@ -1,31 +1,49 @@
-.iconAndText {
+.icon-and-text {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-.iconAndText:hover{
+.icon-and-text:hover {
   color: hsl(152, 93%, 65%);
 }
 
-.iconAndText:hover .fa-mug-hot,
-.iconAndText .fa-mug-hot.liked  {
+.icon-and-text .fa-mug-hot.liked,
+.icon-and-text:hover .fa-mug-hot {
   color: hsl(152, 93%, 65%);
 }
 
-.iconAndText:hover .iconText {
+.icon-and-text:hover .icon-text {
   color: hsl(152, 93%, 65%);
 }
 
-.iconLink {
-  color: #fafafc;
+.icon-and-text .fa-mug-hot.liked + .icon-text {
+  color: hsl(152, 93%, 65%);
+}
+
+.icon-link {
+  color: hsl(240, 25%, 98%);
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
 }
 
-.iconLink:hover, .iconText:hover{
+.icon-link:hover .icon-text {
   color: hsl(152, 93%, 65%);
+}
+
+.container-tooltip{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-text {
+  padding-left: 8px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }

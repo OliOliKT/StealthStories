@@ -1,4 +1,4 @@
-.trendingBlock {
+.trending-block {
   width: 270px;
   background-color: hsl(245, 19%, 27%);
   padding: 20px 20px 0px 20px;
@@ -7,18 +7,18 @@
   margin-right: 30px;
 }
 
-.trendingText {
+.trending-text {
   margin-top: 10px;
   margin-bottom: 3px;
   font-weight: bold;
 }
 
-.postAmountTrending {
+.post-amount-trending {
   font-size: 10px;
   margin-bottom: 20px;
 }
 
-#trending-title{
+#trending-title {
   display: inline;
   margin-right: 0;
   padding: 0;

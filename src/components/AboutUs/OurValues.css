@@ -1,19 +1,21 @@
-.individual-value{
-    display: flex;
-    margin-bottom: 20px;
+.individual-value {
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.fa-user-secret, .fa-hand-holding-heart, .fa-face-laugh-wink{
-    font-size: 30px;
-    color: #FAFAFC;
+.fa-user-secret,
+.fa-hand-holding-heart,
+.fa-face-laugh-wink {
+  font-size: 30px;
+  color: #fafafc;
 }
 
-.icon-box{
-    width: 35px;
+.icon-box {
+  width: 35px;
 }
 
-.value-text{
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 20px;
+.value-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
 }

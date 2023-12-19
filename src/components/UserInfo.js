@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import Parse from 'parse';
-import './UserInfo.css';
+import React, { useEffect, useState } from "react";
+import Parse from "parse";
+import "./UserInfo.css";
 
 const UserInfo = () => {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     async function fetchUsername() {
@@ -11,13 +11,13 @@ const UserInfo = () => {
         const currentUser = Parse.User.current();
         if (currentUser) {
           const userQuery = new Parse.Query(Parse.User);
-          userQuery.equalTo('objectId', currentUser.id);
+          userQuery.equalTo("objectId", currentUser.id);
           const user = await userQuery.first();
-          const userUsername = user.get('username');
+          const userUsername = user.get("username");
           setUsername(userUsername);
         }
       } catch (error) {
-        console.error('Error fetching username:', error);
+        console.error("Error fetching username:", error);
       }
     }
 

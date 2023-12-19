@@ -1,28 +1,20 @@
-.IndividualPostBlock {
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
-}
-
-
-.BlockPostContent {
+.block-post-content {
   padding: 20px 20px 10px 20px;
+  cursor: pointer;
 }
 
-.IndividualPost {
+.individual-post {
   background-color: hsl(245, 19%, 27%);
   width: 640px;
   border-radius: 10px;
   border: 1px solid hsl(242, 22%, 51%);
 }
 
-.bottomPartOfPost {
+.bottom-part-of-post {
   border-radius: 10px;
 }
 
-#backgroundOnActionBar {
+#background-on-actionbar {
   background-color: hsl(245, 21%, 22%);
   height: 30px;
   width: 100%;
@@ -71,17 +63,9 @@
 .post-content {
   padding-bottom: 12px;
 }
-.actionBarOnPost {
+.actionbar-on-post {
   display: flex;
   align-content: center;
   z-index: 100;
   padding-left: 20px;
-}
-
-.iconText {
-  padding-left: 8px;
-  padding-right: 30px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
 }
