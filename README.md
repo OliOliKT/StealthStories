@@ -9,8 +9,10 @@ Once you have created a user, you will be directed to the login page, where you 
 Have fun!
 
 OBS! A few things doesn’t work - these are transparent:
-Search bar
-Two-factor authentication
-Trending Block
-Delete account
-Notifications
+* Search bar
+* Two-factor authentication
+* Trending Block
+* Deleting one's own account
+* Notifications
+* Trending hashtags list
+* Uploading an image to a story
