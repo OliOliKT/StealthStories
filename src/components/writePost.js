@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Parse from "parse";
+import "./WritePost.css";
 
-import "./writePost.css";
-
-const WritePost = ({ onPostPosted }) => {
+function WritePost({ onPostPosted }) {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [userId, setUserId] = useState("unknown user");
@@ -60,7 +59,7 @@ const WritePost = ({ onPostPosted }) => {
   };
 
   return (
-    <section className="writePost">
+    <section className="write-post">
       <PostBox
         setTitle={setTitle}
         setPost={setPost}
@@ -69,7 +68,7 @@ const WritePost = ({ onPostPosted }) => {
       />
     </section>
   );
-};
+}
 
 const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
   const handleKeyDown = (e) => {
@@ -133,18 +132,12 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
 
 const PostBorder = ({ handleSendPost }) => {
   return (
-    <div className="postBorder">
-      <PostIcons />
+    <div className="post-border">
+      <div className="post-icons">
+        <i className="fa-solid fa-image not-implemented"></i>
+        <i className="fa-solid fa-rainbow not-implemented"></i>
+      </div>
       <SendPostIcon handleSendPost={handleSendPost} />
-    </div>
-  );
-};
-
-const PostIcons = () => {
-  return (
-    <div className="postIcons">
-      <i className="fa-solid fa-image NotImplemented"></i>
-      <i className="fa-solid fa-rainbow NotImplemented"></i>
     </div>
   );
 };
@@ -155,7 +148,7 @@ const SendPostIcon = ({ handleSendPost }) => {
   };
 
   return (
-    <div className="postPost" onClick={handleClick}>
+    <div className="post-post" onClick={handleClick}>
       <i className="fa-solid fa-paper-plane"></i>
     </div>
   );

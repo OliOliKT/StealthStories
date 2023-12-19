@@ -4,7 +4,6 @@
   grid-template-rows: auto auto auto auto auto auto;
   grid-gap: 20px;
   place-items: center;
-  
 }
 
 .individual-post {
@@ -24,19 +23,19 @@
   grid-column: 2;
 }
 
-.writeComment {
+.write-comment {
   grid-row: 5;
   grid-column: 2;
-} 
+}
 
 .add-comment-button {
   height: 40px;
   width: 150px;
   border: 1px solid white;
-  background-color: #212034;
-  border-radius: 10px; 
+  background-color: hsl(243, 24%, 16%);
+  border-radius: 10px;
   padding: 2px;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease;
@@ -47,7 +46,6 @@
   background-color: #444267;
 }
 
-
 .add-comment-button-container {
-  width:640px;
+  width: 640px;
 }

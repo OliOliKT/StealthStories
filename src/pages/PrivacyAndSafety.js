@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import "./PrivacyAndSafety.css";
 
-const PrivacyAndSafety = () => {
+function PrivacyAndSafety() {
   return (
     <>
       <TopBarComponent />
@@ -23,22 +23,23 @@ const PrivacyAndSafety = () => {
             <br />
             <strong style={{ fontSize: "16px" }}>Anonymous Sharing</strong>
             <br />
-            <strong>No Personal Data Required:</strong> We don't ask for personal information
-            that could compromise your identity. Enjoy the freedom to share
-            without providing any identifying details. <br />
-            <strong>Anonymous Interactions:</strong> Engage, comment, and connect with others
-            without revealing your identity. Your interactions are purely based
-            on the stories and conversations, not on personal profiles.
+            <strong>No Personal Data Required:</strong> We don't ask for
+            personal information that could compromise your identity. Enjoy the
+            freedom to share without providing any identifying details. <br />
+            <strong>Anonymous Interactions:</strong> Engage, comment, and
+            connect with others without revealing your identity. Your
+            interactions are purely based on the stories and conversations, not
+            on personal profiles.
             <br />
             <br />
             <strong style={{ fontSize: "16px" }}>Secure Platform</strong>
             <br />
-            <strong>Data Encryption:</strong> All data shared on StealthStories is encrypted to
-            ensure confidentiality. Your stories and interactions are protected
-            against unauthorized access. <br />
-            <strong>Anonymity Protection:</strong> We employ robust measures to maintain the
-            anonymity of all users. Our platform is designed to prevent any
-            unintended exposure of your identity.
+            <strong>Data Encryption:</strong> All data shared on StealthStories
+            is encrypted to ensure confidentiality. Your stories and
+            interactions are protected against unauthorized access. <br />
+            <strong>Anonymity Protection:</strong> We employ robust measures to
+            maintain the anonymity of all users. Our platform is designed to
+            prevent any unintended exposure of your identity.
             <br />
             <br />
             <strong style={{ fontSize: "16px" }}>Safety Measures</strong> <br />
@@ -78,6 +79,6 @@ const PrivacyAndSafety = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default PrivacyAndSafety;

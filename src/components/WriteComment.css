@@ -1,44 +1,45 @@
-.writeComment {
-    width: 640px;
-    gap: 10px;
-    border-radius: 10px;
-    border: solid 1px hsl(242, 22%, 51%);
-    background-color: hsl(242, 18%, 27%);
-    margin-left: auto;
-    margin-right: auto;
+.write-comment {
+  width: 640px;
+  gap: 10px;
+  border-radius: 10px;
+  border: solid 1px hsl(242, 22%, 51%);
+  background-color: hsl(242, 18%, 27%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #comment {
-    box-sizing: border-box;
-    width: 100%;
-    height: 150px;
-    background-color: hsl(242, 18%, 27%);
-    border-radius: 10px;
-    padding-top: 20px;
-    padding-left: 20px;
-    z-index: 3;
-    resize: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  background-color: hsl(242, 18%, 27%);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  z-index: 3;
+  resize: none;
 }
 
-.commentBorder {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 6px 15px;
-    background-color: hsl(245, 21%, 22%);
-    border-radius: 0 0 10px 10px;
+.comment-border {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px 15px;
+  background-color: hsl(245, 21%, 22%);
+  border-radius: 0 0 10px 10px;
 }
 
-.commentIcons {
-    display: flex;
-    gap: 26px;
+.comment-icons {
+  display: flex;
+  gap: 26px;
 }
 
-.commentIcons i:hover, .postComment i:hover {
-    color: hsl(152, 93%, 65%);
+.comment-icons i:hover,
+.post-comment i:hover {
+  color: hsl(152, 93%, 65%);
 }
 
-.postComment {
-    cursor: pointer;
+.post-comment {
+  cursor: pointer;
 }

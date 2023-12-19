@@ -17,10 +17,10 @@ const addCommentLike = async (userId, commentId) => {
 
   commentLike
     .save()
-    .then((result) => {
+    .then(() => {
       console.log("CommentLike successfully saved to the database");
     })
-    .catch((error) => {
+    .catch(() => {
       console.log(
         "Something went wrong when saving the CommentLike to the database"
       );
@@ -50,26 +50,25 @@ const deleteCommentLike = async (userId, commentId) => {
 
 // Check if a comment has already been liked by a specific user - returns true if liked, false if not liked
 const checkIfCommentLiked = async (userId, commentId) => {
-    const CommentLike = Parse.Object.extend("CommentLikes");
-    const query = new Parse.Query(CommentLike);
-  
-    query.equalTo("userId", userId);
-    query.equalTo("commentId", commentId);
-  
-    try {
-      const result = await query.first();
-      if (result) {
-        console.log("User have liked this comment before");
-        return true;
-      } else {
-        console.log("User have NOT liked this comment before");
-        return false;
-      }
-    } catch (error) {
-      console.error("Error checking if user liked comment:", error);
+  const CommentLike = Parse.Object.extend("CommentLikes");
+  const query = new Parse.Query(CommentLike);
+
+  query.equalTo("userId", userId);
+  query.equalTo("commentId", commentId);
+
+  try {
+    const result = await query.first();
+    if (result) {
+      console.log("User have liked this comment before");
+      return true;
+    } else {
+      console.log("User have NOT liked this comment before");
       return false;
     }
-  };
-  
+  } catch (error) {
+    console.error("Error checking if user liked comment:", error);
+    return false;
+  }
+};
 
 export { fetchComment, addCommentLike, checkIfCommentLiked, deleteCommentLike };
