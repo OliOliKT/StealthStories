@@ -1,5 +1,4 @@
 import React from "react";
-
 import TopBarComponent from "../components/TopBar";
 import InformationComponent from "../components/Information";
 import Footer from "../components/Footer";
@@ -11,7 +10,7 @@ function PrivacyAndSafety() {
     <>
       <TopBarComponent />
       <div className="privacy-grid">
-        <UserSettingsSidebar />
+        <UserSettingsSidebar activePage="PrivacyAndSafety"/>
         <h1 className="pri-and-saf-title">Privacy & Safety</h1>
         <p className="we-care"> We really do care </p>
         <InformationComponent className="information-component">

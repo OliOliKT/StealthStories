@@ -1,7 +1,7 @@
 import React from "react";
 import "./PostFilter.css";
 
-function PostFilter({ setMood, handleSortChange }) {
+function PostFilter({ mood, setMood, handleSortChange }) {
   const handleMoodChange = (event) => {
     setMood(event.target.value);
   };
@@ -22,9 +22,10 @@ function PostFilter({ setMood, handleSortChange }) {
       <select
         id="mood-filter"
         name="mood-filter-list"
+        value={mood}
         onChange={handleMoodChange}
       >
-        <option value="all" selected>
+        <option value="all">
           All
         </option>
         <option value="happy">Happy</option>

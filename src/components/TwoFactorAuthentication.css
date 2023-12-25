@@ -40,6 +40,6 @@
 
 .see-backup-codes:focus,
 .remove-2fa:focus {
-  outline: 2px solid hsl(0, 0%, 100%);
+  outline: 2px solid white;
   outline-offset: 2px;
 }

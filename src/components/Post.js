@@ -56,22 +56,18 @@ function Post({
         <p className="post-content">{postContent}</p>
       </div>
 
-      <div className="bottom-part-of-post">
-        <div id="background-on-actionbar">
-          <div className="actionbar-on-post">
-            <LikeButtonAndText
-              sipCount={updatedSipCount}
-              onSip={handleSip}
-              isSipped={isSipped}
-              className={"icon-and-text"}
-            />
-            <CommentButtonAndText
-              commentCount={numberOfComments}
-              handleComment={commentClickCallback}
-            />
-            <BellButtonAndText />
-          </div>
-        </div>
+      <div className="post-actionbar">
+        <LikeButtonAndText
+          sipCount={updatedSipCount}
+          onSip={handleSip}
+          isSipped={isSipped}
+          className={"icon-and-text"}
+        />
+        <CommentButtonAndText
+          commentCount={numberOfComments}
+          handleComment={commentClickCallback}
+        />
+        <BellButtonAndText />
       </div>
     </div>
   );

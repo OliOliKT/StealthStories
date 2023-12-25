@@ -42,6 +42,5 @@ textarea::placeholder {
 body {
   font-family: Helvetica, Arial, sans-serif;
   height: 100%;
-  background-color: #212034;
-  height: 100vh;
+  background-color: hsl(243, 24%, 16%);
 }
