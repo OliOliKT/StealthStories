@@ -8,7 +8,6 @@ import "./DiscoverFeed.css";
 
 
 function DiscoverFeed() {
-
   const [numberOfPostsPosted, setNumberOfPostsPosted] = useState(0);
 
   const handlePostPosted = () => {

@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import TopBar from "../components/TopBar";
 import "./ChangePassword.css";
-import "./LogIn.css";
 
 function ChangePassword() {
   const [oldPassword, setOldPassword] = useState("");
@@ -26,6 +25,7 @@ function ChangePassword() {
 
     if (currentUser) {
       try {
+        setError("");
         await Parse.User.logIn(currentUser.get("username"), oldPassword);
         currentUser.setPassword(newPassword);
         await currentUser.save();
@@ -35,12 +35,8 @@ function ChangePassword() {
         );
         navigate("/");
 
-        setError("");
-        setOldPassword("");
-        setNewPassword("");
-        setConfirmPassword("");
       } catch (error) {
-        setError("Invalid password");
+        setError("Your old password is not correct");
       }
     } else {
       setError("No user is currently logged in.");
@@ -52,7 +48,7 @@ function ChangePassword() {
       <TopBar />
       <div className="change-password-grid">
         <h1 className="change-password-title"> Change password </h1>
-        <UserSettingsSidebar className="sidebar-content" />
+        <UserSettingsSidebar className="sidebar-content" activePage="ChangePassword" />
         <div className="change-password-main-content">
           <div className="login-component">
             <div className="login-box">

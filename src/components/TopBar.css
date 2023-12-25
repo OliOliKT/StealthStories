@@ -48,16 +48,11 @@ input[type="search"]:focus {
 .navigation {
   display: flex;
   align-items: center;
-  padding-right: 16px;
-}
-
-ul {
-  display: flex;
-  padding-right: 10px;
+  padding-right: 26px;
   list-style: none;
 }
 
-nav li {
+.navigation li {
   margin-left: 38px;
   font-size: 17px;
   list-style: none;
@@ -114,14 +109,13 @@ nav li {
 }
 
 .dropdown-icon {
-  color: hsl(0, 0%, 100%);
+  color: white;
   padding-right: 10px;
   align-self: center;
   justify-self: center;
 }
 
 .dropdown-text {
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
 }

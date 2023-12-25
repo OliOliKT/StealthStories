@@ -11,7 +11,7 @@ function AboutUs() {
     <>
       <TopBarComponent />
       <div className="about-us-grid">
-        <UserSettingsSidebar />
+        <UserSettingsSidebar activePage="AboutUs" />
         <h1 className="about-us-title">About StealthStories</h1>
         <p className="hi-there"> Hi there! </p>
         <InformationComponent className="information-component">

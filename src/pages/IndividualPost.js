@@ -15,7 +15,7 @@ function IndividualPost() {
   const [postedBy, setPostedBy] = useState("");
   const [mood, setMood] = useState("");
   const [postContent, setPostContent] = useState("");
-  const [numberOfComments, setNumberOfComments] = useState(0);
+  const [numberOfComments, setCommentCount] = useState(0);
   const [sipCount, setSipCount] = useState(0);
   const [isCommenting, setIsCommenting] = useState(false);
 
@@ -28,7 +28,7 @@ function IndividualPost() {
         setPostedBy(postData.userId);
         setMood(postData.mood);
         setPostContent(postData.postContent);
-        setNumberOfComments(postData.comments);
+        setCommentCount(postData.comments);
         setSipCount(postData.sips);
       } catch (error) {
         console.error("Error fetching post:", error);
@@ -46,8 +46,8 @@ function IndividualPost() {
     const Post = Parse.Object.extend("Post");
     const query = new Parse.Query(Post);
     const post = await query.get(postId);
-    const updatedNumberOfComments = post.get("comments");
-    setNumberOfComments(updatedNumberOfComments);
+    const updatedCommentCount = post.get("comments");
+    setCommentCount(updatedCommentCount);
   };
 
   const handleCommentPosted = () => {

@@ -18,7 +18,7 @@ function OurValues() {
         <div className="icon-box">
           <i className="fa-solid fa-hand-holding-heart"></i>
         </div>
-        <p className="value-text"> Everyone are welcome </p>
+        <p className="value-text"> Everyone is welcome </p>
       </div>
 
       <div className="individual-value">
