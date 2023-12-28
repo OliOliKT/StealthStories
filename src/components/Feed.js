@@ -24,39 +24,57 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     navigate(`/posts/${postId}`);
   };
 
+  // This useEffect is responsible for fetching the Post class from our backend
   useEffect(() => {
     async function fetchPosts() {
       try {
         const query = new Parse.Query("Post");
+        // Fetches the current user for the MyPosts component to filter post based on the current user
         const currentUser = Parse.User.current();
 
+        /* Given the parent component (either TrendingFeed, DiscoverFeed, or MyPosts ) 
+        the Feed will be given one of the filterType props (sipsGreaterThanFifteen, all, currentUserPosts)
+        and know which feed to show.  */
         if (filterType === "sipsGreaterThanFifteen") {
+          // greaterThanOrEqualTo is a Parse function - takes a key-value pair as parameter
           query.greaterThanOrEqualTo("sips", 15);
         } else if (filterType === "currentUserPosts" && currentUser) {
           query.equalTo("userObjectId", currentUser.id);
         }
+        // this should sort the post desceding
         query.descending(sortBy);
-
+        // the await const stops the async function temporaly until the Promise of the function is resolved
+        // The Promise being to find the correct data from the Parse backend
+        // the const results has assigned the array of the posts returned by query.find()
         const results = await query.find();
-
+        // we can now use the results const to filter properties in the results array (containing the data from the Posts class)
         if (mood !== "all") {
+          // this ensures that the mood filter in the feed is equal to the mood set by the user
           const filteredPosts = results.filter(
+            // this is given by the child component Post
             (post) => post.get("mood") === mood
           );
-          setPosts(filteredPosts);
+          // udpates the State of posts by the filter
+          setPosts(filteredPosts); // redundant, because we have created updatePostsWithCommentCount that updates the state
+          // updatePostsWithCommentCount is run with filteredPost as parameter
           updatePostsWithCommentCount(filteredPosts);
         } else {
-          setPosts(results);
+          // else it displays everything, as results contains all posts given by the Post class
+          setPosts(results); // redundant, because we have created updatePostsWithCommentCount that updates the state
           updatePostsWithCommentCount(results);
         }
+        // If the Promise is rejected this error is thrown
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
     }
     console.log("fetching posts");
     fetchPosts();
+    // This are the depencies, which the useEffect depend on to re-run
   }, [filterType, currentUser, numberOfPostsPosted, mood, sortBy]);
 
+  // This function is responsible for taking each post and storing it in a JSON file
+  // It also updated the components state
   async function updatePostsWithCommentCount(posts) {
     const updatedPosts = [];
     for (const post of posts) {
@@ -66,6 +84,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     setPosts(updatedPosts);
   }
 
+  // Event handler that sorts either by date or popularity
   const handleSortChange = (event) => {
     const selectedSort = event.target.value;
 
@@ -78,7 +97,11 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
 
   return (
     <div className="feed-content">
+      {/* Renders PostFilter
+      passes mood and sortChange to Post */}
       <PostFilter setMood={setMood} handleSortChange={handleSortChange} />
+      {/* Renders Post component
+      passes the props to Posts */}
       {posts.map((post) => (
         <Post
           postTitle={post.postTitle}

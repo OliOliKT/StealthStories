@@ -1,6 +1,7 @@
 import React from "react";
 import "./OurValues.css";
 
+// This is a dumb component - it only gets rendered one time. It has no hooks and no state.
 function OurValues() {
   return (
     <div className="our-values-content">

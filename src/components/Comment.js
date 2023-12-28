@@ -2,7 +2,10 @@ import React from "react";
 import "./Comment.css";
 import LikeButtonAndText from "./LikeButtonAndText";
 
-// This function takes in several parameters.
+/* This is the child component of CommentSection. 
+This function takes in several parameters.
+It fetches postedBy from the parent CommentSection, commentContent from CommentSection, 
+daysAgo from CommentSection, sipCount & isSiped from the reusable (child) component likeButtonAndText, */
 function Comment({
   postedBy,
   commentContent,

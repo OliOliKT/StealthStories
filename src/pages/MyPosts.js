@@ -27,6 +27,8 @@ function MyPosts() {
         <UserSettingsSidebar className="sidebar-my-posts" />
         <h1 id="your-post-title">My posts</h1>
         <PostStats />
+        {/* MyPosts renders Feed and passes the prop "currentUserPosts" as the filterType and the 
+        currentUser, so when we acces this page, the feed will render and display the posts of the current user */}
         <Feed filterType="currentUserPosts" currentUser={loggedInUserId} />
       </div>
       <Footer />

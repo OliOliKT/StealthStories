@@ -131,7 +131,11 @@ function CommentSection({ postId, numberOfComments }) {
   return (
     // container element for the comments
     <div className="comment-section-content">
-      {/* converts the comments object into an array of key-value pairs, with the commentId as the key, and comment as value */}
+      {/* The CommentSection parent is iterating over the comments.
+      For each comment in this object we render a Comment component, and the there is several properties passes to the Comment component.
+      E.g. postedBy etc. 
+      This allows the Comment component to display specific information about the comment it represents, 
+      and handle user interactions */}
       {Object.entries(comments).map(([commentId, comment]) => (
         <Comment
           key={commentId}

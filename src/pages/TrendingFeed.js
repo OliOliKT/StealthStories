@@ -22,6 +22,8 @@ function TrendingFeed() {
         <TrendingBlock />
         <FeedNavigation />
         <WritePost onPostPosted={handlePostPosted} />
+        {/* TrendingFeed renders Feed and passes the prop "sipsGreaterThanFifteen" as the filterType, 
+        so when we acces this page, the feed will render and display the post with sips over fifteen */}
         <Feed filterType="sipsGreaterThanFifteen" />
       </div>
       <Footer />
