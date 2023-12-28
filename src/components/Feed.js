@@ -5,13 +5,20 @@ import PostFilter from "./PostFilter";
 import "./Feed.css";
 import { useNavigate } from "react-router-dom";
 
+// This function take filterType, currentUser and numberOfPostPosted as props
+// As this is data being passed from parent component (Discover feed and Trending)
+// to child component (Feed)
 function Feed({ filterType, currentUser, numberOfPostsPosted }) {
+  // it has the useStates post, mood and sortBy, as these all can have changes as the site is used
   const [posts, setPosts] = useState([]);
   const [mood, setMood] = useState("all");
   const [sortBy, setSortBy] = useState("createdAt");
+  // we also have the navigation, as when we click a post we need to be navigated to the given post.
   const navigate = useNavigate();
 
+  // we have a event handler, which is responsible for handling a specific post being clicked
   const handleCommentIconClick = (postId) => {
+    // console logs are just used for debuggin the code
     console.log("clicked");
     console.log(postId);
     navigate(`/posts/${postId}`);

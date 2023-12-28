@@ -2,6 +2,7 @@ import React from "react";
 import "./Comment.css";
 import LikeButtonAndText from "./LikeButtonAndText";
 
+// This function takes in several parameters.
 function Comment({
   postedBy,
   commentContent,
@@ -10,7 +11,9 @@ function Comment({
   sipCount,
   isSipped,
 }) {
+  // It returns all this
   return (
+    // The comment container is the box containg everything within the comments
     <div className="comment-container">
       <div className="user-icon-comment">
         <i className="fas fa-circle-user comment"></i>
