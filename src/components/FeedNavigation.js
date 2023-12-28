@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./FeedNavigation.css";
 
+// FeedNavigation is responsible for toggeling between Discover and Trending Feed
 function FeedNavigation() {
+  // it has the useState, which default setting is the Discover Feed
   const [activeLink, setActiveLink] = useState("discover");
 
+  // creates useLocation hook which represents the current URL - can be used to access pathname
   const location = useLocation();
 
+  // useEffect hook which is responsible to set the active link to either trending or
+  // we have useEffect as it is necessary for handling state change
   React.useEffect(() => {
     if (location.pathname === "/DiscoverFeed") {
       setActiveLink("discover");

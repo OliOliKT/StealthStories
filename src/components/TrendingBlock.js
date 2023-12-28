@@ -2,6 +2,7 @@ import React from "react";
 
 import "./TrendingBlock.css";
 
+// dumb component, not implemented. Just hardcoded
 function TrendingBlock() {
   return (
     <div className="trending-block not-implemented">

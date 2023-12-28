@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./UserSettingsSidebar.css";
 
+// dumb component
 function UserSettingsSidebar() {
   return (
     <nav className="sidebar-nav">

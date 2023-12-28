@@ -1,6 +1,7 @@
 import React from "react";
 import "./TwoFactorAuthentication.css";
 
+// dumb component
 function TwoFactorAuthentication() {
   return (
     <div className="two-factor-authentication not-implemented">

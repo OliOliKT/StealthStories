@@ -1,11 +1,17 @@
 import React from "react";
 import "./PostFilter.css";
 
+// child compmnent of Feed, which can be used to filter the feed based on the moodes.
+// expect the props setMood and handleSortChange from Feed
 function PostFilter({ setMood, handleSortChange }) {
+  // event handler for handling the change of mood
+  // this could also have been defined in the Feed component (like setMood and handleSortChange)
+  // and then passed as a prop instead
   const handleMoodChange = (event) => {
     setMood(event.target.value);
   };
 
+  // the id is used for fetching the filter in other components
   return (
     <div id="post-filter">
       <label htmlFor="sort-by-filter">Sort by:</label>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./ToolTip.css";
 
+// displays that notifications has not been implemented
 const Tooltip = ({ text, children }) => {
   return (
     <div className="tooltip-container">
