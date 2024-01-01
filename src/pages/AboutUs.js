@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import OurValues from "../components/AboutUs/OurValues";
 
+// page with no functionality
 function AboutUs() {
   return (
     <>

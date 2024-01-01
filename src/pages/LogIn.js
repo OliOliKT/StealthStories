@@ -5,14 +5,16 @@ import Footer from "../components/Footer";
 import "./LogIn.css";
 
 function LogIn() {
+  // useSate to update the sate of the given variables
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    setError("");
+    setError(""); // a bit uncessary here
     try {
+      // LogIn is a function from Parse to log in users
       const user = await Parse.User.logIn(email, password);
       console.log("Success! User ID:", user.id);
       navigate("/DiscoverFeed");

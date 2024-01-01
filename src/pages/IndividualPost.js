@@ -9,7 +9,12 @@ import Parse from "parse";
 import { fetchPost } from "../repositories/PostRepository";
 import "./IndividualPost.css";
 
+// parent component
 function IndividualPost() {
+  /* useParams is a react hook that is used for handling routing
+  it is necessary for the IndividualPost component to know which post to fetch and display,
+  even after navigation has occurred, because useParams provides the component with the dynamic part of the URL
+  (the postId) that tells the component which post it should load and render on the page. */
   const { postId } = useParams();
   const [postTitle, setPostTitle] = useState("");
   const [postedBy, setPostedBy] = useState("");
@@ -17,9 +22,12 @@ function IndividualPost() {
   const [postContent, setPostContent] = useState("");
   const [numberOfComments, setNumberOfComments] = useState(0);
   const [sipCount, setSipCount] = useState(0);
+  // by setting "isCommenting" to false, the WriteComment component is initially closed
   const [isCommenting, setIsCommenting] = useState(false);
 
+  // useEffect because we fetch data from the backend by using the fetchPost function
   useEffect(() => {
+    // async function as we need the page to be responsive meanwhile we fetch the data
     const getPostData = async () => {
       try {
         const postData = await fetchPost(postId);
@@ -35,13 +43,18 @@ function IndividualPost() {
       }
     };
     getPostData();
+    // usally we would have a dependency array here, but as the state won't change we don't need it
+    // normally it would be good practice to have an empty one
   });
 
+  // this is triggered when the user wants to write a comment
+  // it sets the "setIsCommenting" to true, and therefore is responsible for displaying the component
   const handleAddCommentClick = () => {
     console.log("Add comment clicked");
     setIsCommenting(true);
   };
 
+  // fetches the number of comments for the specific post
   const fetchCommentCount = async () => {
     const Post = Parse.Object.extend("Post");
     const query = new Parse.Query(Post);
@@ -50,15 +63,18 @@ function IndividualPost() {
     setNumberOfComments(updatedNumberOfComments);
   };
 
+  // here it sets the "setIsCommenting" to false again, which means the WriteComment component is not displayed anymore
   const handleCommentPosted = () => {
-    setIsCommenting(false);
+    setIsCommenting(false); // this is redundant becuse we call HandleCommentClear in the function inside WriteComment which also sets isCommenting state to false
     fetchCommentCount();
   };
 
+  // Also sets isCommenting to false, used to hide the WriteComment component without posting a comment (e.g., if the user decides to cancel commenting)
   const handleCommentClear = () => {
     setIsCommenting(false);
   };
 
+  // scroll down to the WritePost component
   useEffect(() => {
     if (isCommenting) {
       document.getElementById("comment").scrollIntoView({ behavior: "smooth" });
@@ -69,6 +85,7 @@ function IndividualPost() {
     <>
       <div className="individual-post-page-content">
         <TopBar />
+        {/* Ternary operator - truthy check */}
         {postTitle ? (
           <Post
             id="individual-post-view"
@@ -84,17 +101,21 @@ function IndividualPost() {
         ) : (
           <p>Post not found</p>
         )}
+        {/* Fetches comment section of the specific post */}
         <CommentSection postId={postId} numberOfComments={numberOfComments} />
 
         <div className="add-comment-button-container">
           <button
             className="add-comment-button"
+            // when handleAddCommentClick is invoked, isCommenting becomes true
+            // and then rerenders the IndividualPost component with the WriteComment
             onClick={handleAddCommentClick}
           >
             <p className="add-comment-text">+ Add Comment</p>
           </button>
         </div>
-
+        {/* if isCommenting is true, then render the WriteComment component
+           it is passed postId, clearCommentForm */}
         {isCommenting && (
           <WriteComment
             postId={postId}

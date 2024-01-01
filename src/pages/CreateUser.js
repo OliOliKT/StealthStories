@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Parse from "parse";
 
 function CreateUser() {
+  // useStates so we can update the state of the variables
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,12 +14,14 @@ function CreateUser() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  // if the passwords and confirm password doesn't match it throws an error
   const handleSignup = async () => {
     if (password !== confirmPassword) {
       setError("The passwords doesn't match, try again! :)");
       return;
     }
 
+    // we create a new user in the backend with the username picked by the user, the mail and the password
     const user = new Parse.User();
     user.setUsername(username);
     user.setPassword(password);

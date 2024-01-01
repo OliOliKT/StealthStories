@@ -1,5 +1,6 @@
 import Parse from "parse";
 
+// fetches a post by the id from the backend
 const fetchPost = async (postId) => {
   const Post = Parse.Object.extend("Post");
   const query = new Parse.Query(Post);
