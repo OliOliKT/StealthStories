@@ -28,7 +28,7 @@ function FeedNavigation() {
         >
           <div className="icon-and-text">
             <i className="fa-regular fa-compass"></i>
-            <p class="nav-text-discover">Discover</p>
+            <p className="nav-text-discover">Discover</p>
           </div>
         </div>
       </Link>
@@ -42,7 +42,7 @@ function FeedNavigation() {
         >
           <div className="icon-and-text">
             <i className="fa-solid fa-fire-flame-curved"></i>
-            <p class="nav-text-trending">Trending</p>
+            <p className="nav-text-trending">Trending</p>
           </div>
         </div>
       </Link>

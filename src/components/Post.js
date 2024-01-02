@@ -46,7 +46,7 @@ function Post({
           <i className="fas fa-user-circle"></i>
           <div className="post-meta-data">
             <h2>
-              {postTitle} <em className="mood"> Feeling {mood}</em>
+              {postTitle} • <em className="mood"> Feeling {mood}</em>
             </h2>
             <p className="posted-by">
               Posted by {postedBy} • {daysAgo} days ago

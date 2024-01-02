@@ -49,13 +49,11 @@ input[type="search"]:focus {
   display: flex;
   align-items: center;
   padding-right: 26px;
-  list-style: none;
 }
 
 .navigation li {
   margin-left: 38px;
   font-size: 17px;
-  list-style: none;
 }
 
 .nav-icon {
