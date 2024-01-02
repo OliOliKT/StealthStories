@@ -6,7 +6,7 @@ function WritePost({ onPostPosted }) {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [userId, setUserId] = useState("unknown user");
-  const [mood, setMood] = useState("");
+  const [mood, setMood] = useState("all");
 
   useEffect(() => {
     async function fetchUserData() {
@@ -65,12 +65,13 @@ function WritePost({ onPostPosted }) {
         setPost={setPost}
         handleSendPost={handleSendPost}
         setMood={setMood}
+        mood={mood}
       />
     </section>
   );
 }
 
-const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
+const PostBox = ({ setTitle, mood, setPost, handleSendPost, setMood }) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -91,11 +92,10 @@ const PostBox = ({ setTitle, setPost, handleSendPost, setMood }) => {
         <select
           id="mood-chooser"
           name="mood-chooser-list"
+          value={mood}
           onChange={(e) => setMood(e.target.value)}
         >
-          <option value="all" selected>
-            All
-          </option>
+          <option value="all">All</option>
           <option value="happy">Happy</option>
           <option value="cheeky">Cheeky</option>
           <option value="sad">Sad</option>

@@ -74,19 +74,19 @@ const TopBarIcons = () => {
           <div className="dropdown-menu">
             <ul onClick={() => navigate("/UserSettings")}>
               <li>
-                <i class="fa-solid fa-gear dropdown-icon"></i>
+                <i className="fa-solid fa-gear dropdown-icon"></i>
                 <p className="dropdown-text"> User settings</p>
               </li>
             </ul>
             <ul onClick={() => navigate("/MyPosts")}>
               <li>
-                <i class="fa-solid fa-box-archive dropdown-icon"></i>
+                <i className="fa-solid fa-box-archive dropdown-icon"></i>
                 <p className="dropdown-text"> My posts </p>
               </li>
             </ul>
             <ul onClick={handleLogout}>
               <li>
-                <i class="fa-solid fa-arrow-right-from-bracket dropdown-icon"></i>
+                <i className="fa-solid fa-arrow-right-from-bracket dropdown-icon"></i>
                 <p className="dropdown-text"> Log out</p>
               </li>
             </ul>
