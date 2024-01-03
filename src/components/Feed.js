@@ -5,7 +5,7 @@ import PostFilter from "./PostFilter";
 import "./Feed.css";
 import { useNavigate } from "react-router-dom";
 
-function Feed({ filterType, currentUser, numberOfPostsPosted }) {
+function Feed({ filterType, numberOfPostsPosted }) {
   const [posts, setPosts] = useState([]);
   const [mood, setMood] = useState("all");
   const [sortBy, setSortBy] = useState("createdAt");
@@ -25,7 +25,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
 
         if (filterType === "sipsGreaterThanFifteen") {
           query.greaterThanOrEqualTo("sips", 15);
-        } else if (filterType === "currentUserPosts" && currentUser) {
+        } else if (filterType === "currentUserPosts" && currentUser.id) {
           query.equalTo("userObjectId", currentUser.id);
         }
         query.descending(sortBy);
@@ -48,7 +48,7 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
     }
     console.log("fetching posts");
     fetchPosts();
-  }, [filterType, currentUser, numberOfPostsPosted, mood, sortBy]);
+  }, [filterType, numberOfPostsPosted, mood, sortBy]);
 
   async function updatePostsWithCommentCount(posts) {
     const updatedPosts = [];
@@ -71,9 +71,10 @@ function Feed({ filterType, currentUser, numberOfPostsPosted }) {
 
   return (
     <div className="feed-content">
-      <PostFilter setMood={setMood} handleSortChange={handleSortChange} />
+      <PostFilter mood={mood} setMood={setMood} handleSortChange={handleSortChange} />
       {posts.map((post) => (
         <Post
+          key={post.objectId}
           postTitle={post.postTitle}
           mood={post.mood}
           postedBy={post.userId}

@@ -6,7 +6,7 @@ import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import AccountInformation from "../components/AccountInformation";
 import TwoFactorAuthentication from "../components/TwoFactorAuthentication";
 import "./UserSettings.css";
-import "../components/NotImplemented.css";
+import "../components/NotImplemented.css"
 
 function UserSettings() {
   return (
@@ -14,7 +14,7 @@ function UserSettings() {
       <div className="user-settings-main-content">
         <TopBar />
         <UserInfo />
-        <UserSettingsSidebar />
+        <UserSettingsSidebar activePage="UserSettings" />
         <AccountInformation />
         <TwoFactorAuthentication />
         <div className="delete-account not-implemented">

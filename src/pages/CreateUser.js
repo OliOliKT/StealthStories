@@ -1,8 +1,7 @@
 import "./CreateUser.css";
 import Footer from "../components/Footer";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Parse from "parse";
 
 function CreateUser() {
@@ -15,7 +14,7 @@ function CreateUser() {
 
   const handleSignup = async () => {
     if (password !== confirmPassword) {
-      setError("The passwords doesn't match, try again! :)");
+      setError("The passwords do not match, try again! :)");
       return;
     }
 

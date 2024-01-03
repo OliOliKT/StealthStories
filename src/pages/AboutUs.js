@@ -4,14 +4,14 @@ import TopBarComponent from "../components/TopBar";
 import InformationComponent from "../components/Information";
 import Footer from "../components/Footer";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
-import OurValues from "../components/AboutUs/OurValues";
+import OurValues from "../components/OurValues";
 
 function AboutUs() {
   return (
     <>
       <TopBarComponent />
       <div className="about-us-grid">
-        <UserSettingsSidebar />
+        <UserSettingsSidebar activePage="AboutUs" />
         <h1 className="about-us-title">About StealthStories</h1>
         <p className="hi-there"> Hi there! </p>
         <InformationComponent className="information-component">

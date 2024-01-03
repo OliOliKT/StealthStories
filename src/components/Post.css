@@ -63,9 +63,13 @@
 .post-content {
   padding-bottom: 12px;
 }
-.actionbar-on-post {
+
+.post-actionbar {
   display: flex;
   align-content: center;
-  z-index: 100;
   padding-left: 20px;
+  background-color: hsl(245, 21%, 22%);
+  height: 30px;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
 }
