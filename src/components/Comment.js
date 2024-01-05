@@ -26,7 +26,6 @@ function Comment({
         </div>
         <div className="actions-on-comment">
           <LikeButtonAndText
-            className={"icon-and-text"}
             isSipped={isSipped}
             sipCount={sipCount}
             onSip={handleSip}
