@@ -13,6 +13,7 @@ import Parse from "parse";
 import CreateUser from "./pages/CreateUser";
 import AboutUs from "./pages/AboutUs";
 import PrivacyAndSafety from "./pages/PrivacyAndSafety";
+import ContactUs from "./pages/ContactUs";
 import ChangePassword from "./pages/ChangePassword";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -28,6 +29,7 @@ root.render(
         <Route path="/MyPosts" element={<MyPosts />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/PrivacyAndSafety" element={<PrivacyAndSafety />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/posts/:postId" element={<IndividualPost />} />
         <Route path="/ChangePassword" element={<ChangePassword />} />
       </Routes>
