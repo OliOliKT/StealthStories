@@ -11,10 +11,10 @@ function ContactUs() {
       <TopBarComponent />
       <div className="contact-grid">
         <UserSettingsSidebar activePage="ContactUs" />
-        <h1 className="pri-and-saf-title">Concact Us</h1>
-        <p className="we-care"> Welcome to StealthStories! </p>
+        <h1 className="contact-title">Concact Us</h1>
+        <p className="welcome-to-stealth"> Welcome to StealthStories! </p>
         <InformationComponent className="information-component">
-          <p className="pri-and-saf-text">
+          <p className="contact-text">
             We love hearing from our users. Whether you have a question,
             feedback, story ideas, or just want to share your thoughts, we're
             here to listen. <br />

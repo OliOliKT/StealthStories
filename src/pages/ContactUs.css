@@ -6,7 +6,7 @@
     place-items: start;
 }
 
-.pri-and-saf-title {
+.contact-title {
     grid-row: 1;
     grid-column: 2;
     font-size: xx-large;
@@ -21,13 +21,13 @@
     justify-self: start;
 }
 
-.pri-and-saf-text {
+.contact-text {
     margin-top: 10px;
     padding: 0;
     font-size: 14px;
 }
 
-.we-care {
+.welcome-to-stealth {
     grid-row: 3;
     grid-column: 2;
     font-size: 18px;
