@@ -15,6 +15,7 @@ function CreateUser() {
   const navigate = useNavigate();
 
   // if the passwords and confirm password doesn't match it throws an error
+  // this is an arrow function
   const handleSignup = async () => {
     if (password !== confirmPassword) {
       setError("The passwords doesn't match, try again! :)");
@@ -60,6 +61,7 @@ function CreateUser() {
                     type="email"
                     className="input-username-and-mail-and-password"
                     value={email}
+                    /* the e inside the eventHandler is an event object */
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>

@@ -86,7 +86,7 @@ function CommentSection({ postId, numberOfComments }) {
     dbComment.set("sips", sips);
     // saves the dbComment with the new sip count
     dbComment.save();
-    // attaches the comment toUpdate ti an array
+    // attaches the comment toUpdate to an array
     // The spread operator is used to copy existing comments, and the updated comment is added
     const updatedComments = {
       ...comments,
