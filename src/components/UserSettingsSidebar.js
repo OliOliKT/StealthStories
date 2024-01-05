@@ -26,7 +26,7 @@ function UserSettingsSidebar({ activePage }) {
                   isActive("MyPosts") ? "active" : ""
                 }`}
               >
-                <p>My Posts</p>
+                <p>My stories</p>
               </li>
             </Link>
             <Link to="/ChangePassword">
@@ -35,7 +35,7 @@ function UserSettingsSidebar({ activePage }) {
                   isActive("ChangePassword") ? "active" : ""
                 }`}
               >
-                <p>Change Password</p>
+                <p>Change password</p>
               </li>
             </Link>
           </ul>
@@ -68,7 +68,7 @@ function UserSettingsSidebar({ activePage }) {
                     isActive("PrivacyAndSafety") ? "active" : ""
                   }`}
                 >
-                  <p>Privacy & Safety</p>
+                  <p>Privacy & safety</p>
                 </li>
               </Link>
             </ul>
