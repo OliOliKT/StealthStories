@@ -12,7 +12,7 @@ function MyPosts() {
       <TopBarComponent />
       <div className="my-posts-main-content">
         <UserSettingsSidebar className="sidebar-my-posts" activePage="MyPosts" />
-        <h1 id="your-post-title">My posts</h1>
+        <h1 id="your-post-title">My stories</h1>
         <PostStats />
         <Feed filterType="currentUserPosts" />
       </div>
