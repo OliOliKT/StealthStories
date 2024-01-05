@@ -39,7 +39,7 @@ function PostStats() {
     <>
       <div id="stats">
         <div id="stat-1" className="stat-box">
-          <p>Total posts</p>
+          <p>Total stories</p>
           <p>{totalPosts}</p>
         </div>
         <div id="stat-2" className="stat-box">

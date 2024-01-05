@@ -49,7 +49,7 @@ function Post({
               {postTitle} • <em className="mood"> Feeling {mood}</em>
             </h2>
             <p className="posted-by">
-              Posted by {postedBy} • {daysAgo} days ago
+              Story by {postedBy} {daysAgo !== undefined ? ` • ${daysAgo} days ago` : ''}
             </p>
           </div>
         </div>

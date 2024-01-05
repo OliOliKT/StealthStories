@@ -11,7 +11,7 @@ function ContactUs() {
       <TopBarComponent />
       <div className="contact-grid">
         <UserSettingsSidebar activePage="ContactUs" />
-        <h1 className="contact-title">Concact Us</h1>
+        <h1 className="contact-title">Contact Us</h1>
         <p className="welcome-to-stealth"> Welcome to StealthStories! </p>
         <InformationComponent className="information-component">
           <p className="contact-text">

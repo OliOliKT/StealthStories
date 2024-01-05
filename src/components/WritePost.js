@@ -120,7 +120,7 @@ const PostBox = ({ setTitle, mood, setPost, handleSendPost, setMood }) => {
       </div>
       <textarea
         id="post"
-        placeholder="Your post..."
+        placeholder="Your story..."
         rows="5"
         onChange={(e) => setPost(e.target.value)}
         onKeyDown={handleKeyDown}
