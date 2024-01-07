@@ -5,7 +5,7 @@ import {
   addCommentLike,
   checkIfCommentLiked,
   deleteCommentLike,
-  fetchComment,
+  fetchComment
 } from "../repositories/CommentRepository";
 import "./CommentSection.css";
 
@@ -21,12 +21,10 @@ function CommentSection({ postId, numberOfComments }) {
         query.equalTo("postIdString", postId);
         query.ascending("createdAt");
         const results = await query.find();
-        console.log("RESULT " + results.map((x) => x.id));
         const updatedComments = { ...comments };
 
         for (const result of results) {
           updatedComments[result.id] = result.toJSON();
-          console.log("COMMENTS " + result.id);
         }
 
         setComments(updatedComments);
@@ -37,7 +35,7 @@ function CommentSection({ postId, numberOfComments }) {
     }
 
     fetchComments();
-  }, [postId, numberOfComments, comments]);
+  }, [postId, numberOfComments]);
 
   async function changeSipCount(factor, commentId) {
     const commentToUpdate = comments[commentId];

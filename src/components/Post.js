@@ -14,7 +14,7 @@ function Post({
   postId,
   sipCount,
   numberOfComments,
-  commentClickCallback,
+  individualPostClickCallback,
 }) {
   const [isSipped, setIsSipped] = useState(false);
   const [updatedSipCount, setUpdatedSipCount] = useState(sipCount);
@@ -41,7 +41,7 @@ function Post({
 
   return (
     <div className="individual-post">
-      <div className="block-post-content" onClick={commentClickCallback}>
+      <div className="block-post-content" onClick={individualPostClickCallback}>
         <div className="avatar-area">
           <i className="fas fa-user-circle"></i>
           <div className="post-meta-data">
@@ -61,11 +61,10 @@ function Post({
           sipCount={updatedSipCount}
           onSip={handleSip}
           isSipped={isSipped}
-          className={"icon-and-text"}
         />
         <CommentButtonAndText
           commentCount={numberOfComments}
-          handleComment={commentClickCallback}
+          handleComment={individualPostClickCallback}
         />
         <BellButtonAndText />
       </div>

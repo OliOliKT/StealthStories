@@ -55,10 +55,6 @@ function IndividualPost() {
     fetchCommentCount();
   };
 
-  const handleCommentClear = () => {
-    setIsCommenting(false);
-  };
-
   useEffect(() => {
     if (isCommenting) {
       document.getElementById("comment").scrollIntoView({ behavior: "smooth" });
@@ -79,7 +75,7 @@ function IndividualPost() {
             postId={postId}
             numberOfComments={numberOfComments}
             sipCount={sipCount}
-            commentClickCallback={() => handleAddCommentClick(postId)}
+            individualPostClickCallback={() => handleAddCommentClick(postId)}
           />
         ) : (
           <p>Post not found</p>
@@ -98,7 +94,6 @@ function IndividualPost() {
         {isCommenting && (
           <WriteComment
             postId={postId}
-            clearCommentForm={handleCommentClear}
             onCommentPosted={handleCommentPosted}
           />
         )}

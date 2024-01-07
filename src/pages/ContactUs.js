@@ -1,6 +1,6 @@
 import React from "react";
-import TopBarComponent from "../components/TopBar";
-import InformationComponent from "../components/Information";
+import TopBar from "../components/TopBar";
+import Information from "../components/Information";
 import Footer from "../components/Footer";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import "./ContactUs.css";
@@ -8,12 +8,12 @@ import "./ContactUs.css";
 function ContactUs() {
   return (
     <>
-      <TopBarComponent />
+      <TopBar />
       <div className="contact-grid">
         <UserSettingsSidebar activePage="ContactUs" />
         <h1 className="contact-title">Contact Us</h1>
         <p className="welcome-to-stealth"> Welcome to StealthStories! </p>
-        <InformationComponent className="information-component">
+        <Information className="information-component">
           <p className="contact-text">
             We love hearing from our users. Whether you have a question,
             feedback, story ideas, or just want to share your thoughts, we're
@@ -42,7 +42,7 @@ function ContactUs() {
             <br />
             The StealthStories Team
           </p>
-        </InformationComponent>
+        </Information>
       </div>
       <Footer />
     </>
