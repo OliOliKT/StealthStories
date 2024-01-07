@@ -61,7 +61,6 @@ function Post({
           sipCount={updatedSipCount}
           onSip={handleSip}
           isSipped={isSipped}
-          className={"icon-and-text"}
         />
         <CommentButtonAndText
           commentCount={numberOfComments}
