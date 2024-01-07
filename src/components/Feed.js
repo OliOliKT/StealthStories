@@ -11,7 +11,7 @@ function Feed({ filterType, numberOfPostsPosted }) {
   const [sortBy, setSortBy] = useState("createdAt");
   const navigate = useNavigate();
 
-  const handleCommentIconClick = (postId) => {
+  const handlePostClick = (postId) => {
     console.log("clicked");
     console.log(postId);
     navigate(`/posts/${postId}`);
@@ -37,10 +37,10 @@ function Feed({ filterType, numberOfPostsPosted }) {
             (post) => post.get("mood") === mood
           );
           setPosts(filteredPosts);
-          updatePostsWithCommentCount(filteredPosts);
+          convertPostsToJSON(filteredPosts);
         } else {
           setPosts(results);
-          updatePostsWithCommentCount(results);
+          convertPostsToJSON(results);
         }
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -50,7 +50,7 @@ function Feed({ filterType, numberOfPostsPosted }) {
     fetchPosts();
   }, [filterType, numberOfPostsPosted, mood, sortBy]);
 
-  async function updatePostsWithCommentCount(posts) {
+  async function convertPostsToJSON(posts) {
     const updatedPosts = [];
     for (const post of posts) {
       const updatedPost = post.toJSON();
@@ -82,7 +82,7 @@ function Feed({ filterType, numberOfPostsPosted }) {
           sipCount={post.sips}
           postId={post.objectId}
           numberOfComments={post.comments}
-          commentClickCallback={() => handleCommentIconClick(post.objectId)}
+          individualPostClickCallback={() => handlePostClick(post.objectId)}
           daysAgo={Math.round(
             (new Date().getTime() - new Date(post.createdAt).getTime()) /
               (1000 * 3600 * 24)

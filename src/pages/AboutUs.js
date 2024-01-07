@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
-import TopBarComponent from "../components/TopBar";
-import InformationComponent from "../components/Information";
+import TopBar from "../components/TopBar";
+import Information from "../components/Information";
 import Footer from "../components/Footer";
 import UserSettingsSidebar from "../components/UserSettingsSidebar";
 import OurValues from "../components/OurValues";
@@ -9,12 +9,12 @@ import OurValues from "../components/OurValues";
 function AboutUs() {
   return (
     <>
-      <TopBarComponent />
+      <TopBar />
       <div className="about-us-grid">
         <UserSettingsSidebar activePage="AboutUs" />
         <h1 className="about-us-title">About StealthStories</h1>
         <p className="hi-there"> Hi there! </p>
-        <InformationComponent className="information-component">
+        <Information className="information-component">
           <p className="about-us-text">
             Welcome to StealthStories! The place where secrets find their safe
             haven and anonymity sparks candid conversations. We believe in the
@@ -44,7 +44,7 @@ function AboutUs() {
             the freedom to express, listen, and connect on StealthStories, where
             anonymity meets authenticity. <br></br>
           </p>
-        </InformationComponent>
+        </Information>
         <p className="our-values-header"> Our Values </p>
         <OurValues />
         <img

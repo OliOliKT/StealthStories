@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Parse from "parse";
 import "./WriteComment.css";
 
-function WriteComment({ postId, clearCommentForm, onCommentPosted }) {
+function WriteComment({ postId, onCommentPosted }) {
   const [comment, setComment] = useState("");
 
   const handleCommentChange = (e) => {
@@ -10,7 +10,6 @@ function WriteComment({ postId, clearCommentForm, onCommentPosted }) {
   };
 
   const handleCommentSubmit = async () => {
-    clearCommentForm();
     const Comment = Parse.Object.extend("Comment");
     const newComment = new Comment();
 
