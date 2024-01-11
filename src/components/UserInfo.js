@@ -10,6 +10,7 @@ const UserInfo = () => {
       try {
         const currentUser = Parse.User.current();
         if (currentUser) {
+          //Parse.User is a build in class in Parse that allows us to access the User table in our database.
           const userQuery = new Parse.Query(Parse.User);
           userQuery.equalTo("objectId", currentUser.id);
           const user = await userQuery.first();

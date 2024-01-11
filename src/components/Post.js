@@ -23,6 +23,7 @@ function Post({
     try {
       const Post = Parse.Object.extend("Post");
       const query = new Parse.Query(Post);
+      // query.get(postID) not only fetches the postID, but every attribute associated with that specific postID.
       const post = await query.get(postId);
       if (isSipped) {
         post.decrement("sips");

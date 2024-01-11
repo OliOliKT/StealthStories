@@ -18,6 +18,7 @@ function CommentSection({ postId, numberOfComments }) {
     async function fetchComments() {
       try {
         const query = new Parse.Query("Comment");
+        // filtering by postId and soring by creation date
         query.equalTo("postIdString", postId);
         query.ascending("createdAt");
         const results = await query.find();
